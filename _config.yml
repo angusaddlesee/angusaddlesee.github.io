@@ -25,8 +25,8 @@ icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name 
 
 # - If deploying to https://<github-username>.github.io/<repo-name>
 #   then set:
-  url: "https://angusaddlesee.github.io"
-  baseurl: ""
+url: "https://angusaddlesee.github.io"
+baseurl: ""
 
 # url: https://alshedivat.github.io # the base hostname & protocol for your site
 # baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
