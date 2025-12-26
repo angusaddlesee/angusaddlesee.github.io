@@ -6,17 +6,16 @@ title: "Angus Addlesee"
 first_name: "Angus"
 middle_name:
 last_name: "Addlesee"
-# contact_note: >
-#  You can even add a little note about which of these is the best way to reach you.
-description: "Applied Scientist at Amazon Alexa with a PhD in Artificial Intelligence. Developing natural voice assistants with Generative AI, NLP, Computer Vision, & Linked Data."
+contact_note: >
+  Feel free to reach out via email - I'm always open to connecting with researchers, engineers, and recruiters working on LLM systems, conversational AI, accessibility, or applied AI innovation.
+description: "Applied Scientist at Amazon Alexa specialising in LLM routing and optimisation. Building conversational AI that benefits everyone with a focus on accessibility and human-centred design."
 #  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-# footer_text: >
-#   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-#   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-#   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+keywords: conversational-ai, llm-routing, accessibility, human-ai-interaction, alexa, machine-learning, nlp, dialogue-systems
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 # IMPORTANT:
 # - If deploying to www.addlesee.co.uk via a CNAME, use these:
@@ -96,8 +95,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Angus Addlesee # blog_name will be displayed in your blog page
+blog_description: Thoughts on conversational AI, LLM systems, and human-centred technology
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -274,8 +273,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Addlesee]
+  first_name: [Angus]
 
   style: apa
   locale: en

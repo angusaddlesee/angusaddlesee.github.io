@@ -2,96 +2,101 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Angus Addlesee
+    - name: Location
+      value: Cambridge, UK
+    - name: Email
+      value: angus[at]addleseeHQ[dot]com
     - name: Languages
-      value: English, German
+      value: English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD in Artificial Intelligence
+      institution: Heriot-Watt University, Edinburgh, UK
+      year: 2018-2022
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Developed accessible dialogue systems for people with cognitive impairments
+        - Focus on human-centred AI and conversational systems
+        - Research on multimodal interaction and accessibility
+    - title: MSc Computer Science
+      institution: University of Edinburgh, Edinburgh, UK
+      year: 2016-2017
       description:
-        - Description 1.
-        - Description 2.
+        - Distinction
+        - Specialisation in Machine Learning and AI
+    - title: BSc Computer Science
+      institution: University of Edinburgh, Edinburgh, UK
+      year: 2013-2016
+      description:
+        - First Class Honours
+        - Focus on AI and software engineering
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Applied Scientist
+      institution: Amazon Alexa, Cambridge, UK
+      year: 2023 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - LLM routing and optimisation for conversational AI systems
+        - Design systems balancing accuracy, latency, and cost for millions of users
+        - Focus on accessibility and human-centred AI design
+    - title: Research Associate
+      institution: Heriot-Watt University, Edinburgh, UK
+      year: 2022 - 2023
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - EU SPRING project - conversational AI and robotics for dementia care
+        - Hospital-based research integrating AI systems with clinical workflows
+        - Human-centred design for accessible dialogue systems
+    - title: Machine Learning Engineer
+      institution: NHS Scotland / Scottish Government
+      year: 2017 - 2018
       description:
+        - Delivered ML pipelines for public sector applications
+        - Data-driven AI solutions for healthcare and government services
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Speaking & Leadership
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: International Speaking
+      year: 2018 - Present
+      description:
+        - 50+ invited talks at Harvard, USC, KTH, BBC, NatWest
+        - Focus on conversational AI, accessibility, and LLM systems
+    - title: Conference Co-Founder
+      year: 2020 - Present
+      description:
+        - Co-founded European and African Conversational AI Summits
+        - Organised multiple academic workshops and events
+    - title: Supervision & Mentoring
+      year: 2018 - Present
+      description:
+        - Supervised 60+ students and interns
+        - Guided early-career researchers in human-centred AI
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Research Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: LLM Systems & Optimisation
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Model routing and selection algorithms
+        - Performance optimisation for conversational AI
+        - Scalable AI system architecture
+    - title: Human-Centred AI
       items:
-        - Description 1.
-        - Description 2.
+        - Accessibility in AI systems
+        - Conversational AI for healthcare
+        - Inclusive dialogue system design
+    - title: Multimodal Interaction
+      items:
+        - Speech and dialogue systems
+        - Computer vision integration
+        - Real-time multimodal processing
 
-- title: Other Interests
+- title: Specialities
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Technical:</u> LLM Routing & Optimisation, Conversational AI, Large Language Models, Machine Learning, Real-Time Systems, Speech & Dialogue, Computer Vision
+    - <u>Research:</u> Human–AI Interaction, Accessibility, Responsible AI, Multimodal Interaction

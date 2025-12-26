@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='https://www.addlesee.co.uk'>Applied Scientist at Amazon Alexa</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Applied Scientist</p>
+    <p>Amazon Alexa</p>
+    <p>Cambridge, UK</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,16 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I build conversational AI that benefits everyone.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My work focuses on making large language model systems fast, accessible, and human-centred — from hospital memory clinics to global voice assistants.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I'm currently an Applied Scientist at **Amazon Alexa**, where I specialise in LLM routing and optimisation. I design systems that intelligently choose the right model for each task, balancing accuracy, latency, and cost to create faster, more reliable experiences for millions of users. This work directly influences Alexa's responsiveness and accessibility.
+
+Before joining Alexa, I worked as a Research Associate in a hospital environment as part of the EU's SPRING project, integrating conversational AI and robotics to support clinicians and patients with dementia. Much of this built on my **PhD in Artificial Intelligence**, where I developed accessible dialogue systems designed specifically for people with cognitive impairments.
+
+Earlier in my career, I delivered machine-learning pipelines for the NHS and Scottish Government, applying data-driven AI to real public-sector problems. Across roles, I've bridged research and real-world deployment with a consistent focus on usability, inclusion, and technical rigour.
+
+I have delivered over **50 invited talks internationally** (Harvard, USC, KTH, BBC, NatWest), co-founded the European and African Conversational AI Summits, and organised multiple academic workshops. I've supervised 60+ students and interns, producing published papers and guiding early-career researchers in human-centred AI.
+
+**Specialities:** LLM Routing & Optimisation · Conversational AI · Large Language Models · Accessibility · Multimodal Interaction · Machine Learning · Real-Time Systems · Speech & Dialogue · Human–AI Interaction · Responsible AI · Computer Vision
