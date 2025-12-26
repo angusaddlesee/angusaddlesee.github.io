@@ -18,7 +18,7 @@ To include a jupyter notebook in a post, you would normally use the [Jekyll Jupy
 For GitHub Pages deployment, you have a few options:
 
 1. **Convert to HTML manually**: Use `jupyter nbconvert --to html notebook.ipynb` and include the HTML directly
-2. **Use GitHub's notebook viewer**: Link directly to notebooks in your repository 
+2. **Use GitHub's notebook viewer**: Link directly to notebooks in your repository
 3. **Use nbviewer**: Link to notebooks via [nbviewer.org](https://nbviewer.org/)
 4. **Export as markdown**: Convert notebooks to markdown and include as regular posts
 
