@@ -10,7 +10,7 @@ related_posts: false
 related_publications: false
 ---
 
-This post shows how to add bibliography to simple blog posts. 
+This post shows how to add bibliography to simple blog posts.
 
 **Note**: Bibliography features are currently disabled for GitHub Pages compatibility. In a full Jekyll setup, you would be able to use [jekyll-scholar](https://github.com/inukshuk/jekyll-scholar) for citations and references.
 
