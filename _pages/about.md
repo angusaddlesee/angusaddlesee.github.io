@@ -13,7 +13,7 @@ profile:
     <p>Amazon Alexa</p>
     <p>Cambridge, UK</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}" - disabled for GitHub Pages
 social: true # includes social icons at the bottom of the page
 
 announcements:
