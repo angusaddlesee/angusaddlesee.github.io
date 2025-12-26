@@ -4,14 +4,16 @@ Your al-folio website has been configured with your information! Here's what's b
 
 ## ✅ Completed Setup
 
-### Configuration (_config.yml)
+### Configuration (\_config.yml)
+
 - Updated title, name, and description
 - Set keywords relevant to your work
 - Updated scholar settings for your name
 - Updated blog name and description
 - Configured for GitHub Pages deployment
 
-### Social Media (_data/socials.yml)
+### Social Media (\_data/socials.yml)
+
 - LinkedIn: angusaddlesee
 - Google Scholar: 6n2P4OEAAAAJ
 - Medium: addlesee
@@ -20,27 +22,32 @@ Your al-folio website has been configured with your information! Here's what's b
 - GitHub: angusaddlesee
 - Email: angus[at]addleseeHQ[dot]com (obfuscated)
 
-### About Page (_pages/about.md)
+### About Page (\_pages/about.md)
+
 - Updated with your LinkedIn bio
 - Professional profile information
 - Current role at Amazon Alexa
 - Research focus and specialities
 
-### News Items (_news/)
+### News Items (\_news/)
+
 - Updated with relevant announcements about your work
 - Speaking engagements
 - Conference co-founding
 
-### Projects (_projects/)
+### Projects (\_projects/)
+
 - Updated first two projects with your Amazon Alexa work and SPRING project
 - You can update the remaining project files as needed
 
-### CV Data (_data/cv.yml)
+### CV Data (\_data/cv.yml)
+
 - Complete CV structure with your education and experience
 - Research interests and specialities
 - Speaking and leadership activities
 
-### Publications (_bibliography/papers.bib)
+### Publications (\_bibliography/papers.bib)
+
 - Placeholder structure created
 - You can replace with your actual publications from https://www.addlesee.co.uk/papers
 
@@ -67,7 +74,7 @@ The site is configured for GitHub Pages. When you're ready to use your custom do
 ## 📝 Content Updates
 
 - **News**: Add files to `_news/` folder
-- **Projects**: Update files in `_projects/` folder  
+- **Projects**: Update files in `_projects/` folder
 - **Blog Posts**: Add files to `_posts/` folder
 - **Publications**: Update `_bibliography/papers.bib`
 
