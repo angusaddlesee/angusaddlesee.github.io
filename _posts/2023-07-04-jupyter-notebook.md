@@ -9,37 +9,24 @@ giscus_comments: true
 related_posts: false
 ---
 
-To include a jupyter notebook in a post, you can use the following code:
+**Note**: Jupyter notebook embedding is disabled for GitHub Pages compatibility.
 
-{% raw %}
+To include a jupyter notebook in a post, you would normally use the [Jekyll Jupyter Notebook plugin](https://github.com/red-data-tools/jekyll-jupyter-notebook), but this isn't supported by GitHub Pages.
 
-```liquid
-{::nomarkdown}
-{% assign jupyter_path = 'assets/jupyter/blog.ipynb' | relative_url %}
-{% capture notebook_exists %}{% file_exists assets/jupyter/blog.ipynb %}{% endcapture %}
-{% if notebook_exists == 'true' %}
-  {% jupyter_notebook jupyter_path %}
-{% else %}
-  <p>Sorry, the notebook you are looking for does not exist.</p>
-{% endif %}
-{:/nomarkdown}
-```
+## GitHub Pages Alternative
 
-{% endraw %}
+For GitHub Pages deployment, you have a few options:
 
-Let's break it down: this is possible thanks to [Jekyll Jupyter Notebook plugin](https://github.com/red-data-tools/jekyll-jupyter-notebook) that allows you to embed jupyter notebooks in your posts. It basically calls [`jupyter nbconvert --to html`](https://nbconvert.readthedocs.io/en/latest/usage.html#convert-html) to convert the notebook to an html page and then includes it in the post. Since [Kramdown](https://jekyllrb.com/docs/configuration/markdown/) is the default Markdown renderer for Jekyll, we need to surround the call to the plugin with the [::nomarkdown](https://kramdown.gettalong.org/syntax.html#extensions) tag so that it stops processing this part with Kramdown and outputs the content as-is.
+1. **Convert to HTML manually**: Use `jupyter nbconvert --to html notebook.ipynb` and include the HTML directly
+2. **Use GitHub's notebook viewer**: Link directly to notebooks in your repository 
+3. **Use nbviewer**: Link to notebooks via [nbviewer.org](https://nbviewer.org/)
+4. **Export as markdown**: Convert notebooks to markdown and include as regular posts
 
-The plugin takes as input the path to the notebook, but it assumes the file exists. If you want to check if the file exists before calling the plugin, you can use the `file_exists` filter. This avoids getting a 404 error from the plugin and ending up displaying the main page inside of it instead. If the file does not exist, you can output a message to the user. The code displayed above outputs the following:
+## Example
 
-{::nomarkdown}
-{% assign jupyter_path = "assets/jupyter/blog.ipynb" | relative_url %}
-{% capture notebook_exists %}{% file_exists assets/jupyter/blog.ipynb %}{% endcapture %}
-{% if notebook_exists == "true" %}
-{% jupyter_notebook jupyter_path %}
-{% else %}
+Instead of embedding the notebook directly, you could link to it:
 
-<p>Sorry, the notebook you are looking for does not exist.</p>
-{% endif %}
-{:/nomarkdown}
+- [View notebook on GitHub](https://github.com/yourusername/yourrepo/blob/main/assets/jupyter/blog.ipynb)
+- [View on nbviewer](https://nbviewer.org/github/yourusername/yourrepo/blob/main/assets/jupyter/blog.ipynb)
 
-Note that the jupyter notebook supports both light and dark themes.
+This approach ensures compatibility with GitHub Pages while still allowing readers to access your Jupyter notebooks.
