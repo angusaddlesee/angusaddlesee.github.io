@@ -21,8 +21,7 @@ layout: default
   {% if page.related_publications %}
     <h2>References</h2>
     <div class="publications">
-      <!-- Bibliography disabled for GitHub Pages compatibility -->
-      <p><em>Publications would be displayed here if jekyll-scholar was available</em></p>
+      {% bibliography --cited_in_order %}
     </div>
   {% endif %}
 

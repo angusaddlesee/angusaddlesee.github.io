@@ -5,7 +5,7 @@ description: Intelligent model selection for conversational AI systems
 img: assets/img/12.jpg
 importance: 1
 category: work
-related_publications: false
+related_publications: true
 ---
 
 At Amazon Alexa, I design and implement systems that intelligently choose the right language model for each conversational task. This work directly impacts the responsiveness and accessibility of Alexa for millions of users worldwide.
