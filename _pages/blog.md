@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+description: Updates, 2-Minute Papers, and notes on conversational AI research and deployments.
 nav: true
 nav_order: 1
 pagination:
@@ -17,6 +18,8 @@ pagination:
 ---
 
 <div class="post">
+
+_Last updated: March 2025_
 
 {% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}

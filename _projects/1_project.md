@@ -1,25 +1,25 @@
 ---
 layout: page
 title: LLM Routing & Optimisation at Amazon Alexa
-description: Intelligent model selection for conversational AI systems
+description: Intelligent model selection and latency optimisation for Alexa’s large-scale conversational systems.
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-At Amazon Alexa, I design and implement systems that intelligently choose the right language model for each conversational task. This work directly impacts the responsiveness and accessibility of Alexa for millions of users worldwide.
+## Problem
 
-## Key Contributions
+Alexa needs to answer millions of diverse questions with the right balance of accuracy, latency, and cost. Routing every request to the largest model is slow and expensive, while lighter models can miss nuance or accessibility needs.
 
-**Intelligent Model Selection**: Developed routing algorithms that balance accuracy, latency, and computational cost to select optimal models for different types of user queries and contexts.
+## Approach
 
-**Performance Optimisation**: Created systems that reduce response times while maintaining high-quality conversational experiences, making Alexa more accessible to users with varying needs.
-
-**Scalable Architecture**: Built infrastructure that handles millions of routing decisions daily, ensuring reliable performance across diverse user interactions.
+- Designed routing algorithms that assess intent, context, and risk to select the best-fit LLM for each interaction.
+- Built evaluation harnesses that continuously benchmark accuracy versus latency to tune routing policies.
+- Instrumented observability so researchers and engineers can trace decisions, iterate quickly, and ship safer models.
 
 ## Impact
 
-This work directly influences Alexa's ability to provide fast, accurate responses while managing computational resources efficiently. The systems I've developed help make voice assistants more accessible and responsive for users worldwide.
-
-The research combines theoretical advances in model routing with practical engineering challenges of deploying AI systems at scale, bridging the gap between academic research and real-world applications.
+- Reduced response times while preserving answer quality for high-traffic domains.
+- Lowered compute costs and enabled rapid experimentation with new models without regressing user experience.
+- Shipped routing improvements that make Alexa more reliable and inclusive for millions of daily users.

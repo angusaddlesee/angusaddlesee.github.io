@@ -1,8 +1,9 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
 subtitle: <a href='https://www.addlesee.co.uk'>Applied Scientist at Amazon Alexa</a>
+description: Angus Addlesee is an Applied Scientist specialising in conversational AI, LLM routing, and accessibility-driven deployments.
 
 profile:
   align: right
@@ -27,9 +28,39 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I build conversational AI that benefits everyone.
+# Angus Addlesee, PhD
 
-My work focuses on making large language model systems fast, accessible, and human-centred — from hospital memory clinics to global voice assistants.
+## Applied Scientist | Conversational AI · LLM Routing · Accessibility
+
+I build conversational AI that is fast, reliable, and inclusive — from hospital deployments to large-scale systems at Amazon Alexa.
+
+<div class="btn-group mb-4" role="group" aria-label="Calls to action">
+  <a class="btn btn-primary" href="/projects/">Explore my work</a>
+  <a class="btn btn-secondary" href="/publications/">View publications</a>
+  <a class="btn btn-outline-primary" href="mailto:angus@addleseehq.com">Contact me</a>
+</div>
+
+## Latest Highlights
+
+- Socially Pertinent Robots in Gerontological Healthcare — Latest journal paper
+- Multi-party Conversational AI in Memory Clinics — Conference publication
+- Repairing Interrupted Questions in Voice Assistants — Amazon Science article
+- 🎥 A Multi-party Conversational Social Robot Using LLMs — Video demo
+
+## Snapshot
+
+- **Current:** Applied Scientist, Amazon Alexa (LLM routing & optimisation)
+- **PhD:** Artificial Intelligence (Conversational AI & Accessibility)
+- **Public Sector:** NHS & Scottish Government ML systems
+- **Talks:** 50+ invited talks (Harvard, USC, KTH, BBC, NatWest)
+
+## Featured Project — Hospital Memory Clinic Conversational Robot
+
+Deployed a multi-party conversational robot using LLMs in a real hospital memory clinic, integrating accessibility-driven dialogue systems from my PhD research.
+
+## About
+
+I build conversational AI that benefits everyone. My work focuses on making large language model systems fast, accessible, and human-centred — from hospital memory clinics to global voice assistants.
 
 I'm currently an Applied Scientist at **Amazon Alexa**, where I specialise in LLM routing and optimisation. I design systems that intelligently choose the right model for each task, balancing accuracy, latency, and cost to create faster, more reliable experiences for millions of users. This work directly influences Alexa's responsiveness and accessibility.
 
@@ -37,6 +68,16 @@ Before joining Alexa, I worked as a Research Associate in a hospital environment
 
 Earlier in my career, I delivered machine-learning pipelines for the NHS and Scottish Government, applying data-driven AI to real public-sector problems. Across roles, I've bridged research and real-world deployment with a consistent focus on usability, inclusion, and technical rigour.
 
-I have delivered over **50 invited talks internationally** (Harvard, USC, KTH, BBC, NatWest), co-founded the European and African Conversational AI Summits, and organised multiple academic workshops. I've supervised 60+ students and interns, producing published papers and guiding early-career researchers in human-centred AI.
-
 **Specialities:** LLM Routing & Optimisation · Conversational AI · Large Language Models · Accessibility · Multimodal Interaction · Machine Learning · Real-Time Systems · Speech & Dialogue · Human–AI Interaction · Responsible AI · Computer Vision
+
+## Organising & Speaking
+
+Co-founder of the European and African Conversational AI Summits. Organiser of workshops and conferences including SIGdial, ICMI, SLiDInG. Invited speaker at Harvard, USC, KTH, BBC, NatWest, Amazon, and more.
+
+## 2-Minute Papers
+
+Short videos and articles explaining my research chronologically — what worked, what didn’t, and what mattered.
+
+## Connect
+
+Connect: [LinkedIn](https://www.linkedin.com/in/angusaddlesee/) · [Google Scholar](https://scholar.google.com/citations?user=6n2P4OEAAAAJ) · [Medium](https://medium.com/@addlesee) · [YouTube](https://www.youtube.com/channel/UCWT5QO09NnvGkikoQW4aYug) · [Email](mailto:angus@addleseehq.com)
