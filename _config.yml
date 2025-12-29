@@ -11,6 +11,7 @@ contact_note: >
 description: "Applied Scientist at Amazon Alexa specialising in LLM routing and optimisation. Building conversational AI that benefits everyone with a focus on accessibility and human-centred design."
 #  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
+  Connect: <a href="https://www.linkedin.com/in/angusaddlesee/" target="_blank">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=6n2P4OEAAAAJ" target="_blank">Google Scholar</a> · <a href="https://medium.com/@addlesee" target="_blank">Medium</a> · <a href="https://www.youtube.com/channel/UCWT5QO09NnvGkikoQW4aYug" target="_blank">YouTube</a> · <a href="mailto:angus@addleseehq.com">Email</a>.<br>
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: conversational-ai, llm-routing, accessibility, human-ai-interaction, alexa, machine-learning, nlp, dialogue-systems

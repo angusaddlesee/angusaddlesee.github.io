@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Case studies in conversational AI, robotics, and accessibility deployments.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
