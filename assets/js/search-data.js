@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-home",
-    title: "Home",
+    id: "nav-",
+    title: "",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -92,6 +92,28 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-llm-routing-at-scale-lessons-from-amazon-alexa",
+        
+          title: "LLM Routing at Scale: Lessons from Amazon Alexa",
+        
+        description: "How intelligent model selection makes voice assistants faster and more accessible",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/llm-routing-at-scale/";
+          
+        },
+      },{id: "post-designing-ai-for-cognitive-diversity-lessons-from-hospital-deployments",
+        
+          title: "Designing AI for Cognitive Diversity: Lessons from Hospital Deployments",
+        
+        description: "What I learned building conversational AI for people with dementia",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/accessible-ai-design/";
           
         },
       },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
@@ -440,7 +462,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-co-founded-the-european-and-african-conversational-ai-summits-bringing-together-researchers-and-practitioners-to-advance-the-field",
+            },},{id: "news-published-on-amazon-science-repairing-interrupted-questions-in-voice-assistants-improving-conversation-flow-when-users-change-their-minds-mid-sentence",
+          title: 'Published on Amazon Science: “Repairing Interrupted Questions in Voice Assistants” - improving conversation...',
+          description: "",
+          section: "News",},{id: "news-co-founded-the-european-and-african-conversational-ai-summits-bringing-together-researchers-and-practitioners-to-advance-the-field",
           title: 'Co-founded the European and African Conversational AI Summits - bringing together researchers and...',
           description: "",
           section: "News",},{id: "news-speaking-at-international-conferences",
@@ -448,12 +473,18 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-excited-to-be-working-on-llm-routing-and-optimisation-at-amazon-alexa-making-voice-assistants-faster-and-more-accessible-for-millions-of-users-worldwide",
+            },},{id: "news-presented-multi-party-conversational-ai-in-memory-clinics-at-the-international-conference-on-multimodal-interaction-icmi-2024",
+          title: 'Presented “Multi-party Conversational AI in Memory Clinics” at the International Conference on Multimodal...',
+          description: "",
+          section: "News",},{id: "news-excited-to-be-working-on-llm-routing-and-optimisation-at-amazon-alexa-making-voice-assistants-faster-and-more-accessible-for-millions-of-users-worldwide",
           title: 'Excited to be working on LLM routing and optimisation at Amazon Alexa, making...',
+          description: "",
+          section: "News",},{id: "news-new-journal-paper-published-socially-pertinent-robots-in-gerontological-healthcare-exploring-how-conversational-ai-can-support-elderly-care-in-clinical-settings",
+          title: 'New journal paper published: “Socially Pertinent Robots in Gerontological Healthcare” - exploring how...',
           description: "",
           section: "News",},{id: "projects-llm-routing-amp-optimisation-at-amazon-alexa",
           title: 'LLM Routing &amp;amp; Optimisation at Amazon Alexa',
-          description: "Intelligent model selection and latency optimisation for Alexa’s large-scale conversational systems.",
+          description: "Intelligent model selection and latency optimisation for Alexa&#39;s large-scale conversational systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-spring-project-hospital-ai-systems",
@@ -530,6 +561,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://twitter.com/Addlesee_AI", "_blank");
+        },
+      },{
+        id: 'social-bluesky_username',
+        title: 'Bluesky_username',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
         },
       },{
         id: 'social-youtube',
