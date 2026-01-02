@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Home
+title: about
 permalink: /
 subtitle: <a href='https://www.addlesee.co.uk'>Applied Scientist at Amazon Alexa · Conversational AI & LLM Systems</a>
 description: Angus Addlesee is an Applied Scientist specialising in conversational AI, LLM routing, and accessibility-driven deployments.
