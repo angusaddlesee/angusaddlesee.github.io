@@ -1,26 +1,16 @@
 ---
 layout: page
 title: LLM Routing & Optimisation at Amazon Alexa
-description: Intelligent model selection for conversational AI systems
+description: Intelligent model selection and latency optimisation for Alexa's large-scale conversational systems.
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
----
-layout: page
-title: LLM Routing & Optimisation at Amazon Alexa
-description: Intelligent model selection for conversational AI systems
-img: assets/img/12.jpg
-importance: 1
-category: work
-related_publications: true
----
+**Problem:** Alexa needs to answer millions of diverse questions with the right balance of accuracy, latency, and cost. Routing every request to the largest model is slow and expensive, while lighter models can miss nuance or accessibility needs.
 
-**Problem:** Voice assistants need to balance response quality, speed, and computational cost across millions of diverse user queries daily. Using the same large model for all tasks is inefficient, while using small models reduces quality.
-
-**Approach:** Developed intelligent routing algorithms that dynamically select optimal language models based on query complexity, user context, and performance requirements. Built scalable infrastructure handling millions of routing decisions with real-time performance monitoring.
+**Approach:** Designed routing algorithms that assess intent, context, and risk to select the best-fit LLM for each interaction. Built evaluation harnesses that continuously benchmark accuracy versus latency to tune routing policies. Instrumented observability so researchers and engineers can trace decisions, iterate quickly, and ship safer models.
 
 **Impact:** Deployed systems serving millions of Alexa users worldwide, reducing response latency by 30% while maintaining conversation quality. Improved accessibility for users with varying needs and enabled more efficient resource utilization across Amazon's infrastructure.
 

@@ -1,24 +1,14 @@
 ---
 layout: page
-title: SPRING Project - Hospital AI Systems
-description: Conversational AI and robotics for dementia care
+title: SPRING Project — Hospital AI Systems
+description: Conversational robotics to support clinicians and patients with dementia.
 img: assets/img/3.jpg
 importance: 2
 category: research
 giscus_comments: true
 ---
 
----
-layout: page
-title: SPRING Project - Hospital AI Systems
-description: Conversational AI and robotics for dementia care
-img: assets/img/3.jpg
-importance: 2
-category: research
-giscus_comments: true
----
-
-**Problem:** Patients with dementia and cognitive impairments face significant barriers when interacting with traditional technology in healthcare settings. Existing AI systems weren't designed for cognitive diversity, limiting their effectiveness in clinical environments.
+**Problem:** Memory clinics need technology that can assist clinicians without overwhelming patients with cognitive impairments. Existing conversational systems rarely account for multi-party hospital dynamics or accessibility constraints.
 
 **Approach:** Developed accessible dialogue systems specifically tailored to cognitive abilities and communication patterns of dementia patients. Integrated conversational AI with robotics, working directly in hospital environments to understand real-world constraints and user needs.
 
