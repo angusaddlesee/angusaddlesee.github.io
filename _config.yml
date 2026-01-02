@@ -2,17 +2,18 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: "Angus Addlesee"
+title: "Angus Addlesee | Applied Scientist | Conversational AI & LLM Routing"
 first_name: "Angus"
 middle_name:
 last_name: "Addlesee"
 contact_note: >
   Feel free to reach out via email - I'm always open to connecting with researchers, engineers, and recruiters working on LLM systems, conversational AI, accessibility, or applied AI innovation.
-description: "Applied Scientist at Amazon Alexa specialising in LLM routing and optimisation. Building conversational AI that benefits everyone with a focus on accessibility and human-centred design."
+description: "Applied Scientist at Amazon Alexa specialising in LLM routing, conversational AI, and accessibility. Research, publications, and projects in human-centred AI systems."
 #  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  <br>Connect: <a href="https://linkedin.com/in/angusaddlesee" target="_blank">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=6n2P4OEAAAAJ" target="_blank">Google Scholar</a> · <a href="https://medium.com/@addlesee" target="_blank">Medium</a> · <a href="https://bsky.app/profile/addlesee.bsky.social" target="_blank">Bluesky</a> · <a href="https://youtube.com/@UCWT5QO09NnvGkikoQW4aYug" target="_blank">YouTube</a> · <a href="mailto:angus@addleseeHQ.com">Email</a>
 keywords: conversational-ai, llm-routing, accessibility, human-ai-interaction, alexa, machine-learning, nlp, dialogue-systems
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)

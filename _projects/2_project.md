@@ -8,22 +8,28 @@ category: research
 giscus_comments: true
 ---
 
-As a Research Associate, I worked on the EU's SPRING project, integrating conversational AI and robotics to support clinicians and patients with dementia in hospital environments.
+---
+layout: page
+title: SPRING Project - Hospital AI Systems
+description: Conversational AI and robotics for dementia care
+img: assets/img/3.jpg
+importance: 2
+category: research
+giscus_comments: true
+---
 
-## Project Overview
+**Problem:** Patients with dementia and cognitive impairments face significant barriers when interacting with traditional technology in healthcare settings. Existing AI systems weren't designed for cognitive diversity, limiting their effectiveness in clinical environments.
 
-The SPRING project focused on developing accessible dialogue systems specifically designed for people with cognitive impairments. This work required deep understanding of both technical AI challenges and the human factors involved in healthcare applications.
+**Approach:** Developed accessible dialogue systems specifically tailored to cognitive abilities and communication patterns of dementia patients. Integrated conversational AI with robotics, working directly in hospital environments to understand real-world constraints and user needs.
 
-## Key Contributions
+**Impact:** Successfully deployed multi-party conversational robot in real hospital memory clinic. Research contributed to EU SPRING project outcomes and informed accessibility guidelines for healthcare AI. Published findings influenced design of inclusive AI systems for vulnerable populations.
 
-**Accessible Dialogue Design**: Developed conversation systems that adapt to the cognitive abilities and communication patterns of patients with dementia, ensuring inclusive and effective interactions.
+## Technical Details
 
-**Clinical Integration**: Worked directly in hospital environments to understand real-world constraints and requirements, ensuring that AI systems could be practically deployed in healthcare settings.
+**Accessible Dialogue Design**: Conversation systems that adapt to cognitive abilities and communication patterns of patients with dementia, ensuring inclusive and effective interactions.
+
+**Clinical Integration**: Direct deployment in hospital environments with real-world constraint analysis, ensuring AI systems could be practically used in healthcare settings.
 
 **Human-Centred Approach**: Prioritised usability and inclusion in system design, focusing on how technology can genuinely support both patients and healthcare professionals.
 
-## Impact
-
-This research contributed to understanding how conversational AI can be designed to be truly accessible and beneficial for vulnerable populations. The work bridged academic research with real-world healthcare applications, demonstrating the importance of human-centred AI design.
-
-The project highlighted the critical need for AI systems that consider cognitive diversity and accessibility from the ground up, rather than as an afterthought.
+This research demonstrated the critical importance of designing AI systems that consider cognitive diversity and accessibility from the ground up, rather than as an afterthought.

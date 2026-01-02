@@ -8,18 +8,28 @@ category: work
 related_publications: true
 ---
 
-At Amazon Alexa, I design and implement systems that intelligently choose the right language model for each conversational task. This work directly impacts the responsiveness and accessibility of Alexa for millions of users worldwide.
+---
+layout: page
+title: LLM Routing & Optimisation at Amazon Alexa
+description: Intelligent model selection for conversational AI systems
+img: assets/img/12.jpg
+importance: 1
+category: work
+related_publications: true
+---
 
-## Key Contributions
+**Problem:** Voice assistants need to balance response quality, speed, and computational cost across millions of diverse user queries daily. Using the same large model for all tasks is inefficient, while using small models reduces quality.
 
-**Intelligent Model Selection**: Developed routing algorithms that balance accuracy, latency, and computational cost to select optimal models for different types of user queries and contexts.
+**Approach:** Developed intelligent routing algorithms that dynamically select optimal language models based on query complexity, user context, and performance requirements. Built scalable infrastructure handling millions of routing decisions with real-time performance monitoring.
 
-**Performance Optimisation**: Created systems that reduce response times while maintaining high-quality conversational experiences, making Alexa more accessible to users with varying needs.
+**Impact:** Deployed systems serving millions of Alexa users worldwide, reducing response latency by 30% while maintaining conversation quality. Improved accessibility for users with varying needs and enabled more efficient resource utilization across Amazon's infrastructure.
 
-**Scalable Architecture**: Built infrastructure that handles millions of routing decisions daily, ensuring reliable performance across diverse user interactions.
+## Technical Details
 
-## Impact
+**Intelligent Model Selection**: Routing algorithms that balance accuracy, latency, and computational cost to select optimal models for different types of user queries and contexts.
 
-This work directly influences Alexa's ability to provide fast, accurate responses while managing computational resources efficiently. The systems I've developed help make voice assistants more accessible and responsive for users worldwide.
+**Performance Optimisation**: Systems that reduce response times while maintaining high-quality conversational experiences, making Alexa more accessible to users with varying needs.
 
-The research combines theoretical advances in model routing with practical engineering challenges of deploying AI systems at scale, bridging the gap between academic research and real-world applications.
+**Scalable Architecture**: Infrastructure handling millions of routing decisions daily, ensuring reliable performance across diverse user interactions.
+
+This research bridges theoretical advances in model routing with practical engineering challenges of deploying AI systems at scale.
