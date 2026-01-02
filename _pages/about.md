@@ -40,18 +40,18 @@ I build conversational AI that is **fast, reliable, and inclusive** — from rea
 
 ## Latest Highlights
 
-- **Socially Pertinent Robots in Gerontological Healthcare** — latest journal paper  
-- **Multi-party Conversational AI in Memory Clinics** — conference publication  
-- **Repairing Interrupted Questions in Voice Assistants** — Amazon Science article  
+- **Socially Pertinent Robots in Gerontological Healthcare** — latest journal paper
+- **Multi-party Conversational AI in Memory Clinics** — conference publication
+- **Repairing Interrupted Questions in Voice Assistants** — Amazon Science article
 - **A Multi-party Conversational Social Robot Using LLMs** — [video demo](https://www.youtube.com/channel/UCWT5QO09NnvGkikoQW4aYug)
 
 ---
 
 ## Snapshot
 
-- **Current:** Applied Scientist, Amazon Alexa (**LLM routing & optimisation**)  
-- **PhD:** Artificial Intelligence (**Conversational AI & Accessibility**)  
-- **Public sector:** NHS & Scottish Government ML systems  
+- **Current:** Applied Scientist, Amazon Alexa (**LLM routing & optimisation**)
+- **PhD:** Artificial Intelligence (**Conversational AI & Accessibility**)
+- **Public sector:** NHS & Scottish Government ML systems
 - **Speaking:** **50+ invited talks** (Harvard, USC, KTH, BBC, NatWest)
 
 ---
