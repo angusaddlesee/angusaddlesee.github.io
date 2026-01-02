@@ -29,6 +29,7 @@ limit: 3 # leave blank to include all the blog posts
 ---
 
 # Angus Addlesee, PhD
+
 ## Applied Scientist | Conversational AI · LLM Routing · Accessibility
 
 I build conversational AI that is fast, reliable, and inclusive — from hospital deployments to large-scale systems at Amazon Alexa.
@@ -51,6 +52,7 @@ I build conversational AI that is fast, reliable, and inclusive — from hospita
 <<<<<<< HEAD
 My work focuses on making **large language model (LLM) systems fast, accessible, and human-centred** — from real-world hospital deployments to global voice assistants used at scale.
 =======
+
 ## Applied Scientist | Conversational AI · LLM Routing · Accessibility
 
 I build conversational AI that is fast, reliable, and inclusive — from hospital deployments to large-scale systems at Amazon Alexa.
@@ -82,7 +84,8 @@ Deployed a multi-party conversational robot using LLMs in a real hospital memory
 ## About
 
 I build conversational AI that benefits everyone. My work focuses on making large language model systems fast, accessible, and human-centred — from hospital memory clinics to global voice assistants.
->>>>>>> bcbd11d5f8a41f098b603d84a28da16fac47b541
+
+> > > > > > > bcbd11d5f8a41f098b603d84a28da16fac47b541
 
 I’m currently an **Applied Scientist at Amazon Alexa**, where I specialise in **LLM routing and optimisation**. I design systems that intelligently select the right model for each task, balancing **accuracy, latency, and cost** to deliver faster, more reliable conversational experiences. This work directly impacts Alexa’s responsiveness, scalability, and accessibility for millions of users.
 
@@ -93,7 +96,7 @@ Earlier in my career, I designed and delivered **machine-learning pipelines** fo
 <<<<<<< HEAD
 Beyond research and engineering, I’m actively involved in the AI community. I’ve delivered **50+ invited talks internationally** (including Harvard, USC, KTH, BBC, and NatWest), co-founded the **European and African Conversational AI Summits**, and organised multiple academic workshops and conferences. I’ve also supervised **60+ students and interns**, contributing to published research and mentoring early-career researchers in **human-centred and responsible AI**.
 
-**Specialities:** 
+**Specialities:**
 LLM Routing & Optimisation · Conversational AI · Large Language Models · Accessibility · Multimodal Interaction · Machine Learning · Real-Time Systems · Speech & Dialogue · Human–AI Interaction · Responsible AI · Computer Vision
 
 ---
@@ -131,8 +134,8 @@ Short videos and articles explaining my research chronologically — what worked
 **Location:** Cambridge, UK  
 **Connect:** [LinkedIn](https://linkedin.com/in/angusaddlesee) · [Google Scholar](https://scholar.google.com/citations?user=6n2P4OEAAAAJ) · [Medium](https://medium.com/@addlesee) · [Bluesky](https://bsky.app/profile/addlesee.bsky.social) · [YouTube](https://youtube.com/@UCWT5QO09NnvGkikoQW4aYug)
 
-*Last updated: December 2024*
-=======
+# _Last updated: December 2024_
+
 **Specialities:** LLM Routing & Optimisation · Conversational AI · Large Language Models · Accessibility · Multimodal Interaction · Machine Learning · Real-Time Systems · Speech & Dialogue · Human–AI Interaction · Responsible AI · Computer Vision
 
 ## Organising & Speaking
@@ -146,4 +149,5 @@ Short videos and articles explaining my research chronologically — what worked
 ## Connect
 
 Connect: [LinkedIn](https://www.linkedin.com/in/angusaddlesee/) · [Google Scholar](https://scholar.google.com/citations?user=6n2P4OEAAAAJ) · [Medium](https://medium.com/@addlesee) · [YouTube](https://www.youtube.com/channel/UCWT5QO09NnvGkikoQW4aYug) · [Email](mailto:angus@addleseehq.com)
->>>>>>> bcbd11d5f8a41f098b603d84a28da16fac47b541
+
+> > > > > > > bcbd11d5f8a41f098b603d84a28da16fac47b541

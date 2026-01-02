@@ -18,13 +18,14 @@ Voice assistants face a fundamental trade-off: larger models provide better resp
 We developed routing algorithms that dynamically choose optimal language models based on:
 
 - **Query complexity**: Simple requests route to fast, lightweight models
-- **User context**: Conversation history and user preferences inform model selection  
+- **User context**: Conversation history and user preferences inform model selection
 - **Performance requirements**: Latency-sensitive interactions prioritize speed
 - **Resource constraints**: Real-time load balancing across our infrastructure
 
 ## Impact
 
 The results speak for themselves:
+
 - 30% reduction in average response latency
 - Maintained conversation quality across all interaction types
 - Improved accessibility for users with varying needs
@@ -38,4 +39,4 @@ The results speak for themselves:
 
 This work demonstrates how thoughtful system design can make AI more accessible and efficient for everyone.
 
-*This post reflects my personal views and experiences, not official Amazon positions.*
+_This post reflects my personal views and experiences, not official Amazon positions._

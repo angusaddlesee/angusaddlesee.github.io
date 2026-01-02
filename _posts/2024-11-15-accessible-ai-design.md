@@ -14,8 +14,9 @@ During my PhD and work on the EU SPRING project, I had the privilege of deployin
 Traditional AI systems assume users have consistent cognitive abilities and communication patterns. But in healthcare settings—particularly with dementia patients—this assumption breaks down completely.
 
 We needed systems that could:
+
 - Adapt to varying attention spans and memory capabilities
-- Handle interrupted or incomplete utterances gracefully  
+- Handle interrupted or incomplete utterances gracefully
 - Provide clear, simple responses without being condescending
 - Support multi-party conversations with patients, companions, and clinicians
 
@@ -41,7 +42,7 @@ Working in a hospital environment revealed constraints that lab studies miss:
 These principles aren't just relevant for healthcare AI. They apply to any system designed for diverse users:
 
 - Voice assistants for elderly users
-- Educational AI for learning differences  
+- Educational AI for learning differences
 - Customer service bots for stressed users
 - Any AI system that claims to be "accessible"
 
@@ -51,4 +52,4 @@ Accessibility isn't a feature you add at the end—it's a design philosophy that
 
 The future of conversational AI isn't just about making it smarter—it's about making it more human-centered.
 
-*Based on research conducted as part of the EU SPRING project and my PhD at Heriot-Watt University.*
+_Based on research conducted as part of the EU SPRING project and my PhD at Heriot-Watt University._
