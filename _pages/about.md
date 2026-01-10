@@ -34,7 +34,13 @@ latest_posts:
 
 I build conversational AI that is **fast, reliable, and inclusive** — from real-world hospital deployments to large-scale systems at Amazon Alexa.
 
-[Explore my work](/projects/) · [View publications](/publications/) · [Contact me](#contact)
+<div class="hero-cta-buttons">
+  <a href="/publications/" class="btn btn-primary">View Publications</a>
+  <a href="mailto:angus@addleseehq.com" class="btn btn-secondary">Contact Me</a>
+  <a href="https://scholar.google.com/citations?user=6n2P4OEAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn-link">
+    <i class="ai ai-google-scholar"></i> Google Scholar
+  </a>
+</div>
 
 ---
 
