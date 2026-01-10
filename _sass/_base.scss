@@ -233,11 +233,11 @@ ul.task-list input[type="checkbox"] {
 // Hero Section Enhancements
 .post-header {
   margin-bottom: 2rem;
-  
+
   .post-title {
     margin-bottom: 0.5rem;
   }
-  
+
   .desc {
     margin-bottom: 1rem;
   }
@@ -250,7 +250,7 @@ ul.task-list input[type="checkbox"] {
   flex-wrap: wrap !important;
   justify-content: center !important;
   align-items: center !important;
-  
+
   a.btn {
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
@@ -261,12 +261,12 @@ ul.task-list input[type="checkbox"] {
     gap: 0.5rem;
     transition: all 0.3s ease;
     white-space: nowrap;
-    
+
     &.btn-primary {
       background-color: var(--global-theme-color);
       color: white;
       border: 2px solid var(--global-theme-color);
-      
+
       &:hover {
         background-color: var(--global-hover-color);
         border-color: var(--global-hover-color);
@@ -274,12 +274,12 @@ ul.task-list input[type="checkbox"] {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
     }
-    
+
     &.btn-secondary {
       background-color: transparent;
       color: var(--global-theme-color);
       border: 2px solid var(--global-theme-color);
-      
+
       &:hover {
         background-color: var(--global-theme-color);
         color: white;
@@ -287,12 +287,12 @@ ul.task-list input[type="checkbox"] {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
     }
-    
+
     &.btn-link {
       background-color: transparent;
       color: var(--global-text-color);
       border: 1px solid var(--global-divider-color);
-      
+
       &:hover {
         color: var(--global-theme-color);
         border-color: var(--global-theme-color);
@@ -316,7 +316,7 @@ ul.task-list input[type="checkbox"] {
   .hero-cta-buttons {
     flex-direction: column;
     align-items: stretch !important;
-    
+
     a.btn {
       width: 100%;
       justify-content: center;
@@ -324,7 +324,7 @@ ul.task-list input[type="checkbox"] {
       padding: 0.65rem 1.25rem;
     }
   }
-  
+
   .post-header {
     .post-title {
       font-size: 1.75rem;
