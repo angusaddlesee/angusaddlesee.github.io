@@ -85,6 +85,7 @@ I'm actively involved in the AI research community as co-founder of the **Europe
 My research spans conversational AI, accessibility, LLM systems, and human-robot interaction. Selected publications appear below, with the full list available on my [publications page](/publications/) and [Google Scholar profile](https://scholar.google.com/citations?user=6n2P4OEAAAAJ).
 
 **Recent Highlights:**
+
 - **Socially Pertinent Robots in Gerontological Healthcare** — latest journal paper
 - **Multi-party Conversations Between Patients, Their Companions, and a Social Robot in a Hospital Memory Clinic** — EACL Best Demo Award Winner
 - **Repairing Interrupted Questions Makes Voice Assistants More Accessible** — Amazon Science article
@@ -133,6 +134,7 @@ Designing intelligent LLM routing systems that balance accuracy, latency, and co
 I'm always interested in connecting with researchers, practitioners, and organisations working on conversational AI, LLM systems, and accessibility.
 
 **Professional Networks:**
+
 - [**LinkedIn**](https://www.linkedin.com/in/angusaddlesee/) — Professional updates and networking
 - [**Google Scholar**](https://scholar.google.com/citations?user=6n2P4OEAAAAJ) — Research publications and citations
 - [**Medium**](https://medium.com/@addlesee) — Technical articles and insights
