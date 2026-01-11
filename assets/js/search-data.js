@@ -487,19 +487,19 @@ ninja.data = [{
           description: "Intelligent model selection and latency optimisation for Alexa&#39;s large-scale conversational systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-spring-project-hospital-ai-systems",
-          title: 'SPRING Project — Hospital AI Systems',
-          description: "Conversational robotics to support clinicians and patients with dementia.",
+            },},{id: "projects-voice-assistants-for-people-with-dementia",
+          title: 'Voice Assistants for People with Dementia',
+          description: "Accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-hospital-memory-clinic-conversational-robot",
-          title: 'Hospital Memory Clinic Conversational Robot',
-          description: "Multi-party social robot using LLMs to support dementia assessments.",
+            },},{id: "projects-spring-hospital-memory-clinic-robot",
+          title: 'SPRING Hospital Memory Clinic Robot',
+          description: "Multi-party conversational robot using LLMs deployed in a real hospital memory clinic.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-repairing-interrupted-questions-in-voice-assistants",
-          title: 'Repairing Interrupted Questions in Voice Assistants',
-          description: "Making assistants resilient to mid-utterance corrections and incomplete questions.",
+            },},{id: "projects-voice-assistants-for-visually-impaired-people-in-the-kitchen",
+          title: 'Voice Assistants for Visually Impaired People in the Kitchen',
+          description: "Accessible kitchen assistance systems addressing malnutrition challenges for visually impaired users.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-grounding-llms-to-in-prompt-instructions",
