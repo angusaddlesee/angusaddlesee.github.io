@@ -556,18 +556,11 @@ ninja.data = [{
           window.open("https://medium.com/@addlesee", "_blank");
         },
       },{
-        id: 'social-x',
-        title: 'X',
+        id: 'social-bluesky',
+        title: 'Bluesky',
         section: 'Socials',
         handler: () => {
-          window.open("https://twitter.com/Addlesee_AI", "_blank");
-        },
-      },{
-        id: 'social-bluesky_username',
-        title: 'Bluesky_username',
-        section: 'Socials',
-        handler: () => {
-          window.open("", "_blank");
+          window.open("https://bsky.app/profile/addlesee.bsky.social", "_blank");
         },
       },{
         id: 'social-youtube',
@@ -575,6 +568,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://youtube.com/@UCWT5QO09NnvGkikoQW4aYug", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/Addlesee_AI", "_blank");
         },
       },{
         id: 'social-github',
