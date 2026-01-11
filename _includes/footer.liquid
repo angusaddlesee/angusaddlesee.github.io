@@ -9,6 +9,9 @@
   {% if site.last_updated %}
     Last updated: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
+  <div class="footer-social-icons" style="margin-top: 10px;">
+    {% include social.liquid %}
+  </div>
 {% endcapture %}
 
 {% if site.footer_fixed %}

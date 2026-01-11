@@ -127,15 +127,75 @@ Designing intelligent LLM routing systems that balance accuracy, latency, and co
 
 ## Connect {#connect}
 
+<div class="connect-section">
+
 I'm always interested in connecting with researchers, practitioners, and organisations working on conversational AI, LLM systems, and accessibility.
 
-**Professional Networks:**
+<div class="social-platforms">
 
-- [**LinkedIn**](https://www.linkedin.com/in/angusaddlesee/) — Professional updates and networking
-- [**Google Scholar**](https://scholar.google.com/citations?user=6n2P4OEAAAAJ) — Research publications and citations
-- [**Medium**](https://medium.com/@addlesee) — Technical articles and insights
-- [**Bluesky**](https://bsky.app/profile/addlesee.bsky.social) — Research discussions and updates
-- [**YouTube**](https://www.youtube.com/channel/UCWT5QO09NnvGkikoQW4aYug) — Research demos and presentations
+<div class="platform-card">
+  <div class="platform-icon">
+    <i class="fa-brands fa-linkedin"></i>
+  </div>
+  <div class="platform-content">
+    <h3><a href="https://www.linkedin.com/in/angusaddlesee/" target="_blank" rel="noopener noreferrer">LinkedIn</a></h3>
+    <p>Professional updates, networking, and career opportunities</p>
+  </div>
+</div>
+
+<div class="platform-card">
+  <div class="platform-icon">
+    <i class="ai ai-google-scholar"></i>
+  </div>
+  <div class="platform-content">
+    <h3><a href="https://scholar.google.com/citations?user=6n2P4OEAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></h3>
+    <p>Research publications, citations, and academic profile</p>
+  </div>
+</div>
+
+<div class="platform-card">
+  <div class="platform-icon">
+    <i class="fa-brands fa-medium"></i>
+  </div>
+  <div class="platform-content">
+    <h3><a href="https://medium.com/@addlesee" target="_blank" rel="noopener noreferrer">Medium</a></h3>
+    <p>Technical articles, insights, and thought leadership</p>
+  </div>
+</div>
+
+<div class="platform-card">
+  <div class="platform-icon">
+    <i class="fa-brands fa-bluesky"></i>
+  </div>
+  <div class="platform-content">
+    <h3><a href="https://bsky.app/profile/addlesee.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></h3>
+    <p>Research discussions, updates, and community engagement</p>
+  </div>
+</div>
+
+<div class="platform-card">
+  <div class="platform-icon">
+    <i class="fa-brands fa-youtube"></i>
+  </div>
+  <div class="platform-content">
+    <h3><a href="https://www.youtube.com/channel/UCWT5QO09NnvGkikoQW4aYug" target="_blank" rel="noopener noreferrer">YouTube</a></h3>
+    <p>Research demos, presentations, and video content</p>
+  </div>
+</div>
+
+<div class="platform-card">
+  <div class="platform-icon">
+    <i class="fa-brands fa-github"></i>
+  </div>
+  <div class="platform-content">
+    <h3><a href="https://github.com/angusaddlesee" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+    <p>Open source projects and code repositories</p>
+  </div>
+</div>
+
+</div>
+
+</div>
 
 ---
 
