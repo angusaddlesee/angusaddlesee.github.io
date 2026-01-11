@@ -88,40 +88,122 @@ My research spans conversational AI, accessibility, LLM systems, and human-robot
 
 ---
 
-## Projects {#projects}
+## Featured Projects {#projects}
+
+<div class="projects-grid">
+
+<div class="project-card featured">
 
 ### SPRING Hospital Memory Clinic Robot
 
-Deployed a multi-party conversational robot using LLMs in a real hospital memory clinic as part of the EU-funded SPRING project. The robot naturally converses with patients, their companions, and clinicians in complex healthcare environments. Featured in [TIME Magazine](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/) and demonstrated at HRI 2024 ([video](https://www.youtube.com/watch?v=xMCpcsLhN_I)).
+<div class="project-image">
+  <img src="/assets/img/7.jpg" alt="Hospital Memory Clinic Robot" />
+</div>
 
-**Technologies:** LLMs, Multi-party Dialogue Systems, Social Robotics, Healthcare AI  
-**Impact:** Real-world deployment in hospital setting, international media coverage  
-**Publications:** [View related papers](/publications/)
+Deployed a **multi-party conversational robot using LLMs** in a real hospital memory clinic as part of the EU-funded SPRING project. Eight research institutes collaborated to tackle the challenges of social robots in complex healthcare environments. The robot naturally converses with patients, their companions, and clinicians simultaneously — unlike today's systems that expect one-on-one conversations.
 
-### Voice Assistants for People with Dementia
+**Technologies:** Large Language Models, Multi-party Dialogue Systems, Social Robotics, Healthcare AI, Speech Diarisation
 
-Developed accessible dialogue systems tailored to people living with dementia, identifying speech production changes that cause voice assistant misunderstandings and designing solutions to improve accessibility.
+**Outcomes:**
 
-**Technologies:** Speech Recognition, Dialogue Systems, Accessibility AI  
-**Impact:** PhD thesis work informing industry best practices for inclusive voice AI  
-**Publications:** [View related papers](/publications/)
+- Real-world deployment in hospital memory clinic with vulnerable patient populations
+- Featured in [TIME Magazine](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/) (March 2024)
+- Winner of **EACL Best Demo Award** (2024)
+- Demonstrated at HRI 2024 with international recognition
 
-### Voice Assistants for Visually Impaired People in the Kitchen
+**Links:**
 
-Supervised 30 MSc students developing voice assistants to address malnutrition challenges for visually impaired users. Systems help users read food labels, locate kitchen items, and make informed decisions about food safety with transparent, explainable AI.
+- 🎥 [Watch Demo Video](https://www.youtube.com/watch?v=xMCpcsLhN_I) (HRI 2024)
+- 📄 [Read Publications](/publications/) (Multi-party Conversations, EACL 2024)
+- 📰 [TIME Magazine Feature](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)
+- 🔗 [Project Details](/projects/3_project/)
 
-**Technologies:** Computer Vision, VQA, Explainable AI, Accessibility  
-**Impact:** Two published papers, practical tools for independent living  
-**Publications:** [View related papers](/publications/)
+</div>
+
+<div class="project-card featured">
 
 ### Amazon Alexa+ LLM Routing & Optimisation
 
-Designing intelligent LLM routing systems that balance accuracy, latency, and cost to deliver faster, more reliable conversational experiences for millions of Alexa users worldwide.
+<div class="project-image">
+  <img src="/assets/img/12.jpg" alt="Amazon Alexa LLM Systems" />
+</div>
 
-**Technologies:** LLM Systems, Model Routing, Optimisation, Conversational AI  
-**Impact:** Production deployment affecting millions of users daily
+Designing **intelligent LLM routing systems** that balance accuracy, latency, and cost to deliver faster, more reliable conversational experiences for millions of Alexa users worldwide. Built routing algorithms that assess intent, context, and risk to select the best-fit LLM for each interaction, with continuous benchmarking and observability.
 
-[View all projects →](/projects/)
+**Technologies:** LLM Systems, Model Routing, Optimisation, Conversational AI, Real-Time Systems, Distributed Computing
+
+**Outcomes:**
+
+- Production deployment serving **millions of users daily**
+- **30% reduction in response latency** while maintaining conversation quality
+- Improved accessibility for users with varying needs
+- Efficient resource utilization across Amazon's infrastructure
+
+**Links:**
+
+- 📄 [Related Publications](/publications/) (Amazon Science articles)
+- 🔗 [Project Details](/projects/1_project/)
+
+</div>
+
+<div class="project-card featured">
+
+### Voice Assistants for People with Dementia
+
+<div class="project-image">
+  <img src="/assets/img/3.jpg" alt="Accessible Voice AI Research" />
+</div>
+
+Developed **accessible dialogue systems** tailored to people living with dementia, identifying speech production changes that cause voice assistant misunderstandings and designing solutions to improve accessibility. Collected real interactions between people with dementia and Alexa devices to understand exactly which speech changes (like mid-sentence pauses) cause problems.
+
+**Technologies:** Speech Recognition, Dialogue Systems, Accessibility AI, Natural Language Processing, Human-Computer Interaction
+
+**Outcomes:**
+
+- **PhD thesis** work informing industry best practices for inclusive voice AI
+- Published research on speech production changes in dementia
+- Practical recommendations for making voice assistants more accessible
+- Advocacy for voice assistant accessibility in industry
+
+**Links:**
+
+- 📄 [Read Publications](/publications/) (PhD thesis, accessibility research)
+- 📰 [Amazon Science Article](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-assistants-more-accessible)
+- 🔗 [Project Details](/projects/2_project/)
+
+</div>
+
+<div class="project-card featured">
+
+### Voice Assistants for Visually Impaired People in the Kitchen
+
+<div class="project-image">
+  <img src="/assets/img/5.jpg" alt="Kitchen Voice Assistant for Visually Impaired" />
+</div>
+
+Supervised **30 MSc students** developing voice assistants to address malnutrition challenges for visually impaired users. Systems help users read food labels, locate kitchen items using stationary objects as "anchor points", and make informed decisions about food safety with transparent, explainable AI that answers follow-up questions like "how sure are you about that?".
+
+**Technologies:** Computer Vision, Visual Question Answering (VQA), Explainable AI, Accessibility, Natural Language Processing
+
+**Outcomes:**
+
+- **Two published papers** on accessible kitchen assistance
+- Practical tools for independent living and nutrition management
+- Novel approach to spatial reasoning using kitchen anchor points
+- Trust-focused design with explainability features
+
+**Links:**
+
+- 📄 [Read Publications](/publications/) (Kitchen assistance papers)
+- 🔗 [Project Details](/projects/)
+
+</div>
+
+</div>
+
+<div class="view-all-projects">
+  <a href="/projects/" class="btn btn-primary">View All Projects →</a>
+</div>
 
 ---
 
