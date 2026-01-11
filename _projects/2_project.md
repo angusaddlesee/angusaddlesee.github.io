@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Voice Assistants for People with Dementia
-description: Accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.
+description: PhD research on accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.
 img: assets/img/3.jpg
 importance: 2
 category: research
@@ -36,7 +36,7 @@ Voice assistants like Alexa work very well for most users, but people with demen
 ## Impact & Outcomes
 
 ✓ **PhD thesis** establishing foundations for accessible voice AI design  
-✓ **Industry impact** at Amazon Alexa informing accessibility features  
+✓ **Industry impact** at Amazon Alexa informing conversational fluidity features  
 ✓ **Published research** on speech production changes in dementia  
 ✓ **Practical recommendations** for making voice assistants more accessible  
 ✓ **Advocacy work** promoting voice assistant accessibility in industry  
@@ -44,10 +44,15 @@ Voice assistants like Alexa work very well for most users, but people with demen
 
 ## Links & Resources
 
-- 📄 **[Related Publications](/publications/)** - PhD thesis and accessibility research papers
+- 📄 **[PhD Thesis](/publications/)** - "Incremental multi-party conversational AI for people with dementia" (2024)
 - 📰 **[Amazon Science Article](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-assistants-more-accessible)** - "Repairing Interrupted Questions Makes Voice Assistants More Accessible"
 - 🎥 **[HRI 2024 Video](https://www.youtube.com/watch?v=xMCpcsLhN_I)** - Demonstration of accessible multi-party dialogue
 - 🏥 **[SPRING Project](/projects/3_project/)** - Related hospital deployment work
+- 📊 **Key Publications**:
+  - "You Have Interrupted Me Again!: Making Voice Assistants More Dementia-Friendly" (Frontiers in Dementia, 2024)
+  - "Clarifying Completions: Evaluating How LLMs Respond to Incomplete Questions" (LREC-COLING, 2024)
+  - "Understanding Disrupted Sentences Using Underspecified AMR" (INTERSPEECH, 2023)
+  - "Voice Assistant Accessibility" (IWSDS, 2023)
 
 ## Key Contributions
 

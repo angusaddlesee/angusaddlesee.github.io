@@ -45,9 +45,12 @@ Textual information is found all over food labels, making it impossible for blin
 
 ## Links & Resources
 
-- 📄 **[Related Publications](/publications/)** - Research papers on kitchen assistance systems
+- 📄 **Key Publications**:
+  - "Am I allergic to this? Assisting sight impaired people in the kitchen" (ICMI, 2021)
+  - "The spoon is in the sink: Assisting visually impaired people in the kitchen" (ReInAct, 2021)
 - 🎓 **MSc Supervision** - Led 30 students to develop and publish research
 - 🔬 **Research Focus** - Accessibility, explainable AI, and independent living
+- 📊 **Outcomes** - Two published papers, practical tools for independent living
 
 ## Key Features
 
