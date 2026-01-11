@@ -482,19 +482,19 @@ ninja.data = [{
           section: "News",},{id: "news-new-journal-paper-published-socially-pertinent-robots-in-gerontological-healthcare-exploring-how-conversational-ai-can-support-elderly-care-in-clinical-settings",
           title: 'New journal paper published: “Socially Pertinent Robots in Gerontological Healthcare” - exploring how...',
           description: "",
-          section: "News",},{id: "projects-llm-routing-amp-optimisation-at-amazon-alexa",
-          title: 'LLM Routing &amp;amp; Optimisation at Amazon Alexa',
-          description: "Intelligent model selection and latency optimisation for Alexa&#39;s large-scale conversational systems.",
+          section: "News",},{id: "projects-llm-routing-amp-optimization-at-amazon-alexa",
+          title: 'LLM Routing &amp;amp; Optimization at Amazon Alexa+',
+          description: "Intelligent model selection and latency optimization for Alexa&#39;s large-scale conversational systems serving millions of users.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-voice-assistants-for-people-with-dementia",
           title: 'Voice Assistants for People with Dementia',
-          description: "Accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.",
+          description: "PhD research on accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-spring-hospital-memory-clinic-robot",
           title: 'SPRING Hospital Memory Clinic Robot',
-          description: "Multi-party conversational robot using LLMs deployed in a real hospital memory clinic.",
+          description: "Multi-party conversational social robot deployed in real hospital settings for patient interactions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-voice-assistants-for-visually-impaired-people-in-the-kitchen",
@@ -502,19 +502,19 @@ ninja.data = [{
           description: "Accessible kitchen assistance systems addressing malnutrition challenges for visually impaired users.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-grounding-llms-to-in-prompt-instructions",
-          title: 'Grounding LLMs to In-Prompt Instructions',
-          description: "Techniques to reduce hallucinations by reinforcing user constraints inside prompts.",
+            },},{id: "projects-nhs-amp-scottish-government-ml-projects",
+          title: 'NHS &amp;amp; Scottish Government ML Projects',
+          description: "Machine learning systems for healthcare information extraction and patient care management.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{id: "projects-multi-party-dialogue-datasets-and-evaluation",
           title: 'Multi-party Dialogue Datasets and Evaluation',
-          description: "Capturing hospital conversations to benchmark goal tracking and diarisation.",
+          description: "Hospital conversation datasets and evaluation frameworks for multi-speaker dialogue systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-public-sector-ml-for-nhs-amp-scottish-government",
-          title: 'Public Sector ML for NHS &amp;amp; Scottish Government',
-          description: "Data pipelines and predictive models for healthcare and policy teams.",
+            },},{id: "projects-conversational-ai-safety-and-question-understanding",
+          title: 'Conversational AI Safety and Question Understanding',
+          description: "Detecting inappropriate content and analyzing conversational question patterns in voice assistants.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-2-minute-papers-series",
@@ -524,7 +524,7 @@ ninja.data = [{
               window.location.href = "/projects/8_project/";
             },},{id: "projects-european-amp-african-conversational-ai-summits",
           title: 'European &amp;amp; African Conversational AI Summits',
-          description: "Community-building for researchers, practitioners, and industry leaders.",
+          description: "Co-founded international summits bringing together researchers, practitioners, and industry leaders in conversational AI.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
