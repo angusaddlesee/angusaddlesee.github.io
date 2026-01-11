@@ -44,6 +44,17 @@ I build conversational AI that is **fast, reliable, and inclusive** — from rea
 
 ---
 
+<div class="quick-nav">
+  <strong>Quick Navigation:</strong>
+  <a href="#about">About</a> ·
+  <a href="#publications">Publications</a> ·
+  <a href="#projects">Projects</a> ·
+  <a href="#connect">Connect</a> ·
+  <a href="#contact">Contact</a>
+</div>
+
+---
+
 ## About {#about}
 
 I'm an **Applied Scientist at Amazon Alexa**, where I specialise in **LLM routing and optimisation** for conversational AI systems. I design intelligent systems that select the right model for each task, balancing **accuracy, latency, and cost** to deliver faster, more reliable experiences for millions of users worldwide. I switched from academia to industry for this exact reason — contributing to a product that helps millions of people. Alexa has been reimagined from the ground up, and Alexa+ is smarter, more capable, and more personalised. Unlike chatbots, it also takes action to help you get things done, making everyone's lives easier through accessible voice interactions that improve independence at home.

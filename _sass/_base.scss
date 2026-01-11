@@ -2,6 +2,11 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+// Smooth scrolling for anchor links
+html {
+  scroll-behavior: smooth;
+}
+
 // Typography
 
 p,
@@ -1923,6 +1928,36 @@ mjx-container[jax="CHTML"][display="true"] {
         color: var(--global-theme-color);
         text-decoration: none;
       }
+    }
+  }
+}
+
+/*******************************************************************************
+ * Quick Navigation
+ ******************************************************************************/
+
+.quick-nav {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+  background-color: var(--global-card-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--global-divider-color);
+
+  strong {
+    color: var(--global-theme-color);
+    margin-right: 0.5rem;
+  }
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--global-hover-color);
     }
   }
 }
