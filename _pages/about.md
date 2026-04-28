@@ -32,7 +32,7 @@ latest_posts:
 
 **Applied Scientist | Conversational AI · LLM Routing · Accessibility**
 
-I build conversational AI that is **fast, reliable, and inclusive** — from real-world hospital deployments to large-scale systems at Amazon Alexa.
+I build conversational AI that is **fast, reliable, and inclusive** — from real-world hospital deployments to large-scale systems at Amazon Alexa+.
 
 <div class="hero-cta-buttons">
   <a href="/publications/" class="btn btn-primary">View Publications</a>
@@ -57,7 +57,7 @@ I build conversational AI that is **fast, reliable, and inclusive** — from rea
 
 ## About {#about}
 
-I'm an **Applied Scientist at Amazon Alexa**, where I specialise in **LLM routing and optimisation** for conversational AI systems. I design intelligent systems that select the right model for each task, balancing **accuracy, latency, and cost** to deliver faster, more reliable experiences for millions of users worldwide. I switched from academia to industry for this exact reason — contributing to a product that helps millions of people. Alexa has been reimagined from the ground up, and Alexa+ is smarter, more capable, and more personalised. Unlike chatbots, it also takes action to help you get things done, making everyone's lives easier through accessible voice interactions that improve independence at home.
+I'm an **Applied Scientist at Amazon Alexa**, where I specialise in **LLM routing and optimisation** for conversational AI systems. I design intelligent systems that select the right model for each task, balancing **accuracy, latency, and cost** to deliver faster, more reliable experiences for millions of customers worldwide. I switched from academia to industry for this exact reason: contributing to a product that helps millions of people. Alexa has been reimagined from the ground up, and Alexa+ is smarter, more capable, and more personalised. Unlike chatbots, it also takes action to help you get things done, making everyone's lives easier through accessible voice interactions that improve independence at home.
 
 My work focuses on making **large language model (LLM) systems fast, accessible, and human-centred** — from hospital memory clinics to global voice assistants deployed at scale. I hold a **PhD in Artificial Intelligence** with expertise in **conversational AI, accessibility-driven design, and multimodal interaction**. Throughout my career, I've worked at the intersection of research and real-world deployment, with a strong emphasis on usability, inclusion, and technical rigour.
 
@@ -75,10 +75,10 @@ My work focuses on making **large language model (LLM) systems fast, accessible,
 As an Applied Scientist, I work on LLM routing and optimisation to make Alexa+ smarter and more accessible. This work directly impacts how millions of people interact with voice assistants daily, with a particular focus on making voice interactions more natural and accessible for diverse user populations.
 
 **SPRING Hospital Robot Project (EU-funded)**  
-I integrated my PhD research into a real hospital memory clinic, deploying a multi-party conversational robot that interacts with patients, their companions, and clinicians. Eight research institutes collaborated on this project to tackle the challenges of social robots in complex healthcare environments. My focus was on multi-party interaction — enabling the robot to naturally converse with patients and their caregivers simultaneously, unlike today's systems that expect one-on-one conversations. This work was [featured in TIME Magazine](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/) and demonstrated at HRI 2024 ([watch the video](https://www.youtube.com/watch?v=xMCpcsLhN_I)).
+I integrated my PhD research into a real hospital memory clinic, deploying a multi-party conversational robot that interacts with patients, their companions, and clinicians. Eight research institutes collaborated on this project to tackle the challenges of social robots in complex healthcare environments. My focus was on the spoken dialogue system, with a particular interest in multi-party interaction (enabling the robot to naturally converse with patients and their caregivers simultaneously) unlike today's systems that expect one-on-one conversations. This work was [featured in TIME Magazine](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/) and demonstrated at HRI 2024 ([watch the video](https://www.youtube.com/watch?v=xMCpcsLhN_I)).
 
 **Accessibility Research**  
-My PhD focused on designing conversational AI for people with dementia. Speech production changes as dementia progresses, but today's voice assistants are trained on huge datasets that work well for the "average" user but not for groups whose speech differs from the norm. I collected interactions between people with dementia and Alexa devices to identify exactly which speech changes cause misunderstandings — such as mid-sentence pauses becoming more common and pronounced. My work focused on tweaking current voice assistants to make them more accessible for people with dementia and more naturally interactive in general. I'm a strong advocate for voice assistant accessibility.
+My PhD focused on designing conversational AI for people with dementia. Speech production changes as dementia progresses, but today's voice assistants are trained on huge datasets that work well for the "average" user but not for groups whose speech differs from the norm. I collected interactions between people with dementia and Alexa devices to identify exactly which speech changes cause misunderstandings, such as mid-sentence pauses becoming more common and pronounced. My work focused on tweaking current voice assistants to make them more accessible for people with dementia and more naturally interactive in general. I'm a strong advocate for voice assistant accessibility.
 
 I also supervised 30 MSc students developing voice assistants for visually impaired people in the kitchen, addressing malnutrition challenges associated with sight impairment. We published two papers on systems that help users read food labels, locate kitchen items, and make informed decisions about food safety and nutrition with transparent, explainable AI.
 
@@ -117,7 +117,7 @@ Deployed a **multi-party conversational robot using LLMs** in a real hospital me
 
 **Outcomes:**
 
-- Real-world deployment in hospital memory clinic with vulnerable patient populations
+- Real-world deployment in hospital memory clinic with actual patient populations
 - Featured in [TIME Magazine](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/) (March 2024)
 - Winner of **EACL Best Demo Award** (2024)
 - Demonstrated at HRI 2024 with international recognition
@@ -146,8 +146,7 @@ Designing **intelligent LLM routing systems** that balance accuracy, latency, an
 **Outcomes:**
 
 - Production deployment serving **millions of users daily**
-- **30% reduction in response latency** while maintaining conversation quality
-- Improved accessibility for users with varying needs
+- **reduction in response latency** while maintaining conversation quality
 - Efficient resource utilization across Amazon's infrastructure
 
 **Links:**
@@ -301,4 +300,4 @@ I'm always happy to discuss research collaborations, speaking opportunities, or 
 
 **Specialities:** LLM Routing & Optimisation · Conversational AI · Large Language Models · Accessibility · Multimodal Interaction · Machine Learning · Real-Time Systems · Speech & Dialogue · Human–AI Interaction · Responsible AI · Computer Vision
 
-_Last updated: January 2026_
+_Last updated: March 2026_

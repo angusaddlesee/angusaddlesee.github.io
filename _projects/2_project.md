@@ -45,7 +45,7 @@ Voice assistants like Alexa work very well for most users, but people with demen
 ## Links & Resources
 
 - 📄 **[PhD Thesis](/publications/)** - "Incremental multi-party conversational AI for people with dementia" (2024)
-- 📰 **[Amazon Science Article](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-assistants-more-accessible)** - "Repairing Interrupted Questions Makes Voice Assistants More Accessible"
+- 📰 **[Amazon Science Article](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible)** - "Repairing Interrupted Questions Makes Voice Assistants More Accessible"
 - 🎥 **[HRI 2024 Video](https://www.youtube.com/watch?v=xMCpcsLhN_I)** - Demonstration of accessible multi-party dialogue
 - 🏥 **[SPRING Project](/projects/3_project/)** - Related hospital deployment work
 - 📊 **Key Publications**:

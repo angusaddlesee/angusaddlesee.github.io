@@ -9,7 +9,7 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
-_Last updated: March 2025_
+_Last updated: March 2026_
 
 <!-- Citation Metrics Summary -->
 

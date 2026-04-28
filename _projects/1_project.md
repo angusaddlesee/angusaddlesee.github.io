@@ -1,14 +1,14 @@
 ---
 layout: page
-title: LLM Routing & Optimization at Amazon Alexa+
-description: Intelligent model selection and latency optimization for Alexa's large-scale conversational systems serving millions of users.
+title: LLM Routing & Optimisation at Amazon Alexa+
+description: Intelligent model selection and latency optimisation for Alexa's large-scale conversational systems serving millions of users.
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-**Problem:** Alexa needs to answer millions of diverse questions daily with the right balance of accuracy, latency, and cost. Routing every request to the largest model is slow and expensive, while lighter models can miss nuance or accessibility needs. With Alexa+ reimagined from the ground up using LLMs, the challenge is to deliver smarter, more capable, and more personalized responses while maintaining the speed and reliability users expect.
+**Problem:** Alexa needs to answer millions of diverse questions daily with the right balance of accuracy, latency, and cost. Routing every request to the largest model is slow and expensive, while lighter models can miss nuance or accessibility needs. With Alexa+ reimagined from the ground up using LLMs, the challenge is to deliver smarter, more capable, and more personalised responses while maintaining the speed and reliability users expect.
 
 **Approach:** Designed routing algorithms that assess intent, context, and risk to select the best-fit LLM for each interaction. Built evaluation frameworks that continuously benchmark accuracy versus latency to tune routing policies. Iterated quickly and continuously shipped models to production, balancing innovation with reliability.
 
@@ -18,7 +18,7 @@ related_publications: true
 
 I joined Amazon Alexa at a perfect time, getting the opportunity to make a real impact on Alexa+. **I switched from academia to industry for this exact reason — contributing to a product that helps millions of people!**
 
-Alexa has been reimagined from the ground up. **Alexa+ is smarter, more capable, more personalized, and unlike chatbots, also takes action to help you get things done.**
+Alexa has been reimagined from the ground up. **Alexa+ is smarter, more capable, more personalised, and unlike chatbots, also takes action to help you get things done.**
 
 This latter point is the most critical in my opinion, as Alexa+ makes everyone's lives easier, but **carrying out actions via voice is accessible and can improve many people's independence in their own home** — a natural extension of my PhD work on accessibility.
 
@@ -31,7 +31,7 @@ This latter point is the most critical in my opinion, as Alexa+ makes everyone's
 - Real-time performance monitoring
 - Continuous model evaluation and benchmarking
 
-**Performance Optimization**: Systems that reduce response times while maintaining high-quality conversational experiences, making Alexa more accessible to users with varying needs. Key achievements:
+**Performance Optimisation**: Systems that reduce response times while maintaining high-quality conversational experiences, making Alexa more accessible to users with varying needs. Key achievements:
 
 - Reduced latency for millions of daily interactions
 - Maintained conversation quality across diverse user needs
@@ -55,7 +55,7 @@ This research bridges theoretical advances in model routing with practical engin
 
 **Routing Algorithms**: Developed intelligent routing strategies that balance multiple objectives (accuracy, latency, cost, accessibility) in real-time decision-making.
 
-**Evaluation Frameworks**: Built comprehensive evaluation systems that measure both technical performance and user experience, enabling data-driven optimization.
+**Evaluation Frameworks**: Built comprehensive evaluation systems that measure both technical performance and user experience, enabling data-driven optimisation.
 
 **Cross-functional Collaboration**: Worked with product managers, UX researchers, and engineering teams across Amazon to deliver cohesive user experiences.
 
@@ -78,7 +78,7 @@ This work builds on and extends my research background:
 
 ## Publications & Articles
 
-- 📰 **[Amazon Science: Repairing Interrupted Questions](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-assistants-more-accessible)** - Making voice assistants more accessible
+- 📰 **[Amazon Science: Repairing Interrupted Questions](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible)** - Making voice assistants more accessible
 - 📄 **[Related Publications](/publications/)** - Research on LLMs, dialogue systems, and accessibility
 
 ## Skills & Technologies
@@ -86,7 +86,7 @@ This work builds on and extends my research background:
 - Large Language Models (LLMs)
 - Model Routing & Selection
 - Production ML Systems
-- Latency Optimization
+- Latency Optimisation
 - A/B Testing & Experimentation
 - Conversational AI
 - Accessibility-focused Design

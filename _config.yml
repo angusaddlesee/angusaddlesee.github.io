@@ -7,7 +7,7 @@ first_name: "Angus"
 middle_name:
 last_name: "Addlesee"
 contact_note: >
-  I'm open to opportunities in LLM systems, conversational AI, accessibility research, and applied AI innovation. With 50+ international talks, an EACL best demo award, and work featured in TIME Magazine, I bring both research depth and real-world impact. Feel free to reach out via email to discuss collaborations or roles.
+  I'm always happy to chat about LLM systems, conversational AI, accessibility research, and applied AI innovation. With 50+ international talks, an EACL best demo award, and work featured in TIME Magazine, I love connecting with others in the space. Feel free to reach out via email to discuss collaborations or ideas.
 description: "Applied Scientist at Amazon Alexa specialising in LLM routing, conversational AI, and accessibility. Award-winning researcher with 50+ talks, EACL best demo award, and work featured in TIME Magazine. PhD in AI focused on human-centred dialogue systems."
 footer_text: >
   Connect: <a href="https://www.linkedin.com/in/angusaddlesee/" target="_blank">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=6n2P4OEAAAAJ" target="_blank">Google Scholar</a> · <a href="https://medium.com/@addlesee" target="_blank">Medium</a> · <a href="https://bsky.app/profile/addlesee.bsky.social" target="_blank">Bluesky</a> · <a href="https://www.youtube.com/channel/UCWT5QO09NnvGkikoQW4aYug" target="_blank">YouTube</a> · <a href="mailto:angus@addleseeHQ.com">Email</a><br>
@@ -132,11 +132,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
   - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+    rss_url: https://medium.com/@addlesee/feed
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -153,7 +149,7 @@ newsletter:
 
 collections:
   books:
-    output: true
+    output: false
   news:
     defaults:
       layout: post

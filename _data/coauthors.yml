@@ -1,34 +1,91 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"lemon":
+  - firstname: ["Oliver", "O."]
+    url: https://scholar.google.com/citations?user=ohj7aHIAAAAJ
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"eshghi":
+  - firstname: ["Arash", "A."]
+    url: https://scholar.google.com/citations?user=BMrLBgIAAAAJ
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"gunson":
+  - firstname: ["Nancie", "N."]
+    url: https://scholar.google.com/citations?user=0xge2VIAAAAJ
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"garcia":
+  - firstname: ["Daniel Hernández", "Daniel", "D."]
+    url: https://scholar.google.com/citations?user=IpMCpUkAAAAJ
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"dondrup":
+  - firstname: ["Christian", "C."]
+    url: https://scholar.google.com/citations?user=xnfzH1EAAAAJ
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"sieinska":
+  - firstname: ["Weronika", "W."]
+    url: https://scholar.google.com/citations?user=Wd0TRUUAAAAJ
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"romeo":
+  - firstname: ["Marta", "M."]
+    url: https://scholar.google.com/citations?user=5dlQlCgAAAAJ
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"damonte":
+  - firstname: ["Marco", "M."]
+    url: https://scholar.google.com/citations?user=trOLDroAAAAJ
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"papaioannou":
+  - firstname: ["Ioannis", "I."]
+    url: https://scholar.google.com/citations?user=LEVrASYAAAAJ
+
+"rieser":
+  - firstname: ["Verena", "V."]
+    url: https://scholar.google.com/citations?user=yKzqwd0AAAAJ
+
+"parekh":
+  - firstname: ["Amit", "A."]
+    url: https://scholar.google.com/citations?user=Wd0TRUUAAAAJ
+
+"yu":
+  - firstname: ["Yanchao", "Y."]
+    url: https://scholar.google.com/citations?user=hY8CTkoAAAAJ
+
+"cherakara":
+  - firstname: ["Neeraj", "N."]
+    url: https://scholar.google.com/citations?user=Neeraj
+
+"nelson":
+  - firstname: ["Nivan", "N."]
+    url: https://www.linkedin.com/in/nivan-nelson/
+
+"albert":
+  - firstname: ["Pierre", "P."]
+    url: https://scholar.google.com/citations?user=Pierre
+
+"konstas":
+  - firstname: ["Ioannis", "I."]
+    url: https://scholar.google.com/citations?user=8RVMQLQAAAAJ
+
+"payne":
+  - firstname: ["Bryony", "B."]
+    url: https://scholar.google.com/citations?user=Bryony
+
+"mcgettigan":
+  - firstname: ["Carolyn", "C."]
+    url: https://scholar.google.com/citations?user=carolyn
+
+"alameda-pineda":
+  - firstname: ["Xavier", "X."]
+    url: https://scholar.google.com/citations?user=okC8qnwAAAAJ
+
+"kruiper":
+  - firstname: ["Ruben", "R."]
+    url: https://scholar.google.com/citations?user=Ruben
+
+"baker":
+  - firstname: ["Katie", "K."]
+    url: https://www.linkedin.com/
+
+"fabre":
+  - firstname: ["Adrien", "A."]
+    url: https://www.linkedin.com/
+
+"brick":
+  - firstname: ["Elisa Ramil", "Elisa", "E."]
+    url: https://www.linkedin.com/

@@ -1,14 +1,14 @@
+# GitHub repositories to feature
+# Update this with your actual repos when ready
+
 github_users:
-  - torvalds
-  - alshedivat
+  - angusaddlesee
 
 repo_description_lines_max: 2
 
-github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+# Add your repositories here when ready, e.g.:
+# github_repos:
+#   - angusaddlesee/repo-name
+#   - angusaddlesee/another-repo
+
+github_repos: []

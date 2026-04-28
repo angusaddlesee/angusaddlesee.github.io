@@ -1,9 +1,53 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Publication venues for Angus Addlesee's research
 
-"PhysRev":
-  url: https://journals.aps.org/
+"EACL":
+  url: https://eacl.org/
+  color: "#0066cc"
 
-"Vision":
-  color: "#009f36"
+"ACL":
+  url: https://www.aclweb.org/
+  color: "#003366"
+
+"SIGdial":
+  url: https://www.sigdial.org/
+  color: "#006633"
+
+"INTERSPEECH":
+  url: https://www.isca-speech.org/
+  color: "#cc3300"
+
+"HRI":
+  url: https://humanrobotinteraction.org/
+  color: "#663399"
+
+"ICMI":
+  url: https://icmi.acm.org/
+  color: "#ff6600"
+
+"COLING":
+  url: https://coling2024.org/
+  color: "#336699"
+
+"LREC":
+  url: https://lrec-coling-2024.org/
+  color: "#669933"
+
+"IVA":
+  url: https://ivaconference.org/
+  color: "#993366"
+
+"CUI":
+  url: https://www.conversationaluserinterfaces.org/
+  color: "#339966"
+
+"IWSDS":
+  url: https://www.iwsds.tech/
+  color: "#666699"
+
+"Frontiers":
+  url: https://www.frontiersin.org/
+  color: "#cc6600"
+
+"IJSR":
+  url: https://www.springer.com/journal/12369
+  color: "#0099cc"
