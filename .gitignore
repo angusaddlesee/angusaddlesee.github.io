@@ -3,6 +3,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.DS_Store
 .DS_store
 .ruby-version
 .tweet-cache
@@ -12,3 +13,4 @@ node_modules/
 vendor
 .idea
 .venv
+.kiro/
