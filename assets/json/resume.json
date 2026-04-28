@@ -37,11 +37,7 @@
       "startDate": "2023",
       "endDate": "",
       "summary": "LLM routing and optimisation for conversational AI systems. Design systems balancing accuracy, latency, and cost for millions of users worldwide.",
-      "highlights": [
-        "LLM Routing & Optimisation",
-        "Production AI Systems",
-        "Accessibility-focused Design"
-      ]
+      "highlights": ["LLM Routing & Optimisation", "Production AI Systems", "Accessibility-focused Design"]
     },
     {
       "name": "Heriot-Watt University",
@@ -50,11 +46,7 @@
       "startDate": "2022",
       "endDate": "2023",
       "summary": "EU SPRING project - conversational AI and robotics for dementia care. Hospital-based research integrating AI systems with clinical workflows.",
-      "highlights": [
-        "EACL Best Demo Award",
-        "TIME Magazine Feature",
-        "Hospital Robot Deployment"
-      ]
+      "highlights": ["EACL Best Demo Award", "TIME Magazine Feature", "Hospital Robot Deployment"]
     },
     {
       "name": "NHS Scotland / Scottish Government",
@@ -62,11 +54,7 @@
       "startDate": "2017",
       "endDate": "2018",
       "summary": "Delivered ML pipelines for healthcare information extraction and patient care management.",
-      "highlights": [
-        "Healthcare NLP",
-        "Information Extraction",
-        "Knowledge Graphs"
-      ]
+      "highlights": ["Healthcare NLP", "Information Extraction", "Knowledge Graphs"]
     }
   ],
   "education": [
@@ -77,11 +65,7 @@
       "studyType": "PhD",
       "startDate": "2018",
       "endDate": "2022",
-      "courses": [
-        "Conversational AI",
-        "Accessibility",
-        "Multi-party Dialogue"
-      ]
+      "courses": ["Conversational AI", "Accessibility", "Multi-party Dialogue"]
     },
     {
       "institution": "University of Edinburgh",
@@ -126,13 +110,7 @@
     {
       "name": "Research Areas",
       "level": "Expert",
-      "keywords": [
-        "Accessibility",
-        "Human-AI Interaction",
-        "Multi-party Dialogue",
-        "Social Robotics",
-        "Healthcare AI"
-      ]
+      "keywords": ["Accessibility", "Human-AI Interaction", "Multi-party Dialogue", "Social Robotics", "Healthcare AI"]
     }
   ],
   "languages": [
@@ -144,12 +122,7 @@
   "interests": [
     {
       "name": "Conversational AI",
-      "keywords": [
-        "LLM Systems",
-        "Voice Assistants",
-        "Accessibility",
-        "Human-Centred Design"
-      ]
+      "keywords": ["LLM Systems", "Voice Assistants", "Accessibility", "Human-Centred Design"]
     }
   ]
 }
