@@ -13,7 +13,6 @@ profile:
     <p>Applied Scientist</p>
     <p>Amazon Alexa</p>
     <p>Cambridge, UK</p>
-    <p><a href="mailto:angus@addleseehq.com">angus@addleseehq.com</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -28,10 +27,6 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-
-# Angus Addlesee, PhD
-
-**Applied Scientist | Conversational AI · LLM Routing · Accessibility**
 
 I build conversational AI that is fast, reliable, and inclusive — from real-world hospital deployments to large-scale systems at Amazon Alexa+.
 
