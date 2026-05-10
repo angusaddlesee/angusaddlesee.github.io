@@ -52,9 +52,9 @@ I co-founded the **European and African Conversational AI Summits**, a SIGdial o
 
 ## Featured Projects
 
-<div class="projects-grid">
+<div class="projects-grid" markdown="1">
 
-<div class="project-card featured">
+<div class="project-card featured" markdown="1">
 
 ### SPRING Hospital Memory Clinic Robot
 
@@ -70,7 +70,7 @@ A multi-party conversational robot using LLMs, deployed in a real hospital memor
 
 </div>
 
-<div class="project-card featured">
+<div class="project-card featured" markdown="1">
 
 ### Amazon Alexa+ LLM Routing & Optimisation
 
@@ -84,7 +84,7 @@ Intelligent LLM routing that assesses intent, context, and risk to select the be
 
 </div>
 
-<div class="project-card featured">
+<div class="project-card featured" markdown="1">
 
 ### Voice Assistants for People with Dementia
 
@@ -98,7 +98,7 @@ My PhD research on accessible dialogue systems for people living with dementia. 
 
 </div>
 
-<div class="project-card featured">
+<div class="project-card featured" markdown="1">
 
 ### Voice Assistants for Visually Impaired People in the Kitchen
 
