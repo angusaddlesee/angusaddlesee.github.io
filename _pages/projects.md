@@ -5,7 +5,7 @@ permalink: /projects/
 description: Case studies in conversational AI, robotics, and accessibility deployments.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [work, research, fun]
 horizontal: false
 ---
 
