@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Code and data repositories associated with published research.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
         },{id: "nav-cv",
           title: "cv",
           description: "Curriculum vitae highlighting work in conversational AI, LLM routing, and accessibility.",
@@ -44,21 +51,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-llm-routing-at-scale-lessons-from-amazon-alexa",
+        },{id: "post-llm-routing-at-scale-lessons-from-amazon-alexa",
         
           title: "LLM Routing at Scale: Lessons from Amazon Alexa",
         
