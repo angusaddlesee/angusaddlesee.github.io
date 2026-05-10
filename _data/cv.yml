@@ -15,47 +15,63 @@
   contents:
     - title: PhD in Artificial Intelligence
       institution: Heriot-Watt University, Edinburgh, UK
-      year: 2018-2022
+      year: 2019-2024
       description:
         - Developed accessible dialogue systems for people with cognitive impairments
         - Focus on human-centred AI and conversational systems
         - Research on multimodal interaction and accessibility
-    - title: MSc Computer Science
-      institution: University of Edinburgh, Edinburgh, UK
-      year: 2016-2017
+    - title: MSc Artificial Intelligence with Speech and Multimodal Interaction
+      institution: Heriot-Watt University, Edinburgh, UK
+      year: 2016-2018
       description:
-        - Distinction
-        - Specialisation in Machine Learning and AI
-    - title: BSc Computer Science
-      institution: University of Edinburgh, Edinburgh, UK
+        - Specialisation in speech processing and multimodal AI
+    - title: BSc (Hons) Mathematics
+      institution: Heriot-Watt University, Edinburgh, UK
       year: 2013-2016
       description:
-        - First Class Honours
-        - Focus on AI and software engineering
+        - Foundation in mathematical reasoning and formal methods
 
 - title: Experience
   type: time_table
   contents:
     - title: Applied Scientist
       institution: Amazon Alexa, Cambridge, UK
-      year: 2023 - Present
+      year: 2024 - Present
       description:
         - LLM routing and optimisation for conversational AI systems
         - Design systems balancing accuracy, latency, and cost for millions of users
         - Focus on accessibility and human-centred AI design
     - title: Research Associate
       institution: Heriot-Watt University, Edinburgh, UK
-      year: 2022 - 2023
+      year: 2022 - 2024
       description:
         - EU SPRING project - conversational AI and robotics for dementia care
         - Hospital-based research integrating AI systems with clinical workflows
         - Human-centred design for accessible dialogue systems
+    - title: Applied Scientist Intern
+      institution: Amazon Alexa, Cambridge, UK
+      year: 2022
+      description:
+        - Research internship during PhD on voice assistant accessibility
+        - Collaborated on understanding partial and interrupted questions
+    - title: Machine Learning Engineer & Researcher
+      institution: Wallscope, Edinburgh, UK
+      year: 2019 - 2022
+      description:
+        - NLP and ML projects for NHS Scotland and Scottish Government
+        - Overlapping with PhD research
     - title: Machine Learning Engineer
-      institution: NHS Scotland / Scottish Government
+      institution: Wallscope, Edinburgh, UK
+      year: 2018 - 2019
+      description:
+        - Information extraction from unstructured data into knowledge graphs
+        - ML pipelines for healthcare and public sector applications
+    - title: Data Scientist
+      institution: Wallscope, Edinburgh, UK
       year: 2017 - 2018
       description:
-        - Delivered ML pipelines for public sector applications
-        - Data-driven AI solutions for healthcare and government services
+        - Data-driven solutions for healthcare and government services
+        - NLP for patient care improvement
 
 - title: Speaking & Leadership
   type: time_table

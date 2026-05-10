@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Published on Amazon Science: "Repairing Interrupted Questions in Voice Assistants" - improving conversation flow when users change their minds mid-sentence.
+Published on Amazon Science: "Repairing Interrupted Questions Makes Voice Agents More Accessible" — improving conversation flow when users pause or change their minds mid-sentence.

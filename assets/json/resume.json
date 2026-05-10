@@ -34,7 +34,7 @@
       "name": "Amazon Alexa",
       "position": "Applied Scientist",
       "url": "https://www.amazon.science/",
-      "startDate": "2023",
+      "startDate": "2024",
       "endDate": "",
       "summary": "LLM routing and optimisation for conversational AI systems. Design systems balancing accuracy, latency, and cost for millions of users worldwide.",
       "highlights": ["LLM Routing & Optimisation", "Production AI Systems", "Accessibility-focused Design"]
@@ -44,17 +44,42 @@
       "position": "Research Associate",
       "url": "https://www.hw.ac.uk/",
       "startDate": "2022",
-      "endDate": "2023",
+      "endDate": "2024",
       "summary": "EU SPRING project - conversational AI and robotics for dementia care. Hospital-based research integrating AI systems with clinical workflows.",
       "highlights": ["EACL Best Demo Award", "TIME Magazine Feature", "Hospital Robot Deployment"]
     },
     {
-      "name": "NHS Scotland / Scottish Government",
+      "name": "Amazon Alexa",
+      "position": "Applied Scientist Intern",
+      "url": "https://www.amazon.science/",
+      "startDate": "2022-03",
+      "endDate": "2022-08",
+      "summary": "Research internship during PhD focused on voice assistant accessibility and understanding partial questions.",
+      "highlights": ["Voice Assistant Accessibility", "Partial Question Understanding"]
+    },
+    {
+      "name": "Wallscope",
+      "position": "Machine Learning Engineer & Researcher",
+      "startDate": "2019",
+      "endDate": "2022",
+      "summary": "NLP and ML projects for NHS Scotland and Scottish Government, overlapping with PhD research.",
+      "highlights": ["Healthcare NLP", "Information Extraction", "Knowledge Graphs"]
+    },
+    {
+      "name": "Wallscope",
       "position": "Machine Learning Engineer",
+      "startDate": "2018",
+      "endDate": "2019",
+      "summary": "Information extraction from unstructured data into knowledge graphs for healthcare and public sector.",
+      "highlights": ["Information Extraction", "Knowledge Graphs", "NLP Pipelines"]
+    },
+    {
+      "name": "Wallscope",
+      "position": "Data Scientist",
       "startDate": "2017",
       "endDate": "2018",
-      "summary": "Delivered ML pipelines for healthcare information extraction and patient care management.",
-      "highlights": ["Healthcare NLP", "Information Extraction", "Knowledge Graphs"]
+      "summary": "Data-driven NLP solutions for healthcare and government services.",
+      "highlights": ["Healthcare NLP", "Data Science", "Public Sector"]
     }
   ],
   "education": [
@@ -63,27 +88,25 @@
       "location": "Edinburgh, UK",
       "area": "Artificial Intelligence",
       "studyType": "PhD",
-      "startDate": "2018",
-      "endDate": "2022",
+      "startDate": "2019",
+      "endDate": "2024",
       "courses": ["Conversational AI", "Accessibility", "Multi-party Dialogue"]
     },
     {
-      "institution": "University of Edinburgh",
+      "institution": "Heriot-Watt University",
       "location": "Edinburgh, UK",
-      "area": "Computer Science",
+      "area": "Artificial Intelligence with Speech and Multimodal Interaction",
       "studyType": "MSc",
       "startDate": "2016",
-      "endDate": "2017",
-      "score": "Distinction"
+      "endDate": "2018"
     },
     {
-      "institution": "University of Edinburgh",
+      "institution": "Heriot-Watt University",
       "location": "Edinburgh, UK",
-      "area": "Computer Science",
-      "studyType": "BSc",
+      "area": "Mathematics",
+      "studyType": "BSc (Hons)",
       "startDate": "2013",
-      "endDate": "2016",
-      "score": "First Class Honours"
+      "endDate": "2016"
     }
   ],
   "awards": [

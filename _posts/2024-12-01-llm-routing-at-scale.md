@@ -26,7 +26,7 @@ We developed routing algorithms that dynamically choose optimal language models 
 
 The results speak for themselves:
 
-- 30% reduction in average response latency
+- Meaningful reduction in average response latency
 - Maintained conversation quality across all interaction types
 - Improved accessibility for users with varying needs
 - More efficient resource utilization at scale
