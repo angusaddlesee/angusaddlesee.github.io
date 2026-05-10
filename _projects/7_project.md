@@ -14,7 +14,7 @@ Developed machine learning systems to improve voice assistant safety and questio
 
 ## Problem 1: Detecting Inappropriate Content
 
-Voice assistants need to detect when users are saying inappropriate things, but this is more nuanced than simple keyword filtering. **Swearing does not always indicate offense (especially in Scotland!)**, and seemingly innocuous terms like "sleep with" can be used in inappropriate sentences. Traditional profanity filters fail to capture context and intent.
+Voice assistants need to detect when users are saying inappropriate things, but this is more nuanced than simple keyword filtering. **Swearing does not always indicate offence (especially in Scotland!)**, and seemingly innocuous terms like "sleep with" can be used in inappropriate sentences. Traditional profanity filters fail to capture context and intent.
 
 ## Problem 2: Understanding Conversational Questions
 

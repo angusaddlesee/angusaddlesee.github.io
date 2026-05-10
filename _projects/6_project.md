@@ -24,7 +24,7 @@ Most dialogue datasets ignore overlapping speech and shifting goals, making it h
 
 ## Approach
 
-**Data Collection**: Collected and annotated multi-party hospital dialogues with comprehensive labeling including:
+**Data Collection**: Collected and annotated multi-party hospital dialogues with comprehensive labelling including:
 
 - Speaker diarisation (who is speaking when)
 - Conversational goals and goal progress
@@ -105,7 +105,7 @@ Results showed that prompt engineering with large models often outperformed fine
 
 **Ethical Data Collection**: Developed privacy-preserving methods for collecting conversations with vulnerable populations, ensuring informed consent and data protection while enabling valuable research.
 
-**Multi-party Complexity**: Demonstrated the unique challenges of multi-speaker dialogue compared to traditional one-on-one conversations, highlighting the need for specialized datasets and evaluation methods.
+**Multi-party Complexity**: Demonstrated the unique challenges of multi-speaker dialogue compared to traditional one-on-one conversations, highlighting the need for specialised datasets and evaluation methods.
 
 **LLM Capabilities**: Showed that large language models can effectively handle multi-party goal tracking when properly prompted, but also identified failure modes and limitations.
 

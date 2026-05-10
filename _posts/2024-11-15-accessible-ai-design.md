@@ -50,6 +50,6 @@ These principles aren't just relevant for healthcare AI. They apply to any syste
 
 Accessibility isn't a feature you add at the end—it's a design philosophy that makes technology better for everyone. When we design for cognitive diversity, we create more robust, empathetic, and ultimately more useful AI systems.
 
-The future of conversational AI isn't just about making it smarter—it's about making it more human-centered.
+The future of conversational AI isn't just about making it smarter—it's about making it more human-centred.
 
 _Based on research conducted as part of the EU SPRING project and my PhD at Heriot-Watt University._

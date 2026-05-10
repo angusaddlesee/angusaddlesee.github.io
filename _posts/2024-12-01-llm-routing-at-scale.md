@@ -19,7 +19,7 @@ We developed routing algorithms that dynamically choose optimal language models 
 
 - **Query complexity**: Simple requests route to fast, lightweight models
 - **User context**: Conversation history and user preferences inform model selection
-- **Performance requirements**: Latency-sensitive interactions prioritize speed
+- **Performance requirements**: Latency-sensitive interactions prioritise speed
 - **Resource constraints**: Real-time load balancing across our infrastructure
 
 ## Impact
@@ -29,7 +29,7 @@ The results speak for themselves:
 - Meaningful reduction in average response latency
 - Maintained conversation quality across all interaction types
 - Improved accessibility for users with varying needs
-- More efficient resource utilization at scale
+- More efficient resource utilisation at scale
 
 ## Key Learnings
 

@@ -9,7 +9,7 @@ category: work
 
 ## Overview
 
-Before specializing in conversational AI, I worked as a **Machine Learning Engineer** focused on information extraction from unstructured data into knowledge graphs. These projects with the **NHS in Scotland** and the **Scottish Government** applied NLP and machine learning to improve patient care and healthcare operations.
+Before specialising in conversational AI, I worked as a **Machine Learning Engineer** focused on information extraction from unstructured data into knowledge graphs. These projects with the **NHS in Scotland** and the **Scottish Government** applied NLP and machine learning to improve patient care and healthcare operations.
 
 ## Problem
 
@@ -73,7 +73,7 @@ Healthcare systems generate vast amounts of unstructured text data — clinical 
 
 ### Information Extraction Pipeline
 
-1. **Text Preprocessing**: Cleaning and normalizing clinical text, handling medical abbreviations and terminology
+1. **Text Preprocessing**: Cleaning and normalising clinical text, handling medical abbreviations and terminology
 2. **Named Entity Recognition**: Identifying medical entities (conditions, medications, procedures, etc.)
 3. **Relationship Extraction**: Extracting relationships between entities (patient-condition, medication-dosage, etc.)
 4. **Knowledge Graph Construction**: Building structured representations of extracted information

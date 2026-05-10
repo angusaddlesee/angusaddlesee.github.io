@@ -12,7 +12,7 @@ related_publications: true
 
 **Approach:** Designed routing algorithms that assess intent, context, and risk to select the best-fit LLM for each interaction. Built evaluation frameworks that continuously benchmark accuracy versus latency to tune routing policies. Iterated quickly and continuously shipped models to production, balancing innovation with reliability.
 
-**Impact:** Deployed systems serving **millions of Alexa users worldwide**, reducing response latency while maintaining conversation quality. Improved accessibility for users with varying needs and enabled more efficient resource utilization across Amazon's infrastructure.
+**Impact:** Deployed systems serving **millions of Alexa users worldwide**, reducing response latency while maintaining conversation quality. Improved accessibility for users with varying needs and enabled more efficient resource utilisation across Amazon's infrastructure.
 
 ## Why Amazon Alexa+
 

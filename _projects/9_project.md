@@ -27,7 +27,7 @@ Conversational AI teams across academia and industry often work in silos, slowin
 
 **Curated Programming**: Designed programmes with accessibility, safety, and real-world deployment as central themes, ensuring these critical topics receive attention alongside technical advances.
 
-**Diverse Perspectives**: Facilitated workshops and panels that paired technical deep-dives with practitioner case studies, bringing together researchers, startups, and large organizations.
+**Diverse Perspectives**: Facilitated workshops and panels that paired technical deep-dives with practitioner case studies, bringing together researchers, startups, and large organisations.
 
 **Inclusive Community**: Created welcoming spaces for underrepresented voices in conversational AI, including researchers from the Global South, accessibility advocates, and practitioners working on social impact applications.
 
@@ -37,7 +37,7 @@ Conversational AI teams across academia and industry often work in silos, slowin
 ✓ **Recurring events** - Established sustainable community-building platforms  
 ✓ **Cross-sector collaboration** - Connected academia, industry, and startups  
 ✓ **Accessibility focus** - Elevated discussions of inclusive AI design  
-✓ **Global network** - Built connections across continents and organizations  
+✓ **Global network** - Built connections across continents and organisations  
 ✓ **Career impact** - Facilitated hiring, mentorship, and project partnerships
 
 ## Key Contributions
@@ -108,13 +108,13 @@ These community-building activities have:
 - **Informed research**: Learned about real-world challenges and opportunities
 - **Facilitated collaboration**: Led to joint projects and publications
 - **Enhanced visibility**: Raised profile in conversational AI community
-- **Developed skills**: Improved organization, communication, and leadership abilities
+- **Developed skills**: Improved organisation, communication, and leadership abilities
 
 ## Key Learnings
 
 **Community matters**: The best research and products emerge from diverse communities that share knowledge openly and support each other's growth.
 
-**Accessibility needs advocates**: Without dedicated focus, accessibility and safety concerns can be overlooked in favor of technical performance metrics.
+**Accessibility needs advocates**: Without dedicated focus, accessibility and safety concerns can be overlooked in favour of technical performance metrics.
 
 **Cross-sector collaboration is valuable**: Academia and industry have complementary strengths. Bringing them together accelerates progress.
 
