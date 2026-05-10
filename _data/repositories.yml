@@ -1,14 +1,17 @@
-# GitHub repositories to feature
-# Update this with your actual repos when ready
-
 github_users:
   - angusaddlesee
+  - AddleseeHQ
 
 repo_description_lines_max: 2
 
-# Add your repositories here when ready, e.g.:
-# github_repos:
-#   - angusaddlesee/repo-name
-#   - angusaddlesee/another-repo
-
-github_repos: []
+github_repos:
+  - AddleseeHQ/SLUICE-CR
+  - AddleseeHQ/SLUICE
+  - AddleseeHQ/in-prompt-grounding
+  - AddleseeHQ/mp-llm-demo-prompts
+  - AddleseeHQ/interruption-recovery
+  - AddleseeHQ/amr-disruption
+  - AddleseeHQ/mpgt-eval
+  - AddleseeHQ/CVR-SI
+  - AddleseeHQ/incremental-asr-evaluation
+  - AddleseeHQ/incremental-asr-processing
