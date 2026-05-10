@@ -247,8 +247,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/speech_language_processing/";
-            },},{id: "news-published-on-amazon-science-repairing-interrupted-questions-in-voice-assistants-improving-conversation-flow-when-users-change-their-minds-mid-sentence",
-          title: 'Published on Amazon Science: “Repairing Interrupted Questions in Voice Assistants” - improving conversation...',
+            },},{id: "news-published-on-amazon-science-repairing-interrupted-questions-makes-voice-agents-more-accessible-improving-conversation-flow-when-users-pause-or-change-their-minds-mid-sentence",
+          title: 'Published on Amazon Science: “Repairing Interrupted Questions Makes Voice Agents More Accessible” —...',
           description: "",
           section: "News",},{id: "news-co-founded-the-european-and-african-conversational-ai-summits-bringing-together-researchers-and-practitioners-to-advance-the-field",
           title: 'Co-founded the European and African Conversational AI Summits - bringing together researchers and...',
@@ -266,6 +266,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-new-journal-paper-published-socially-pertinent-robots-in-gerontological-healthcare-exploring-how-conversational-ai-can-support-elderly-care-in-clinical-settings",
           title: 'New journal paper published: “Socially Pertinent Robots in Gerontological Healthcare” - exploring how...',
+          description: "",
+          section: "News",},{id: "news-new-paper-published-evaluating-multi-party-interactions-with-social-robots-using-large-language-models-and-multi-modal-systems-in-the-international-journal-of-interaction-studies",
+          title: 'New paper published: “Evaluating Multi-party Interactions with Social Robots Using Large Language Models...',
+          description: "",
+          section: "News",},{id: "news-alexa-has-launched-in-the-us-uk-and-is-currently-rolling-out-across-the-eu-exciting-to-see-the-llm-powered-systems-we-ve-built-reaching-millions-of-new-users",
+          title: 'Alexa+ has launched in the US, UK, and is currently rolling out across...',
           description: "",
           section: "News",},{id: "projects-llm-routing-amp-optimisation-at-amazon-alexa",
           title: 'LLM Routing &amp;amp; Optimisation at Amazon Alexa+',
@@ -302,11 +308,6 @@ ninja.data = [{
           description: "Detecting inappropriate content and analyzing conversational question patterns in voice assistants.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-2-minute-papers-series",
-          title: '2-Minute Papers Series',
-          description: "Bite-sized videos and articles explaining research progress and lessons learned.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
             },},{id: "projects-european-amp-african-conversational-ai-summits",
           title: 'European &amp;amp; African Conversational AI Summits',
           description: "Co-founded international summits bringing together researchers, practitioners, and industry leaders in conversational AI.",
