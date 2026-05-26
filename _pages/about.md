@@ -2,8 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.addlesee.co.uk'>Applied Scientist at Amazon Alexa · Conversational AI & LLM Systems</a>
-description: Angus Addlesee is an Applied Scientist specialising in conversational AI, LLM routing, and accessibility-driven deployments.
+subtitle: <a href='https://www.addlesee.co.uk'>Applied Scientist · Frontier AI Modelling Lab @ Amazon Alexa+</a>
+description: Angus Addlesee is an Applied Scientist in Amazon Alexa's Frontier AI Modelling Lab specialising in LLM routing, reward modelling, evaluation infrastructure, and accessibility-driven deployments.
 
 profile:
   align: right
@@ -11,7 +11,8 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Applied Scientist</p>
-    <p>Amazon Alexa</p>
+    <p>Frontier AI Modelling Lab</p>
+    <p>Amazon Alexa+</p>
     <p>Cambridge, UK</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -42,7 +43,7 @@ I build conversational AI that is fast, reliable, and inclusive — from real-wo
 
 ## About
 
-I'm an Applied Scientist at **Amazon Alexa+**, working on **LLM routing and optimisation** — designing systems that select the right model for each interaction to balance accuracy, latency, and cost for millions of users. I moved from academia to industry to help build a product that reaches people at that scale, with a particular focus on making voice interactions more natural and accessible.
+I'm an Applied Scientist in **Amazon Alexa's Frontier AI Modelling Lab**, working on **Alexa+** across several critical workstreams — LLM routing and optimisation, reward modelling for evaluation and training, and high-throughput evaluation infrastructure. I moved from academia to industry to help build a product that reaches people at that scale, with a particular focus on making voice interactions more natural and accessible.
 
 Before Amazon, I completed a **PhD in Artificial Intelligence** on conversational AI for people with dementia, and contributed to the **EU-funded SPRING project**, deploying a multi-party social robot in a hospital memory clinic. Earlier, I worked as a machine learning engineer on NLP projects with the NHS and Scottish Government, using information extraction to improve patient outcomes.
 

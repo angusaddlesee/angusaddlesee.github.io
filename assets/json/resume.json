@@ -31,13 +31,13 @@
   },
   "work": [
     {
-      "name": "Amazon Alexa",
+      "name": "Amazon Alexa+ · Frontier AI Modelling Lab",
       "position": "Applied Scientist",
       "url": "https://www.amazon.science/",
       "startDate": "2024",
       "endDate": "",
-      "summary": "LLM routing and optimisation for conversational AI systems. Design systems balancing accuracy, latency, and cost for millions of users worldwide.",
-      "highlights": ["LLM Routing & Optimisation", "Production AI Systems", "Accessibility-focused Design"]
+      "summary": "Working on Alexa+ across several critical workstreams: LLM routing and optimisation (production models triggered for 100% of traffic), reward modelling for model evaluation and training (moving to 100% of production traffic), and a high-throughput system simulator enabling offline evaluation of counterfactual tool-calling for router training and model checkpoint evaluation. On-call for production. Active interviewer with 25+ technical interviews.",
+      "highlights": ["LLM Routing & Optimisation", "Reward Modelling", "Evaluation Infrastructure", "Production AI Systems", "Accessibility-focused Design"]
     },
     {
       "name": "Heriot-Watt University",

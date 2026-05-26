@@ -35,11 +35,14 @@
   type: time_table
   contents:
     - title: Applied Scientist
-      institution: Amazon Alexa, Cambridge, UK
+      institution: Amazon Alexa+ · Frontier AI Modelling Lab, Cambridge, UK
       year: 2024 - Present
       description:
-        - LLM routing and optimisation for conversational AI systems
-        - Design systems balancing accuracy, latency, and cost for millions of users
+        - LLM routing and optimisation for Alexa+ — production models triggered for 100% of traffic
+        - Lead the development of reward models for model evaluation and training, moving to run on 100% of production traffic
+        - Built a high-throughput system simulator enabling offline evaluation of counterfactual tool-calling, used for router training and model checkpoint evaluation against traffic signals
+        - On-call rotas — diagnose and resolve Alexa+ production issues under pressure
+        - Active interviewer — conducted 25+ technical interviews for the team
         - Focus on accessibility and human-centred AI design
     - title: Research Associate
       institution: Heriot-Watt University, Edinburgh, UK

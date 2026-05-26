@@ -1,46 +1,54 @@
 ---
 layout: page
-title: LLM Routing & Optimisation at Amazon Alexa+
-description: Intelligent model selection and latency optimisation for Alexa's large-scale conversational systems serving millions of users.
+title: Production LLM Systems at Amazon Alexa+
+description: LLM routing, reward modelling, and evaluation infrastructure in Alexa's Frontier AI Modelling Lab.
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-**Problem:** Alexa needs to answer millions of diverse questions daily with the right balance of accuracy, latency, and cost. Routing every request to the largest model is slow and expensive, while lighter models can miss nuance or accessibility needs. With Alexa+ reimagined from the ground up using LLMs, the challenge is to deliver smarter, more capable, and more personalised responses while maintaining the speed and reliability users expect.
-
-**Approach:** Designed routing algorithms that assess intent, context, and risk to select the best-fit LLM for each interaction. Built evaluation frameworks that continuously benchmark accuracy versus latency to tune routing policies. Iterated quickly and continuously shipped models to production, balancing innovation with reliability.
-
-**Impact:** Deployed systems serving **millions of Alexa users worldwide**, reducing response latency while maintaining conversation quality. Improved accessibility for users with varying needs and enabled more efficient resource utilisation across Amazon's infrastructure.
+I work in **Amazon Alexa's Frontier AI Modelling Lab** on **Alexa+**, contributing across several workstreams that span model training, evaluation, and production routing.
 
 ## Why Amazon Alexa+
 
-I joined Amazon Alexa at a perfect time, getting the opportunity to make a real impact on Alexa+. **I switched from academia to industry for this exact reason — contributing to a product that helps millions of people!**
+I joined Amazon Alexa at a perfect time, getting the opportunity to make a real impact on Alexa+. **I switched from academia to industry for this exact reason — contributing to a product that helps millions of people.**
 
-Alexa has been reimagined from the ground up. **Alexa+ is smarter, more capable, more personalised, and unlike chatbots, also takes action to help you get things done.**
+Alexa+ has been reimagined from the ground up. It is smarter, more capable, more personalised, and unlike chatbots, also takes action to help you get things done. **Carrying out actions via voice is accessible and can improve many people's independence in their own home** — a natural extension of my PhD work on accessibility.
 
-This latter point is the most critical in my opinion, as Alexa+ makes everyone's lives easier, but **carrying out actions via voice is accessible and can improve many people's independence in their own home** — a natural extension of my PhD work on accessibility.
+## LLM Routing & Optimisation
 
-## Technical Details
+Alexa+ needs to handle millions of diverse interactions daily with the right balance of accuracy, latency, and cost. I work on **routing algorithms** that assess intent, context, and risk to select the best-fit LLM for each interaction, alongside the evaluation frameworks that tune those policies. The work involves continuous iteration and shipping to production, balancing innovation with the reliability users expect.
 
-**Intelligent Model Selection**: Routing algorithms that balance accuracy, latency, and computational cost to select optimal models for different types of user queries and contexts. This involves intent classification, risk assessment, context-aware routing, and continuous model evaluation.
+## Reward Modelling
 
-**Performance Optimisation**: Systems that reduce response times while maintaining high-quality conversational experiences. This includes real-time performance monitoring and accessibility-aware routing for users with cognitive or sensory differences.
+Evaluating and training large LLMs at this scale requires reliable, automated reward signals. I contribute to the development of **reward models used in evaluation and training**, helping the team move beyond surface-level metrics towards signals that better capture nuanced, multi-step interactions.
 
-**Scalable Architecture**: Infrastructure handling millions of routing decisions daily with robust monitoring, rapid iteration cycles, and support for model updates without downtime.
+## Evaluation Infrastructure
 
-**Accessibility Focus**: Drawing on PhD research on voice assistant accessibility, ensuring routing decisions consider users with different abilities and communication patterns.
+Working on a routing system whose decisions involve downstream tool use is fundamentally hard to evaluate offline. I have built **internal evaluation infrastructure** that supports high-throughput experimentation — used both for training and for assessing new model candidates against representative signals before any production rollout.
+
+## Production Engineering & Team
+
+Beyond research, this role demands deep production engineering and team contribution:
+
+- **On-call rotas** — when Alexa+ has issues in production, I get paged and work to identify the root cause and resolve them quickly.
+- **Active interviewing** — I have conducted **over 25 technical interviews** for the team.
+- **Cross-functional collaboration** — across applied scientists, engineers, product, and operations.
+
+## Accessibility Focus
+
+Drawing on PhD research on voice assistant accessibility, I make sure routing decisions, evaluation criteria, and reward signals consider users with different abilities and communication patterns. Accessibility is not a separate workstream — it shapes every workstream above.
 
 ## Related Work
 
 This work builds on and extends my research background:
 
-- **[Voice Assistants for Dementia](/projects/2_project/)** - PhD research on accessibility
-- **[SPRING Hospital Robot](/projects/3_project/)** - Multi-party conversational AI in healthcare
-- **[NHS ML Projects](/projects/5_project/)** - Healthcare information extraction and decision support
+- **[Voice Assistants for Dementia](/projects/2_project/)** — PhD research on accessibility
+- **[SPRING Hospital Robot](/projects/3_project/)** — Multi-party conversational AI in healthcare
+- **[NHS ML Projects](/projects/5_project/)** — Healthcare information extraction and decision support
 
 ## Publications & Articles
 
-- 📰 **[Amazon Science: Repairing Interrupted Questions](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible)** - Making voice assistants more accessible
-- 📄 **[Related Publications](/publications/)** - Research on LLMs, dialogue systems, and accessibility
+- 📰 **[Amazon Science: Repairing Interrupted Questions](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible)** — Making voice assistants more accessible
+- 📄 **[Related Publications](/publications/)** — Research on LLMs, dialogue systems, and accessibility
