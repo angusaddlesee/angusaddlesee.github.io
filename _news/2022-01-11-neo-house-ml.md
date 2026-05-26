@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Gave a Machine Learning talk at Neo House, Edinburgh.
+Gave a Machine Learning talk at Neo House, Aberdeen.
