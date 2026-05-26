@@ -619,9 +619,9 @@ ninja.data = [{
           section: "News",},{id: "news-alexa-is-rolling-out-across-europe-italy-spain-and-more-an-exciting-and-challenging-time-as-we-scale-models-triggered-for-100-of-traffic-to-support-an-increasing-variety-of-languages",
           title: 'Alexa+ is rolling out across Europe — Italy, Spain, and more. An exciting...',
           description: "",
-          section: "News",},{id: "projects-llm-routing-amp-optimisation-at-amazon-alexa",
-          title: 'LLM Routing &amp;amp; Optimisation at Amazon Alexa+',
-          description: "Intelligent model selection and latency optimisation for Alexa&#39;s large-scale conversational systems serving millions of users.",
+          section: "News",},{id: "projects-production-llm-systems-at-amazon-alexa",
+          title: 'Production LLM Systems at Amazon Alexa+',
+          description: "LLM routing, reward modelling, and evaluation infrastructure in Alexa&#39;s Frontier AI Modelling Lab.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-voice-assistants-for-people-with-dementia",
