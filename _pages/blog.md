@@ -2,7 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
-description: Updates, 2-Minute Papers, and notes on conversational AI research and deployments.
+description: Long-form posts on conversational AI, LLM systems, and accessibility — alongside selected articles I've written for Towards Data Science, Heartbeat, Amazon Science, and others.
 nav: true
 nav_order: 1
 pagination:
@@ -19,8 +19,6 @@ pagination:
 
 <div class="post">
 
-_Last updated: March 2025_
-
 {% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}
 
@@ -31,6 +29,34 @@ _Last updated: March 2025_
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
+
+<div class="external-articles" markdown="1">
+
+## Articles I've written elsewhere
+
+I've written **36+ articles** for industry and research outlets, on topics spanning conversational AI, linked data, and computer vision. A selection of the most-read:
+
+### Conversational AI & accessibility
+
+- [Repairing Interrupted Questions Makes Voice Assistants More Accessible](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible) — Amazon Science (2023)
+- [Designing Conversational Agents for Multi-party Interactions](https://medium.com/data-science/designing-conversational-agents-for-multi-party-interactions-523b05ea8834?source=friends_link&sk=aa13926898a2cdca47d69192c05ad670) — Towards Data Science (2023)
+- [Voice Assistant Accessibility](https://medium.com/data-science/voice-assistant-accessibility-dc737cde0394?source=friends_link&sk=b24436d717009c37083fbd7d78c59a31) — Towards Data Science (2023)
+- [The Future of Voice Assistants: What Are the Early Research Trends?](https://medium.com/data-science/the-future-of-voice-assistants-what-are-the-early-research-trends-dc02215fe2aa?source=friends_link&sk=8f07eb0c8254b871fa4f245985c87c3b) — Towards Data Science (2022)
+- [Ethically Collecting Conversations with People that have Cognitive Impairments](https://medium.com/data-science/ethically-collecting-conversations-with-people-that-have-cognitive-impairments-9ad0d2714bdd?source=friends_link&sk=d78703a4c5fda9d24a74c70463635fc9) — Towards Data Science (2020)
+
+### Knowledge graphs & linked data
+
+- [The Olympics: How to Build a Linked Data Application](https://medium.com/wallscope/the-olympics-how-to-build-a-linked-data-application-f6f844b3a19c) — Wallscope (2020)
+- [Comparison of Linked Data Triplestores: A New Contender](https://medium.com/wallscope/comparison-of-linked-data-triplestores-a-new-contender-c62ae04901d3) — Wallscope (2019)
+- [Constructing More Advanced SPARQL Queries](https://medium.com/wallscope/constructing-more-advanced-sparql-queries-72d5ade1eedc) — Wallscope (2019)
+
+The full list (including all 13 linked data tutorials, 4 computer vision pieces, and several interviews) is announced in the [news timeline](/news/).
+
+</div>
+
+---
+
+## Posts on this site
 
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
