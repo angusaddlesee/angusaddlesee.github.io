@@ -66,114 +66,400 @@ ninja.data = [{
             window.location.href = "/blog/2024/accessible-ai-design/";
           
         },
+      },{id: "post-repairing-interrupted-questions-makes-voice-assistants-more-accessible",
+        
+          title: 'Repairing Interrupted Questions Makes Voice Assistants More Accessible <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Making voice assistants more accessible by handling interrupted questions.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible", "_blank");
+          
+        },
       },{id: "post-designing-conversational-agents-for-multi-party-interactions",
         
           title: 'Designing Conversational Agents for Multi-party Interactions <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "Exploring how additional participants impact conversations.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/data-science/designing-conversational-agents-for-multi-party-interactions-523b05ea8834?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://medium.com/data-science/designing-conversational-agents-for-multi-party-interactions-523b05ea8834?source=friends_link&sk=aa13926898a2cdca47d69192c05ad670", "_blank");
           
         },
       },{id: "post-voice-assistant-accessibility",
         
           title: 'Voice Assistant Accessibility <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "Ensuring everyone is understood by voice systems.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/data-science/voice-assistant-accessibility-dc737cde0394?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://medium.com/data-science/voice-assistant-accessibility-dc737cde0394?source=friends_link&sk=b24436d717009c37083fbd7d78c59a31", "_blank");
           
         },
       },{id: "post-the-future-of-voice-assistants-what-are-the-early-research-trends",
         
-          title: 'The Future of Voice Assistants: What are the Early Research Trends? <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'The Future of Voice Assistants: What Are the Early Research Trends? <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "Analysing five years of PhD research topics in conversational AI.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/data-science/the-future-of-voice-assistants-what-are-the-early-research-trends-dc02215fe2aa?source=rss-7f06284203ea------2", "_blank");
-          
-        },
-      },{id: "post-am-i-allergic-to-this-developing-a-voice-assistant-for-sight-impaired-people",
-        
-          title: 'Am I Allergic to This? Developing a Voice Assistant for Sight Impaired People... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://heartbeat.comet.ml/am-i-allergic-to-this-developing-a-voice-assistant-for-sight-impaired-people-3f036fe7792b?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://medium.com/data-science/the-future-of-voice-assistants-what-are-the-early-research-trends-dc02215fe2aa?source=friends_link&sk=8f07eb0c8254b871fa4f245985c87c3b", "_blank");
           
         },
       },{id: "post-the-spoon-is-in-the-sink-assisting-visually-impaired-people-in-the-kitchen",
         
           title: 'The Spoon is in the Sink: Assisting Visually Impaired People in the Kitchen... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "A multimodal voice assistant that helps visually impaired users locate items in the kitchen.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://heartbeat.comet.ml/the-spoon-is-in-the-sink-assisting-visually-impaired-people-in-the-kitchen-ccea20b098cd?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://heartbeat.comet.ml/the-spoon-is-in-the-sink-assisting-visually-impaired-people-in-the-kitchen-ccea20b098cd", "_blank");
           
         },
-      },{id: "post-the-current-state-of-chatbots-and-conversational-ai-across-europe-and-africa-a-catalogue",
+      },{id: "post-how-to-adapt-voice-assistants-for-people-with-dementia-and-people-affected-by-sight-loss",
         
-          title: 'The Current State of Chatbots and Conversational AI across Europe and Africa -... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'How to Adapt Voice Assistants for People with Dementia and People Affected by... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "How to adapt voice assistants for people with dementia and sight loss.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://blog.chatbotslife.com/the-current-state-of-chatbots-and-conversational-ai-across-europe-and-africa-a-catalogue-c85605c85878?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://thedatalab.com/news/how-to-adapt-voice-assistants-for-people-with-dementia-and-people-affected-by-sight-loss/", "_blank");
           
         },
-      },{id: "post-an-overview-of-scotland-s-linked-data-projects-from-sliding-7",
+      },{id: "post-am-i-allergic-to-this-developing-a-voice-assistant-for-sight-impaired-people",
         
-          title: 'An Overview of Scotland’s Linked Data Projects from SLiDInG 7 <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'Am I Allergic to This? Developing a Voice Assistant for Sight Impaired People... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "A voice assistant that helps sight-impaired people read food packaging.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/wallscope/an-overview-of-scotlands-linked-data-projects-from-sliding-7-561617454415?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://heartbeat.comet.ml/am-i-allergic-to-this-developing-a-voice-assistant-for-sight-impaired-people-3f036fe7792b", "_blank");
+          
+        },
+      },{id: "post-haver-design-collective-39-s-interview-with-angus-addlesee",
+        
+          title: 'Haver Design Collective&#39;s Interview with Angus Addlesee <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An interview with Haver Design Collective on conversational AI and accessibility.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://haver.scot/angusaddlesee.html", "_blank");
+          
+        },
+      },{id: "post-the-current-state-of-chatbots-and-conversational-ai-across-europe-and-africa",
+        
+          title: 'The Current State of Chatbots and Conversational AI across Europe and Africa <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "A catalogue of conversational AI activity across Europe and Africa.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://chatbotslife.com/the-current-state-of-chatbots-and-conversational-ai-across-europe-and-africa-a-catalogue-c85605c85878", "_blank");
+          
+        },
+      },{id: "post-an-overview-of-scotland-39-s-linked-data-projects-from-sliding-7",
+        
+          title: 'An Overview of Scotland&#39;s Linked Data Projects from SLiDInG 7 <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An overview of Scotland&#39;s linked data projects.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/an-overview-of-scotlands-linked-data-projects-from-sliding-7-561617454415", "_blank");
+          
+        },
+      },{id: "post-creating-better-conversational-agents-to-improve-health-and-social-care",
+        
+          title: 'Creating Better Conversational Agents to Improve Health and Social Care <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Creating better conversational agents to improve health and social care.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://wattmag.hw.ac.uk/9/", "_blank");
           
         },
       },{id: "post-the-olympics-how-to-build-a-linked-data-application",
         
           title: 'The Olympics: How to Build a Linked Data Application <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "How to build a linked data application using RDFox and Wallscope&#39;s platform.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/wallscope/the-olympics-how-to-build-a-linked-data-application-f6f844b3a19c?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://medium.com/wallscope/the-olympics-how-to-build-a-linked-data-application-f6f844b3a19c", "_blank");
           
         },
       },{id: "post-ethically-collecting-conversations-with-people-that-have-cognitive-impairments",
         
-          title: 'Ethically Collecting Conversations With People that have Cognitive Impairments <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'Ethically Collecting Conversations with People that have Cognitive Impairments <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "Practical guidance for ethical research with people who have cognitive impairments.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/data-science/ethically-collecting-conversations-with-people-that-have-cognitive-impairments-9ad0d2714bdd?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://medium.com/data-science/ethically-collecting-conversations-with-people-that-have-cognitive-impairments-9ad0d2714bdd?source=friends_link&sk=d78703a4c5fda9d24a74c70463635fc9", "_blank");
           
         },
-      },{id: "post-using-furhat-and-rasa-to-assist-when-you-forget-a-word-mid-sentence-a-student-group-project",
+      },{id: "post-covid-impact-on-ecrs-angus-addlesee",
         
-          title: 'Using Furhat and Rasa to Assist when You Forget a Word Mid-Sentence: A... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'COVID Impact on ECRs: Angus Addlesee <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "Reflections on the impact of COVID on early career researchers.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://heartbeat.comet.ml/using-furhat-and-rasa-to-assist-when-you-forget-a-word-mid-sentence-a-student-group-project-53e40d788acb?source=rss-7f06284203ea------2", "_blank");
+            window.open("https://www.sdrc.scot/covid-impact-blog-angus-addlesee", "_blank");
+          
+        },
+      },{id: "post-where-to-find-linked-open-data-for-your-home-projects",
+        
+          title: 'Where to Find Linked Open Data for Your Home Projects <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Sources of linked open data for home projects.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/where-to-find-linked-open-data-for-your-home-projects-d4f56b46223a", "_blank");
+          
+        },
+      },{id: "post-using-furhat-and-rasa-to-assist-when-you-forget-a-word-mid-sentence",
+        
+          title: 'Using Furhat and Rasa to Assist when You Forget a Word Mid-sentence <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "A student group project assisting users who pause mid-sentence.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://heartbeat.comet.ml/using-furhat-and-rasa-to-assist-when-you-forget-a-word-mid-sentence-a-student-group-project-53e40d788acb", "_blank");
+          
+        },
+      },{id: "post-building-a-voice-assistant-for-blind-and-partially-sighted-people",
+        
+          title: 'Building a Voice Assistant for Blind and Partially Sighted People <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "A student group project on accessible voice assistance.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://heartbeat.comet.ml/building-a-voice-assistant-for-blind-and-partially-sighted-people-a-student-group-project-ce1ecd631382", "_blank");
+          
+        },
+      },{id: "post-convolutions-image-resizing-and-filtering",
+        
+          title: 'Convolutions, Image Resizing, and Filtering <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Convolutions, image resizing, and filtering.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://heartbeat.comet.ml/the-ancient-secrets-of-computer-vision-4-by-joseph-redmon-convolutions-546f4032f335", "_blank");
+          
+        },
+      },{id: "post-image-storage-colour-spaces-and-manipulation",
+        
+          title: 'Image Storage, Colour Spaces, and Manipulation <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Image storage, colour spaces, and manipulation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://heartbeat.comet.ml/the-ancient-secrets-of-computer-vision-3-by-joseph-redmon-condensed-681517a89060", "_blank");
+          
+        },
+      },{id: "post-developing-conversational-ai-to-be-more-human",
+        
+          title: 'Developing Conversational AI to be More Human <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Featured in DIGIT discussing the human side of conversational AI.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://www.digit.fyi/developing-conversational-ai-to-be-more-human/", "_blank");
+          
+        },
+      },{id: "post-comparison-of-linked-data-triplestores-a-new-contender",
+        
+          title: 'Comparison of Linked Data Triplestores: A New Contender <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Comparing the latest triplestores.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/comparison-of-linked-data-triplestores-a-new-contender-c62ae04901d3", "_blank");
+          
+        },
+      },{id: "post-how-dementia-affects-conversation-building-a-more-accessible-conversational-ai",
+        
+          title: 'How Dementia Affects Conversation: Building a More Accessible Conversational AI <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Building a more accessible conversational AI for people with dementia.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://heartbeat.comet.ml/how-dementia-effects-conversation-f538d2d9507a", "_blank");
+          
+        },
+      },{id: "post-human-vision-how-eyes-work-and-why-they-evolved-that-way",
+        
+          title: 'Human Vision: How Eyes Work and Why they Evolved that Way <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "How eyes work and why they evolved that way.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://heartbeat.comet.ml/the-ancient-secrets-of-computer-vision-2-by-joseph-redmon-condensed-934e16eacb44", "_blank");
+          
+        },
+      },{id: "post-introduction-to-computer-vision",
+        
+          title: 'Introduction to Computer Vision <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An introduction to computer vision.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://heartbeat.comet.ml/the-ancient-secrets-of-computer-vision-1-by-joseph-redmon-condensed-9839ae85a4c8", "_blank");
+          
+        },
+      },{id: "post-constructing-more-advanced-sparql-queries",
+        
+          title: 'Constructing More Advanced SPARQL Queries <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Constructing more advanced SPARQL queries.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/constructing-more-advanced-sparql-queries-72d5ade1eedc", "_blank");
+          
+        },
+      },{id: "post-beginning-to-replicate-natural-conversation-in-real-time",
+        
+          title: 'Beginning to Replicate Natural Conversation in Real Time <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Early steps towards real-time, naturally interactive dialogue.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/data-science/beginning-to-replicate-natural-conversation-in-real-time-d4f6b7f62e08?source=friends_link&sk=58b50bb44a3d9ef2d21bd89768284a06", "_blank");
+          
+        },
+      },{id: "post-conversational-ai-with-angus-addlesee-of-heriot-watt",
+        
+          title: 'Conversational AI with Angus Addlesee of Heriot-Watt <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An interview about conversational AI research at Heriot-Watt.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://companyconnecting.com/2019/04/04/conversational-ai-with-angus-addlesee-of-heriot-watt/", "_blank");
+          
+        },
+      },{id: "post-linked-data-reconciliation-in-graphdb",
+        
+          title: 'Linked Data Reconciliation in GraphDB <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "How to reconcile linked data using GraphDB.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/linked-data-reconciliation-in-graphdb-cd2796d2870b", "_blank");
+          
+        },
+      },{id: "post-comparison-of-linked-data-triplestores-developing-the-methodology",
+        
+          title: 'Comparison of Linked Data Triplestores: Developing the Methodology <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Developing a methodology for comparing linked data triplestores.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/comparison-of-linked-data-triplestores-developing-the-methodology-e87771cb3011", "_blank");
+          
+        },
+      },{id: "post-using-ontorefine-to-transform-tabular-data-into-linked-data",
+        
+          title: 'Using OntoRefine to Transform Tabular Data into Linked Data <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Using OntoRefine to transform tabular data into linked data.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/using-ontorefine-to-transform-tabular-data-into-linked-data-7277ec8c2c0f", "_blank");
+          
+        },
+      },{id: "post-comparing-linked-data-triplestores",
+        
+          title: 'Comparing Linked Data Triplestores <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An initial comparison of linked data triplestores.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/comparing-linked-data-triplestores-ebfac8c3ad4f", "_blank");
+          
+        },
+      },{id: "post-constructing-sparql-queries",
+        
+          title: 'Constructing SPARQL Queries <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An introduction to constructing SPARQL queries.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/constructing-sparql-queries-ca63b8b9ac02", "_blank");
+          
+        },
+      },{id: "post-creating-linked-data",
+        
+          title: 'Creating Linked Data <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "How to create linked data.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/creating-linked-data-31c7dd479a9e", "_blank");
+          
+        },
+      },{id: "post-understanding-linked-data-formats",
+        
+          title: 'Understanding Linked Data Formats <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Understanding RDF/XML vs Turtle vs N-Triples.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/understanding-linked-data-formats-rdf-xml-vs-turtle-vs-n-triples-eb931dbe9827", "_blank");
+          
+        },
+      },{id: "post-tackling-big-data-challenges-with-linked-data",
+        
+          title: 'Tackling Big Data Challenges with Linked Data <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Tackling big data challenges with linked data.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/wallscope/tackling-big-data-challenges-with-linked-data-278b0761a6de", "_blank");
+          
+        },
+      },{id: "post-an-interview-with-heriot-watt-student-angus-addlesee",
+        
+          title: 'An Interview with Heriot-Watt Student Angus Addlesee <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An interview as a Heriot-Watt student about my early studies.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://companyconnecting.com/2017/03/02/graduate-series-an-interview-with-heriot-watt-student-angus-addlesee/", "_blank");
           
         },
       },{id: "books-artificial-intelligence-a-modern-approach",
