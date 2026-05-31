@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-blog",
           title: "blog",
-          description: "Updates, 2-Minute Papers, and notes on conversational AI research and deployments.",
+          description: "Long-form posts on conversational AI, LLM systems, and accessibility — alongside selected articles I&#39;ve written for Towards Data Science, Heartbeat, Amazon Science, and others.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
