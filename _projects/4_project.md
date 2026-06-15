@@ -10,93 +10,68 @@ related_publications: true
 
 ## Overview
 
-I supervised **30 MSc students** developing voice assistants to address malnutrition challenges for visually impaired users. Malnutrition is commonly associated with sight impairment because it is very difficult to shop, prepare food, and eat a meal. We published **two papers** and created practical tools for independent living focused on reading food labels, locating kitchen items, and making informed decisions with transparent, explainable AI.
+I **founded the Aye-Saac project** and led its development across multiple cohorts of MSc students at Heriot-Watt. In total I supervised **30 MSc students** through this work, with two academic papers published as outcomes. My role was to propose the project, teach the students about conversational AI, and guide the technical direction across years; the students did the heavy lifting and built the system.
+
+Aye-Saac is a voice assistant designed to help blind and partially sighted people in the kitchen. Malnutrition and visual impairment are well-known comorbidities, because shopping, preparing food, and eating safely all become harder without sight. Aye-Saac addresses this directly by reading food labels, locating kitchen items, and answering follow-up questions with transparent, explainable AI.
+
+## Why "Aye-Saac"? A Lesson in Human-Centred Design
+
+When we first started, we considered answering questions like *"where is my sofa?"* But once we asked actual people with visual impairments, they explained: **"I never lose my sofa, it doesn't move."** What they did struggle with was the kitchen, where utensils and ingredients move constantly. They also explained the food label problem in detail.
+
+This conversation reshaped the project entirely. The "**anchor points**" feature (using stationary objects like the fridge, oven, and microwave as reference points to locate movable items) came directly out of that user feedback. **It is yet another reminder that working with the target user group from day one is critical**, a theme that runs through all my accessibility research.
 
 ## Problem
 
 Textual information is found all over food labels, making it impossible for blind or partially sighted people to know whether their food has expired, follow cooking instructions, find nutritional information, or check ingredients for allergies. Additionally, unlike stationary objects like the fridge or oven, utensils and ingredients move around the kitchen and can be lost, making meal preparation challenging and sometimes dangerous.
 
+It is worth noting that this work pre-dates today's strong vision-language models (VLMs). At the time, asking *"where is the strawberry?"* would, at best, yield *"in the kitchen"*, and when shown a picture of a STOP sign and asked *"what does this sign say?"*, VLMs could not answer. Modern VLMs have since solved some of these problems, which is genuinely brilliant for visually impaired people. Aye-Saac was an attempt to bridge that gap purposefully, with carefully designed components, well before general-purpose VLMs could.
+
 ## Approach
 
-**Food Label Reading**: Developed systems to answer questions like "Is this safe to eat?", "Is the soup vegetarian?", and "How do I cook this?" by extracting and interpreting information from food packaging using computer vision and natural language processing.
+**Food Label Reading**: We used **OCR** to extract text from food packaging and then answered users' questions based on that text. The system can answer questions like *"Is this safe to eat?"*, *"Is the soup vegetarian?"*, and *"How do I cook this?"*
 
-**Spatial Reasoning with Anchor Points**: Using stationary kitchen objects as "anchor points" (fridge, sink, oven, microwave), we provided more specific location information like "just to the left of the microwave" than traditional visual question answering (VQA) systems. This novel approach helps users locate movable items more effectively.
+**Spatial Reasoning with Anchor Points**: Using stationary kitchen objects as anchor points (fridge, sink, oven, microwave), the system gives more specific location information like *"just to the left of the microwave"* than traditional VQA systems. This was novel at the time, and is one of the main contributions of *The Spoon Is in the Sink*.
 
-**Trust & Explainability**: Designed the system to be transparent and answer follow-up questions like "how sure are you about that?" Trust and explainability are critical in this domain where incorrect information could lead to food poisoning or allergic reactions.
-
-## Technologies
-
-- Computer Vision
-- Visual Question Answering (VQA)
-- Optical Character Recognition (OCR)
-- Explainable AI
-- Natural Language Processing
-- Accessibility-focused Design
-- Spatial Reasoning
-
-## Impact & Outcomes
-
-✓ **Two published papers** on accessible kitchen assistance  
-✓ **30 MSc students supervised** to completion with research outputs  
-✓ **Practical tools** for independent living and nutrition management  
-✓ **Novel spatial reasoning approach** using kitchen anchor points  
-✓ **Trust-focused design** with explainability features  
-✓ **Real-world applicability** addressing malnutrition challenges
-
-## Links & Resources
-
-- 📄 **Key Publications**:
-  - "Am I allergic to this? Assisting sight impaired people in the kitchen" (ICMI, 2021)
-  - "The spoon is in the sink: Assisting visually impaired people in the kitchen" (ReInAct, 2021)
-- 🎓 **MSc Supervision** - Led 30 students to develop and publish research
-- 🔬 **Research Focus** - Accessibility, explainable AI, and independent living
-- 📊 **Outcomes** - Two published papers, practical tools for independent living
+**Trust & Explainability**: The system reports confidence ("I'm 95% confident this expires tomorrow"), handles uncertainty gracefully ("I can't read the expiration date clearly, would you like me to try again?"), and answers follow-up questions like *"how sure are you about that?"* Trust matters in this domain, where incorrect information could lead to food poisoning or allergic reactions.
 
 ## Key Features
 
-### 1. Food Label Information Extraction
-
-The system can read and interpret various types of information from food packaging:
+### Food Label Information Extraction
 
 - **Expiration dates**: "Is this safe to eat?"
 - **Ingredients**: "Is this vegetarian?" or "Does this contain nuts?"
 - **Nutritional information**: "How many calories are in this?"
 - **Cooking instructions**: "How do I prepare this?"
 
-### 2. Spatial Location Assistance
-
-Using stationary kitchen objects as reference points:
+### Spatial Location Assistance
 
 - **Relative positioning**: "The salt is just to the left of the microwave"
 - **Anchor-based navigation**: More precise than generic "on the counter" descriptions
 - **Dynamic object tracking**: Helps locate items that move around the kitchen
 
-### 3. Explainable AI & Trust
-
-Critical for safety in food preparation:
+### Explainable AI & Trust
 
 - **Confidence reporting**: "I'm 95% confident this expires tomorrow"
 - **Uncertainty handling**: "I can't read the expiration date clearly, would you like me to try again?"
 - **Transparent reasoning**: Explains how conclusions were reached
 - **Follow-up questions**: Users can probe the system's reasoning
 
-## Research Contributions
+## Impact & Outcomes
 
-This work demonstrated that voice assistants can be powerful tools for independent living when designed with specific accessibility needs in mind. The combination of computer vision, natural language understanding, and explainable AI creates systems that are not only functional but also trustworthy — essential for applications where mistakes could have serious consequences.
+✓ **Two published papers** on accessible kitchen assistance
+✓ **30 MSc students supervised** to completion across multiple cohorts
+✓ **Novel anchor-point spatial reasoning** approach (a main contribution of *The Spoon Is in the Sink*)
+✓ **Trust-focused design** with confidence reporting and follow-up questions
+✓ **Real-world applicability**: addressing malnutrition risk, a known comorbidity of visual impairment
 
-### Novel Approaches
+## Links & Resources
 
-**Anchor Point Spatial Reasoning**: Unlike generic VQA systems that might say "on the counter," our approach uses stationary kitchen objects as reference points to provide more actionable location information.
+### Papers
 
-**Trust-Centered Design**: Recognizing that users need to trust the system's answers about food safety and allergens, we built explainability and confidence reporting into the core design.
+- 📄 **[Am I allergic to this? Assisting sight impaired people in the kitchen](https://dl.acm.org/doi/10.1145/3462244.3481000)** (ICMI, 2021)
+- 📄 **[The spoon is in the sink: Assisting visually impaired people in the kitchen](https://aclanthology.org/2021.reinact-1.5.pdf)** (ReInAct, 2021)
 
-**Accessibility-First Development**: Rather than adapting existing systems, we designed from the ground up for visually impaired users, ensuring the interaction patterns and information architecture matched their needs.
+### Articles for a Wider Audience
 
-## Future Directions
-
-This research opens pathways for broader applications of accessible AI in daily living:
-
-- Integration with smart kitchen appliances
-- Expanded coverage of household tasks beyond food preparation
-- Multi-modal interaction combining voice, touch, and haptic feedback
-- Personalized learning of individual users' kitchen layouts and preferences
+- 📝 **[Am I Allergic to This? Developing a Voice Assistant for Sight Impaired People](https://heartbeat.comet.ml/am-i-allergic-to-this-developing-a-voice-assistant-for-sight-impaired-people-3f036fe7792b)** (Heartbeat)
+- 📝 **[The Spoon is in the Sink: Assisting Visually Impaired People in the Kitchen](https://heartbeat.comet.ml/the-spoon-is-in-the-sink-assisting-visually-impaired-people-in-the-kitchen-ccea20b098cd)** (Heartbeat)
