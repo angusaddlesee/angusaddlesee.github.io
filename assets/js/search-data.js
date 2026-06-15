@@ -930,11 +930,6 @@ ninja.data = [{
           description: "Machine learning systems for healthcare information extraction and patient care management.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-multi-party-dialogue-datasets-and-evaluation",
-          title: 'Multi-party Dialogue Datasets and Evaluation',
-          description: "Hospital conversation datasets and evaluation frameworks for multi-speaker dialogue systems.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
             },},{id: "projects-conversational-ai-safety-and-question-understanding",
           title: 'Conversational AI Safety and Question Understanding',
           description: "Detecting inappropriate content and analyzing conversational question patterns in voice assistants.",
