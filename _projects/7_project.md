@@ -14,13 +14,13 @@ During my MSc at Heriot-Watt I worked on two distinct projects that shared one t
 
 ## Project 1: Abuse Detection (with Verena Rieser)
 
-Voice assistants need to detect when users say inappropriate things, but this is more nuanced than simple keyword filtering. **Swearing does not always indicate offence (especially in Scotland!)**, and seemingly innocuous terms like *"sleep with"* can be used in inappropriate sentences. Traditional profanity filters fail to capture this.
+Voice assistants need to detect when users say inappropriate things, but this is more nuanced than simple keyword filtering. **Swearing does not always indicate offence (especially in Scotland!)**, and seemingly innocuous terms like _"sleep with"_ can be used in inappropriate sentences. Traditional profanity filters fail to capture this.
 
 **Approach:**
 
 1. We **filtered the Alexa Prize corpus** for certain words and phrases to surface a candidate set of potentially abusive utterances.
 2. We **annotated** this candidate set.
-3. We then **bootstrapped further candidates** by exploiting the observation that a user who has said something offensive once is more likely to have said other offensive things. Following users into their other utterances surfaced abuse that simple keyword filters could not catch (the *"sleep with"* type cases).
+3. We then **bootstrapped further candidates** by exploiting the observation that a user who has said something offensive once is more likely to have said other offensive things. Following users into their other utterances surfaced abuse that simple keyword filters could not catch (the _"sleep with"_ type cases).
 4. With the resulting corpus, we **trained abuse detector models**.
 
 **Outcome:** The trained abuse detector was **deployed in the Alexa Prize Challenge system**, going beyond keyword filtering to use context and a wider vocabulary of harmful patterns.
@@ -34,10 +34,10 @@ People ask questions very differently when speaking to a voice assistant compare
 1. **Filtered the same Alexa Prize corpus** for question utterances.
 2. **Analysed how voice questions differed** from typed-question QA datasets: voice questions were far more colloquial and frequently contained anaphora to previous turns, both of which standard QA systems struggle with.
 3. **Classified the questions into types**, including:
-    - **Sluices** (incomplete clarification-style questions like *"the one with the dragons?"*)
-    - **Explanation questions** (*"why does X happen?"*)
-    - **Personal questions to the bot** (*"what is your favourite colour?"*)
-    - And several other categories
+   - **Sluices** (incomplete clarification-style questions like _"the one with the dragons?"_)
+   - **Explanation questions** (_"why does X happen?"_)
+   - **Personal questions to the bot** (_"what is your favourite colour?"_)
+   - And several other categories
 
 **Outcome:** A characterisation of the question landscape that voice assistants face in the wild, very different from the clean question forms in benchmark QA datasets.
 

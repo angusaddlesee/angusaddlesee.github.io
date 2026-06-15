@@ -16,7 +16,7 @@ Aye-Saac is a voice assistant designed to help blind and partially sighted peopl
 
 ## Why "Aye-Saac"? A Lesson in Human-Centred Design
 
-When we first started, we considered answering questions like *"where is my sofa?"* But once we asked actual people with visual impairments, they explained: **"I never lose my sofa, it doesn't move."** What they did struggle with was the kitchen, where utensils and ingredients move constantly. They also explained the food label problem in detail.
+When we first started, we considered answering questions like _"where is my sofa?"_ But once we asked actual people with visual impairments, they explained: **"I never lose my sofa, it doesn't move."** What they did struggle with was the kitchen, where utensils and ingredients move constantly. They also explained the food label problem in detail.
 
 This conversation reshaped the project entirely. The "**anchor points**" feature (using stationary objects like the fridge, oven, and microwave as reference points to locate movable items) came directly out of that user feedback. **It is yet another reminder that working with the target user group from day one is critical**, a theme that runs through all my accessibility research.
 
@@ -24,15 +24,15 @@ This conversation reshaped the project entirely. The "**anchor points**" feature
 
 Textual information is found all over food labels, making it impossible for blind or partially sighted people to know whether their food has expired, follow cooking instructions, find nutritional information, or check ingredients for allergies. Additionally, unlike stationary objects like the fridge or oven, utensils and ingredients move around the kitchen and can be lost, making meal preparation challenging and sometimes dangerous.
 
-It is worth noting that this work pre-dates today's strong vision-language models (VLMs). At the time, asking *"where is the strawberry?"* would, at best, yield *"in the kitchen"*, and when shown a picture of a STOP sign and asked *"what does this sign say?"*, VLMs could not answer. Modern VLMs have since solved some of these problems, which is genuinely brilliant for visually impaired people. Aye-Saac was an attempt to bridge that gap purposefully, with carefully designed components, well before general-purpose VLMs could.
+It is worth noting that this work pre-dates today's strong vision-language models (VLMs). At the time, asking _"where is the strawberry?"_ would, at best, yield _"in the kitchen"_, and when shown a picture of a STOP sign and asked _"what does this sign say?"_, VLMs could not answer. Modern VLMs have since solved some of these problems, which is genuinely brilliant for visually impaired people. Aye-Saac was an attempt to bridge that gap purposefully, with carefully designed components, well before general-purpose VLMs could.
 
 ## Approach
 
-**Food Label Reading**: We used **OCR** to extract text from food packaging and then answered users' questions based on that text. The system can answer questions like *"Is this safe to eat?"*, *"Is the soup vegetarian?"*, and *"How do I cook this?"*
+**Food Label Reading**: We used **OCR** to extract text from food packaging and then answered users' questions based on that text. The system can answer questions like _"Is this safe to eat?"_, _"Is the soup vegetarian?"_, and _"How do I cook this?"_
 
-**Spatial Reasoning with Anchor Points**: Using stationary kitchen objects as anchor points (fridge, sink, oven, microwave), the system gives more specific location information like *"just to the left of the microwave"* than traditional VQA systems. This was novel at the time, and is one of the main contributions of *The Spoon Is in the Sink*.
+**Spatial Reasoning with Anchor Points**: Using stationary kitchen objects as anchor points (fridge, sink, oven, microwave), the system gives more specific location information like _"just to the left of the microwave"_ than traditional VQA systems. This was novel at the time, and is one of the main contributions of _The Spoon Is in the Sink_.
 
-**Trust & Explainability**: The system reports confidence ("I'm 95% confident this expires tomorrow"), handles uncertainty gracefully ("I can't read the expiration date clearly, would you like me to try again?"), and answers follow-up questions like *"how sure are you about that?"* Trust matters in this domain, where incorrect information could lead to food poisoning or allergic reactions.
+**Trust & Explainability**: The system reports confidence ("I'm 95% confident this expires tomorrow"), handles uncertainty gracefully ("I can't read the expiration date clearly, would you like me to try again?"), and answers follow-up questions like _"how sure are you about that?"_ Trust matters in this domain, where incorrect information could lead to food poisoning or allergic reactions.
 
 ## Key Features
 
@@ -60,7 +60,7 @@ It is worth noting that this work pre-dates today's strong vision-language model
 
 ✓ **Two published papers** on accessible kitchen assistance
 ✓ **30 MSc students supervised** to completion across multiple cohorts
-✓ **Novel anchor-point spatial reasoning** approach (a main contribution of *The Spoon Is in the Sink*)
+✓ **Novel anchor-point spatial reasoning** approach (a main contribution of _The Spoon Is in the Sink_)
 ✓ **Trust-focused design** with confidence reporting and follow-up questions
 ✓ **Real-world applicability**: addressing malnutrition risk, a known comorbidity of visual impairment
 

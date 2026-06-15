@@ -26,7 +26,7 @@ This research was grounded throughout in collaboration with the people it was de
 
 ## Why This Helps Everyone
 
-Improving conversational fluidity for people with dementia improves the experience for everyone. Mid-utterance pauses aren't unique to dementia: non-native speakers pause while translating a word, and we all hesitate when we momentarily forget a name or song title. **Designing voice assistants that handle these patterns gracefully makes them more accessible *and* more natural for every user.**
+Improving conversational fluidity for people with dementia improves the experience for everyone. Mid-utterance pauses aren't unique to dementia: non-native speakers pause while translating a word, and we all hesitate when we momentarily forget a name or song title. **Designing voice assistants that handle these patterns gracefully makes them more accessible _and_ more natural for every user.**
 
 ## Real-World Deployment
 
