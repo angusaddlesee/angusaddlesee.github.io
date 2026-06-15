@@ -930,9 +930,9 @@ ninja.data = [{
           description: "Machine learning systems for healthcare information extraction and patient care management.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-conversational-ai-safety-and-question-understanding",
-          title: 'Conversational AI Safety and Question Understanding',
-          description: "Detecting inappropriate content and analyzing conversational question patterns in voice assistants.",
+            },},{id: "projects-abuse-detection-amp-question-analysis-on-the-alexa-prize-corpus",
+          title: 'Abuse Detection &amp;amp; Question Analysis on the Alexa Prize Corpus',
+          description: "Two MSc projects analysing roughly 1.7 million real Alexa Prize utterances; one for abuse detection, one for conversational question analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-european-amp-african-conversational-ai-summits",
