@@ -10,7 +10,9 @@ related_publications: true
 
 ## Overview
 
-The **SPRING project** (EU-funded) deployed a social robot in a hospital memory clinic to interact with patients and their companions. This work was **featured in TIME Magazine** and represents one of the first real-world deployments of multi-party conversational AI in clinical settings. Eight research institutes collaborated to tackle the challenges of robots operating in complex healthcare environments.
+The **SPRING project** (EU H2020 funded) deployed a social robot in a Parisian hospital memory clinic to interact with patients and their companions. This work was **featured in TIME Magazine** and represents one of the first real-world deployments of multi-party conversational AI in clinical settings. **Eight research institutes** collaborated to tackle the challenges of robots operating in complex healthcare environments.
+
+**My role:** I led the **Conversational AI and dialogue system** development; I built it. The wider SPRING consortium covered the robot platform, clinical partnership, navigation, emotion recognition, gestures, and more.
 
 ## Problem
 
@@ -30,36 +32,29 @@ Robots have been introduced to public spaces like museums, airports, shopping ce
 
 **Clinical Integration**: Worked closely with healthcare professionals to ensure the robot's behaviour was clinically appropriate, supportive, and safe. The robot participated in actual patient assessments in the memory clinic.
 
-**Real-world Deployment**: Tested the system in a functioning hospital with real patients, companions, and clinicians — not in a controlled lab environment. This provided invaluable insights into practical deployment challenges.
+**Real-world Deployment**: Tested the system in a functioning Parisian hospital with real patients, companions, and clinicians, not in a controlled lab environment. This provided invaluable insights into practical deployment challenges.
 
-## Technologies
+## From Rule-Based System to LLM-Based Dialogue
 
-- Large Language Models (LLMs)
-- Multi-party Dialogue Systems
-- Speaker Diarisation
-- Incremental Speech Recognition
-- Social Robotics
-- Human-Robot Interaction
-- Clinical AI Systems
-- Accessibility AI
+When I joined SPRING, the dialogue system was a classic intent/rule-based system, and the patients hated it. They were older adults who asked all sorts of unexpected things, and a rule-based system could only respond to a narrow set of intents. After I built and deployed the **LLM-based dialogue system**, patients could ask about their favourite plays, ask for jokes, and chat about Paris without an issue. **Making that impact was hugely rewarding**, and a strong demonstration of how LLMs can transform conversational AI in real clinical settings when designed carefully.
 
 ## Impact & Outcomes
 
-✓ **TIME Magazine feature** - [Robots Are Being Tested in Hospitals](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)  
-✓ **EACL 2024 Best Demo Award** - Multi-party hospital conversations  
-✓ **Real clinical deployment** - Actual patient interactions in hospital memory clinic  
-✓ **International collaboration** - 8 research institutes across Europe  
-✓ **Published research** - Multiple papers on multi-party dialogue and clinical robotics  
-✓ **PhD integration** - Successfully integrated doctoral research into real-world system  
-✓ **Accessibility impact** - Demonstrated feasibility of accessible conversational robots in healthcare
+✓ **TIME Magazine feature**: [Robots Are Being Tested in Hospitals](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)
+✓ **EACL 2024 Best Demo Award**: Multi-party hospital conversations
+✓ **Real clinical deployment**: Actual patient interactions in a Parisian hospital memory clinic
+✓ **International collaboration**: 8 research institutes across Europe
+✓ **Published research**: Multiple papers on multi-party dialogue and clinical robotics
+✓ **PhD integration**: Successfully integrated doctoral research into real-world system
+✓ **Accessibility impact**: Demonstrated feasibility of accessible conversational robots in healthcare
 
 ## Links & Resources
 
-- 🎥 **[HRI 2024 Video](https://www.youtube.com/watch?v=xMCpcsLhN_I)** - "A Multi-party Conversational Social Robot Using LLMs"
-- 📰 **[TIME Magazine Article](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)** - Feature on hospital robot testing
-- 📄 **[Related Publications](/publications/)** - EACL Best Demo, journal papers, and conference proceedings
-- 🏆 **EACL 2024 Best Demo Award** - Multi-party Multimodal Conversations in Hospital Memory Clinic
-- 🔬 **[SPRING Project Website](https://spring-h2020.eu/)** - EU-funded research initiative
+- 🎥 **[HRI 2024 Video](https://www.youtube.com/watch?v=xMCpcsLhN_I)**: "A Multi-party Conversational Social Robot Using LLMs"
+- 📰 **[TIME Magazine Article](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)**: Feature on hospital robot testing
+- 📄 **[Related Publications](/publications/)**: EACL Best Demo, journal papers, and conference proceedings
+- 🏆 **EACL 2024 Best Demo Award**: Multi-party Multimodal Conversations in Hospital Memory Clinic
+- 🔬 **[SPRING Project Website](https://spring-h2020.eu/)**: EU H2020 funded research initiative
 
 ## Key Contributions
 
@@ -81,51 +76,13 @@ Working in a healthcare setting demanded careful attention to:
 - **Professional coordination**: Working alongside clinicians without interfering
 - **Privacy and consent**: Ethical data handling for vulnerable populations
 
-### Accessibility for Dementia
+## Key Publications
 
-Applied PhD research on dementia-friendly dialogue:
-
-- **Extended timeouts**: Accommodating slower speech and longer pauses
-- **Clarification strategies**: Handling interrupted or incomplete questions
-- **Patient responses**: Avoiding frustration when misunderstandings occur
-- **Cognitive load management**: Keeping interactions simple and supportive
-
-## Research Highlights
-
-**LLM Integration**: Demonstrated how large language models can be effectively deployed in social robots for real-world clinical applications, balancing conversational fluidity with safety constraints.
-
-**Multi-party Dialogue Dataset**: Created and released a dataset of hospital conversations for training and evaluating multi-party dialogue systems, enabling future research in this domain.
-
-**Evaluation Framework**: Developed holistic evaluation methodologies covering technical performance (diarisation, goal tracking) and human factors (user experience, clinical appropriateness).
-
-**Practical Deployment Insights**: Documented the challenges and solutions for deploying conversational robots in real healthcare settings, providing a roadmap for future clinical AI systems.
-
-## Publications
-
-This project resulted in multiple high-impact publications:
-
-- **Socially Pertinent Robots in Gerontological Healthcare** (International Journal of Social Robotics, 2025)
-- **Multi-party Multimodal Conversations in Hospital Memory Clinic** (EACL 2024, Best Demo Award)
-- **A Multi-party Conversational Social Robot Using LLMs** (HRI 2024)
-- **Multi-party Goal Tracking with LLMs** (SIGdial 2023)
-- **A Holistic Evaluation Methodology for Multi-Party Spoken Conversational Agents** (IVA 2024)
+- **[Multi-party Multimodal Conversations Between Patients, Their Companions, and a Social Robot in a Hospital Memory Clinic](https://aclanthology.org/2024.eacl-demo.8.pdf)** (EACL 2024, **Best Demo Award**)
+- **[Socially Pertinent Robots in Gerontological Healthcare](https://link.springer.com/article/10.1007/s12369-025-01330-6)** (International Journal of Social Robotics, 2025)
 
 ## Media Coverage
-
-The SPRING project received significant media attention, highlighting the potential of social robots in healthcare:
 
 > "Robots Are Being Tested in Hospitals. Here's What Patients Think of Them" — TIME Magazine
 
 The article discusses how patients and healthcare professionals responded to the robot, the challenges of deployment, and the future of AI assistance in clinical settings.
-
-## Future Directions
-
-This work opens pathways for broader deployment of conversational AI in healthcare:
-
-- Scaling to other clinical settings (primary care, rehabilitation, mental health)
-- Integration with electronic health records and clinical workflows
-- Personalization to individual patient needs and preferences
-- Long-term interaction studies tracking patient outcomes
-- Multi-lingual support for diverse patient populations
-
-The SPRING project demonstrates that with careful design, ethical consideration, and clinical collaboration, conversational robots can play a supportive role in healthcare delivery.
