@@ -935,9 +935,9 @@ ninja.data = [{
           description: "Two MSc projects analysing roughly 1.7 million real Alexa Prize utterances; one for abuse detection, one for conversational question analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-european-amp-african-conversational-ai-summits",
-          title: 'European &amp;amp; African Conversational AI Summits',
-          description: "Co-founded international summits bringing together researchers, practitioners, and industry leaders in conversational AI.",
+            },},{id: "projects-community-leadership-in-conversational-ai",
+          title: 'Community Leadership in Conversational AI',
+          description: "Co-founded the European and African Conversational AI Summits, SIGdial officer, conference organiser, and 50+ international talks.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
