@@ -11,114 +11,39 @@ category: work
 
 Before specialising in conversational AI, I worked as a **Machine Learning Engineer** focused on information extraction from unstructured data into knowledge graphs. These projects with the **NHS in Scotland** and the **Scottish Government** applied NLP and machine learning to improve patient care and healthcare operations.
 
-## Problem
+## NHS Scotland: Patient Management Platform
 
-Healthcare systems generate vast amounts of unstructured text data — clinical notes, discharge summaries, patient records, and administrative documents. Critical information about patient needs, care requirements, and follow-up actions is buried in this text, making it difficult for healthcare professionals to:
+The primary NHS project parsed **hospital discharge letters in real time** using ML models I trained. The system did three things at once:
 
-- Identify patients requiring critical care after hospital discharge
-- Track patient outcomes and care pathways
-- Extract structured information for decision support
-- Ensure timely follow-up for high-risk patients
-- Manage resource allocation efficiently
+1. **Information extraction**: Pulled structured patient information (identifiers, conditions, medications, etc.) directly out of unstructured discharge letters.
+2. **Knowledge graph construction**: Inserted the extracted information into a live structured knowledge graph, with terminology grounded in **SNOMED**.
+3. **Risk identification**: Identified high-risk patients (e.g. somebody whose discharge letter looks routine in isolation, but whose graph shows recurring heart problems across multiple visits, raising the risk profile).
 
-## Approach
+A **live user interface for GP practices** sat on top of this graph, surfacing high-risk patients to their GPs in real time. Risk scoring itself was developed in close collaboration with GPs and SNOMED, so the model surfaced clinically meaningful signals rather than statistical noise.
 
-**Information Extraction**: Developed NLP pipelines to extract structured information from unstructured clinical text, transforming free-form notes into actionable data.
+## Scottish Government: Child Protection
 
-**Knowledge Graph Construction**: Built graph-based representations of patient information, care pathways, and clinical relationships to enable better reasoning and decision support.
+The Scottish Government project was in the **child protection** domain (so I'll keep details deliberately vague). The shape of the work was similar to the NHS project: I trained ML models that analysed patterns, joined unstructured data into knowledge graphs, and surfaced findings to Scottish Government staff to inform decision making.
 
-**Risk Stratification**: Created machine learning models to identify patients at high risk who required immediate attention or follow-up care after discharge.
+## Why This Mattered to Me
 
-**Clinical Workflow Integration**: Designed systems that integrated with existing healthcare workflows, ensuring extracted information reached the right healthcare professionals at the right time.
+I really enjoyed getting up every day to work on projects with **direct, positive real-world impact**. That feeling of tangible, human-relevant outcomes is what motivated my move into PhD research on conversational AI for healthcare, and is the same reason I switched to Amazon: to keep building things that affect real people, at scale.
 
-## Technologies
+## Knowledge Graphs Beyond the Day Job
 
-- Natural Language Processing (NLP)
-- Information Extraction
-- Knowledge Graphs
-- Machine Learning
-- Clinical Text Mining
-- Healthcare Data Systems
-- Risk Prediction Models
-- Python, scikit-learn, spaCy
+Around this work I became a **leading user and communicator of knowledge graph technology**. I wrote a series of articles on linked data (some with well over **100,000 views**), spoke at events like the **DBpedia Conference** at Leipzig University, and helped organise **SLiDInG 7** with the Scottish Government as a community gathering for Scotland's linked data practitioners.
 
-## Impact & Outcomes
+### Selected articles
 
-✓ **Patient safety improvements** - Highlighted high-risk patients requiring critical care post-discharge  
-✓ **Clinical decision support** - Provided structured data for healthcare professionals  
-✓ **NHS deployment** - Real-world implementation in Scottish healthcare system  
-✓ **Government collaboration** - Worked directly with Scottish Government on ML initiatives  
-✓ **Scalable solutions** - Systems handling large volumes of clinical documentation  
-✓ **Workflow integration** - Seamless integration with existing healthcare processes
+- 📝 **[The Olympics: How to Build a Linked Data Application](https://medium.com/wallscope/the-olympics-how-to-build-a-linked-data-application-f6f844b3a19c)**
+- 📝 **[Comparison of Linked Data Triplestores: A New Contender](https://medium.com/wallscope/comparison-of-linked-data-triplestores-a-new-contender-c62ae04901d3)**
+- 📝 **[Constructing More Advanced SPARQL Queries](https://medium.com/wallscope/constructing-more-advanced-sparql-queries-72d5ade1eedc)**
+- 📝 **[Linked Data Reconciliation in GraphDB](https://medium.com/wallscope/linked-data-reconciliation-in-graphdb-cd2796d2870b)**
 
-## Key Projects
-
-### 1. Post-Discharge Critical Care Identification (NHS Scotland)
-
-**Challenge**: Patients discharged from hospital sometimes require critical follow-up care, but this information can be scattered across discharge notes and clinical documentation.
-
-**Solution**: Developed NLP systems to automatically extract indicators of critical care needs from discharge summaries and patient records. The system flagged high-risk patients to their GPs, ensuring timely follow-up.
-
-**Impact**: Improved patient safety by ensuring critical care needs were communicated effectively to primary care physicians.
-
-### 2. Healthcare Information Extraction (Scottish Government)
-
-**Challenge**: Government healthcare initiatives required structured data from unstructured clinical and administrative documents to inform policy and resource allocation.
-
-**Solution**: Built machine learning pipelines to extract key entities, relationships, and outcomes from healthcare documents, constructing knowledge graphs that enabled better analysis and decision-making.
-
-**Impact**: Provided data-driven insights for healthcare policy and resource planning at the government level.
-
-## Technical Approach
-
-### Information Extraction Pipeline
-
-1. **Text Preprocessing**: Cleaning and normalising clinical text, handling medical abbreviations and terminology
-2. **Named Entity Recognition**: Identifying medical entities (conditions, medications, procedures, etc.)
-3. **Relationship Extraction**: Extracting relationships between entities (patient-condition, medication-dosage, etc.)
-4. **Knowledge Graph Construction**: Building structured representations of extracted information
-5. **Risk Scoring**: Applying machine learning models to identify high-risk patients
-
-### Clinical NLP Challenges
-
-Working with healthcare data presented unique challenges:
-
-- **Medical terminology**: Handling complex medical vocabulary and abbreviations
-- **Privacy and security**: Ensuring GDPR compliance and patient data protection
-- **Data quality**: Dealing with inconsistent documentation practices
-- **Clinical validation**: Working with healthcare professionals to validate outputs
-- **Integration**: Connecting with existing NHS systems and workflows
-
-## Skills Developed
-
-This work built foundational skills that later informed my conversational AI research:
-
-- **Domain expertise**: Understanding healthcare workflows and clinical needs
-- **NLP fundamentals**: Text processing, entity extraction, and semantic understanding
-- **Production ML**: Deploying and maintaining ML systems in real-world settings
-- **Stakeholder collaboration**: Working with clinicians, administrators, and policymakers
-- **Ethical AI**: Handling sensitive data responsibly and ensuring patient privacy
-
-## Transition to Conversational AI
-
-These projects revealed the potential for AI to improve healthcare delivery, but also highlighted the importance of natural interaction. Many healthcare professionals and patients would benefit from conversational interfaces rather than traditional data systems. This insight motivated my transition to research on voice assistants and social robots in healthcare settings, culminating in the SPRING hospital robot project.
+The full set of linked data articles, plus tutorials and conference write-ups, is on my [blog](/blog/).
 
 ## Related Work
 
-This healthcare ML experience directly informed later projects:
-
-- **[SPRING Hospital Robot](/projects/3_project/)** - Applied conversational AI in clinical settings
-- **[Voice Assistants for Dementia](/projects/2_project/)** - Accessibility-focused healthcare AI
-- **[Amazon Alexa+](/projects/1_project/)** - Scalable conversational systems helping millions
-
-## Key Learnings
-
-**Real-world impact matters**: Working on systems that directly improved patient care was incredibly rewarding and shaped my career focus on impactful AI applications.
-
-**Domain expertise is critical**: Understanding healthcare workflows, clinical needs, and regulatory requirements was as important as technical ML skills.
-
-**Collaboration is essential**: The best solutions emerged from close collaboration with healthcare professionals who understood the problems deeply.
-
-**Ethics and privacy are paramount**: Working with sensitive healthcare data requires rigorous attention to privacy, security, and ethical considerations.
-
-**Deployment is different from research**: Production ML systems require robustness, monitoring, and integration that go beyond research prototypes.
+- **[Voice Assistants for Dementia](/projects/2_project/)**: PhD work on accessibility-focused dialogue
+- **[SPRING Hospital Robot](/projects/3_project/)**: Conversational AI in clinical settings
+- **[Amazon Alexa+](/projects/1_project/)**: Production conversational AI at scale
