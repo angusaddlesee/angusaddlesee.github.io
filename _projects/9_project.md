@@ -1,7 +1,7 @@
 ---
 layout: page
-title: European & African Conversational AI Summits
-description: Co-founded international summits bringing together researchers, practitioners, and industry leaders in conversational AI.
+title: Community Leadership in Conversational AI
+description: Co-founded the European and African Conversational AI Summits, SIGdial officer, conference organiser, and 50+ international talks.
 img: assets/img/10.jpg
 importance: 9
 category: fun
@@ -9,125 +9,49 @@ category: fun
 
 ## Overview
 
-**Co-founded both the European and African Conversational AI Summits** to create community-building events for researchers, practitioners, and industry leaders. These summits address the challenge of siloed work in conversational AI by bringing together diverse perspectives on accessibility, safety, and real-world deployment.
+I have spent the last several years actively shaping the conversational AI community: **co-founding two continental summits**, serving as a **SIGdial officer**, organising academic conferences, running local meetups, and giving **over 50 talks internationally**. My motivation has always been to bridge two worlds I cared about, applied industry work and academic research, and to make the resulting community more open, more inclusive, and more practically useful.
 
-## Problem
+## Why I Started Doing This
 
-Conversational AI teams across academia and industry often work in silos, slowing down the exchange of ideas and responsible deployment practices. Key challenges include:
+I'd done industry work I genuinely enjoyed (the NHS / Scottish Government projects), and I'd done deep academic research. But moving between those worlds, I noticed a real disconnect: my academic colleagues were experts, but often had little insight into how their work would actually be used in practice. My industry network, meanwhile, didn't read papers. **I wanted to build the bridge.**
 
-- Limited knowledge sharing between academia and industry
-- Underrepresentation of accessibility and safety perspectives
-- Geographic barriers to collaboration
-- Disconnect between research advances and practical deployment
-- Lack of forums for discussing ethical and societal implications
+## European & African Conversational AI Summits
 
-## Approach
+I **co-founded both the European and African Conversational AI Summits**, with the African event being the **first of its kind on the continent**. The first European event hosted **1,200 attendees and 46 speakers**, and the first African event hosted **1,000 attendees and 44 speakers**.
 
-**Regional Summit Creation**: Co-founded summits in Europe and Africa to bring together local and international communities around applied conversational AI. These events create opportunities for collaboration that might not otherwise exist.
+The programmes are deliberately built around **diverse perspectives and pairing the right academics with the right industry practitioners**, so that collaborations actually happen on the day, not just in conference small talk.
 
-**Curated Programming**: Designed programmes with accessibility, safety, and real-world deployment as central themes, ensuring these critical topics receive attention alongside technical advances.
+The **European Conversational AI Summit is still running**, and it still takes place in **Edinburgh, the city I was born in**. It is incredible to watch it sell out **Dynamic Earth** multiple times and outgrow it, bringing Conversational AI experts from across the world to my home city.
 
-**Diverse Perspectives**: Facilitated workshops and panels that paired technical deep-dives with practitioner case studies, bringing together researchers, startups, and large organisations.
+## SIGdial Officer
 
-**Inclusive Community**: Created welcoming spaces for underrepresented voices in conversational AI, including researchers from the Global South, accessibility advocates, and practitioners working on social impact applications.
+I serve as an officer of **SIGdial**, the Special Interest Group on Discourse and Dialogue, contributing to one of the field's flagship academic communities.
 
-## Impact & Outcomes
+## Conference & Workshop Organising
 
-✓ **Two continental summits** - European and African Conversational AI Summits  
-✓ **Recurring events** - Established sustainable community-building platforms  
-✓ **Cross-sector collaboration** - Connected academia, industry, and startups  
-✓ **Accessibility focus** - Elevated discussions of inclusive AI design  
-✓ **Global network** - Built connections across continents and organisations  
-✓ **Career impact** - Facilitated hiring, mentorship, and project partnerships
+- **SIGdial 2022** (Edinburgh): Helped organise the conference itself
+- **YRRSDS 2021 and 2022**: Co-organised the Young Researchers' Roundtable on Spoken Dialogue Systems
+- **SLiDInG 7** (with the Scottish Government): Organised this Scotland-wide linked-data workshop
+- **ICMI 2020**: Supported the organisation
+- Several **special sessions on multi-party dialogue and LLMs**
 
-## Key Contributions
+## Local Communities
 
-### Community Building
+Beyond formal events, I have organised and run **local research and engineering communities**:
 
-Created recurring events that fostered collaborations across continents:
+- A **monthly tech meetup (L&L)** that I started in 2019 in Edinburgh
+- A **paper reading group** within my PhD lab
 
-- **Networking opportunities**: Connected researchers with industry practitioners
-- **Knowledge exchange**: Facilitated sharing of best practices and lessons learned
-- **Mentorship**: Enabled senior researchers to guide early-career professionals
-- **Hiring pipeline**: Created pathways for talent discovery and recruitment
+Both kept knowledge flowing between people who would not otherwise have crossed paths.
 
-### Accessibility and Safety Focus
+## Speaking
 
-Surfaced underrepresented perspectives on critical topics:
+I have given **over 50 talks internationally** at universities, conferences, and industry events including **Harvard, USC, KTH, the BBC, NatWest**, and many more. Talks have taken me to Los Angeles, Montreal, Abu Dhabi, Stockholm, Boston, Leipzig, Riga, Ljubljana, Eindhoven, Prague, and across the UK.
 
-- **Accessibility sessions**: Dedicated tracks on inclusive AI design
-- **Safety discussions**: Panels on responsible deployment and ethical considerations
-- **Real-world impact**: Case studies of conversational AI helping vulnerable populations
-- **Policy implications**: Discussions of regulation and governance
+I have also attended several **science communication and storytelling workshops** to keep refining how I make technical work accessible to people outside my immediate field, whether that is a hospital memory clinic patient, a Heriot-Watt undergraduate, or a senior leader at a bank.
 
-### Practical Deployment Emphasis
+## Why It Matters
 
-Balanced research advances with real-world application:
+Community work pays dividends I never anticipated when I started. It informs my research because I hear the actual problems people are trying to solve. It makes my engineering better because I see how other teams have hit the same walls. And every now and then, an introduction at a summit becomes a hire, a paper, a project, or a friendship that lasts.
 
-- **Industry case studies**: Presentations from companies deploying conversational AI at scale
-- **Startup showcases**: Platforms for emerging companies to share innovations
-- **Technical workshops**: Hands-on sessions on deployment challenges
-- **Failure stories**: Honest discussions of what doesn't work and why
-
-## Related Activities
-
-### SIGdial Officer
-
-Currently serve as an officer of SIGdial (Special Interest Group on Discourse and Dialogue), contributing to the broader conversational AI research community.
-
-### Conference Organization
-
-Organized several academic conferences, workshops, and special sessions:
-
-- SIGdial (Special Interest Group on Discourse and Dialogue)
-- YRRSDS (Young Researchers' Roundtable on Spoken Dialogue Systems)
-- ICMI (International Conference on Multimodal Interaction)
-- SLiDInG (Special Session on Spoken Language Interaction with Dialogue Systems)
-- Special sessions on multi-party dialogue and LLMs
-
-### Knowledge Sharing Groups
-
-Organized and ran multiple knowledge sharing groups within industry and academia, creating informal spaces for learning and collaboration.
-
-## Speaking Experience
-
-Delivered **over 50 work-related presentations internationally** at large events and universities including:
-
-- **Universities**: Harvard, USC, KTH, and many others
-- **Conferences**: Research conferences across Europe, North America, and beyond
-- **Industry events**: Tech summits, meetups, and company knowledge sharing sessions
-- **Locations**: Los Angeles, Montreal, Abu Dhabi, Stockholm, Boston, Leipzig, Riga, Ljubljana, Eindhoven, Prague, Edinburgh, and more
-
-Attended several **science communication and storytelling workshops** to refine presentation skills and make technical content accessible to diverse audiences.
-
-## Impact on Career
-
-These community-building activities have:
-
-- **Expanded network**: Connected with researchers and practitioners worldwide
-- **Informed research**: Learned about real-world challenges and opportunities
-- **Facilitated collaboration**: Led to joint projects and publications
-- **Enhanced visibility**: Raised profile in conversational AI community
-- **Developed skills**: Improved organisation, communication, and leadership abilities
-
-## Key Learnings
-
-**Community matters**: The best research and products emerge from diverse communities that share knowledge openly and support each other's growth.
-
-**Accessibility needs advocates**: Without dedicated focus, accessibility and safety concerns can be overlooked in favour of technical performance metrics.
-
-**Cross-sector collaboration is valuable**: Academia and industry have complementary strengths. Bringing them together accelerates progress.
-
-**Regional diversity enriches the field**: Different regions face different challenges and bring different perspectives. Global representation makes conversational AI better for everyone.
-
-**Organization is a skill**: Running successful events requires careful planning, inclusive design, and attention to community needs.
-
-## Future Directions
-
-Continue building inclusive, impactful conversational AI communities:
-
-- Expanding summit reach to additional regions
-- Creating more opportunities for early-career researchers
-- Strengthening connections between research and deployment
-- Elevating accessibility and safety in community discussions
-- Supporting underrepresented voices in conversational AI
+If you're working on conversational AI and want to chat, present at a summit, or collaborate, **[get in touch](mailto:angus@addleseehq.com)**.
