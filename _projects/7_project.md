@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Conversational AI Safety and Question Understanding
-description: Detecting inappropriate content and analyzing conversational question patterns in voice assistants.
+title: Abuse Detection & Question Analysis on the Alexa Prize Corpus
+description: Two MSc projects analysing roughly 1.7 million real Alexa Prize utterances; one for abuse detection, one for conversational question analysis.
 img: assets/img/8.jpg
 importance: 7
 category: research
@@ -10,122 +10,44 @@ related_publications: true
 
 ## Overview
 
-Developed machine learning systems to improve voice assistant safety and question understanding. This work addressed two critical challenges: detecting inappropriate content in conversational contexts, and understanding how people ask questions differently when speaking versus typing.
+During my MSc at Heriot-Watt I worked on two distinct projects that shared one thing: a corpus of **roughly 1.7 million real utterances** from my lab's **Alexa Prize Chatbot**. With that data in hand, I led two different lines of work, one with **Professor Verena Rieser** on detecting abuse directed at conversational agents, and one with **Professor Arash Eshghi** analysing how people ask questions via voice.
 
-## Problem 1: Detecting Inappropriate Content
+## Project 1: Abuse Detection (with Verena Rieser)
 
-Voice assistants need to detect when users are saying inappropriate things, but this is more nuanced than simple keyword filtering. **Swearing does not always indicate offence (especially in Scotland!)**, and seemingly innocuous terms like "sleep with" can be used in inappropriate sentences. Traditional profanity filters fail to capture context and intent.
+Voice assistants need to detect when users say inappropriate things, but this is more nuanced than simple keyword filtering. **Swearing does not always indicate offence (especially in Scotland!)**, and seemingly innocuous terms like *"sleep with"* can be used in inappropriate sentences. Traditional profanity filters fail to capture this.
 
-## Problem 2: Understanding Conversational Questions
+**Approach:**
 
-People ask questions more conversationally when speaking with a voice assistant compared to typing into a search engine. These differences can cause problems for systems trained primarily on written text. Understanding which differences matter and which cause failures is critical for improving voice assistant performance.
+1. We **filtered the Alexa Prize corpus** for certain words and phrases to surface a candidate set of potentially abusive utterances.
+2. We **annotated** this candidate set.
+3. We then **bootstrapped further candidates** by exploiting the observation that a user who has said something offensive once is more likely to have said other offensive things. Following users into their other utterances surfaced abuse that simple keyword filters could not catch (the *"sleep with"* type cases).
+4. With the resulting corpus, we **trained abuse detector models**.
 
-## Approach
+**Outcome:** The trained abuse detector was **deployed in the Alexa Prize Challenge system**, going beyond keyword filtering to use context and a wider vocabulary of harmful patterns.
 
-### Inappropriate Content Detection
+## Project 2: How People Ask Questions via Voice (with Arash Eshghi)
 
-**Context-Aware Classification**: Trained models to detect inappropriate content based on context and intent, not just keyword matching. The system considers:
+People ask questions very differently when speaking to a voice assistant compared with typing into a search engine. Understanding those differences matters for designing voice-first QA systems that don't fail on natural speech.
 
-- Surrounding context and conversation history
-- Intent behind the language use
-- Cultural and regional variations in language
-- Difference between casual swearing and offensive content
+**Approach:**
 
-**Nuanced Understanding**: Recognized that the same words can be appropriate or inappropriate depending on context. For example, discussing medical topics or quoting literature requires different handling than offensive language directed at the assistant or other users.
+1. **Filtered the same Alexa Prize corpus** for question utterances.
+2. **Analysed how voice questions differed** from typed-question QA datasets: voice questions were far more colloquial and frequently contained anaphora to previous turns, both of which standard QA systems struggle with.
+3. **Classified the questions into types**, including:
+    - **Sluices** (incomplete clarification-style questions like *"the one with the dragons?"*)
+    - **Explanation questions** (*"why does X happen?"*)
+    - **Personal questions to the bot** (*"what is your favourite colour?"*)
+    - And several other categories
 
-### Conversational Question Analysis
+**Outcome:** A characterisation of the question landscape that voice assistants face in the wild, very different from the clean question forms in benchmark QA datasets.
 
-**Comparative Analysis**: Analyzed how questions differ between voice and text interfaces:
+**A fun connection:** I then trained question classifiers on the annotated question corpus and built a **QA system in which the question type informed which underlying QA system was called**. This was back during my MSc, but with the benefit of hindsight, it is a clear early hint of the **LLM routing** work I now do on Alexa+, picking the right downstream system for each user request based on what the request actually looks like.
 
-- Longer, more natural phrasing in voice
-- More incomplete or interrupted questions
-- Different word choice and formality
-- Contextual references to previous interactions
+## Why This Matters
 
-**Failure Mode Identification**: Identified which differences cause problems for current systems:
-
-- Incomplete questions interpreted as complete
-- Conversational phrasing not matching training data
-- Implicit context not being captured
-- Disfluencies and self-corrections causing confusion
-
-## Technologies
-
-- Natural Language Processing
-- Text Classification
-- Machine Learning
-- Contextual Understanding
-- Voice Assistant Systems
-- Conversational Analysis
-- Safety AI
-
-## Impact & Outcomes
-
-✓ **Improved safety** - More nuanced detection of inappropriate content  
-✓ **Reduced false positives** - Better handling of casual language and regional variations  
-✓ **Question understanding** - Identified key differences in conversational vs. written questions  
-✓ **System improvements** - Informed design of more robust voice assistant question handling  
-✓ **Published research** - Contributed to understanding of conversational question patterns
-
-## Key Contributions
-
-### Context-Aware Safety
-
-Moved beyond simple keyword filtering to understand intent and context:
-
-- **Cultural sensitivity**: Recognized regional variations in language use
-- **Intent detection**: Distinguished between casual language and offensive content
-- **Conversation history**: Used context from previous turns to inform decisions
-- **Nuanced responses**: Enabled appropriate handling of edge cases
-
-### Conversational Question Patterns
-
-Identified specific patterns that distinguish voice from text questions:
-
-- **Length and structure**: Voice questions tend to be longer and more naturally phrased
-- **Disfluencies**: Pauses, self-corrections, and incomplete thoughts are common in speech
-- **Contextual references**: Voice users more often refer to previous interactions
-- **Formality**: Voice questions are typically less formal than typed queries
-
-### Practical Recommendations
-
-Provided actionable guidance for improving voice assistants:
-
-- Better handling of incomplete and interrupted questions
-- Training data that includes conversational speech patterns
-- Context-aware interpretation of user intent
-- More flexible question understanding that accommodates natural speech
+Both projects shared the same insight: **real spoken interactions are messier and more contextual than the data most systems are trained on.** Whether you're building a safety classifier or a QA model, you need data that reflects how people actually speak. The Alexa Prize corpus made that possible at scale, and these two projects laid groundwork I'd return to throughout my PhD and beyond.
 
 ## Related Work
 
-This research connects to broader themes in my work:
-
-- **[Voice Assistants for Dementia](/projects/2_project/)** - Understanding disrupted and incomplete questions
-- **[Amazon Alexa+](/projects/1_project/)** - Applying safety and question understanding at scale
-- **[SPRING Hospital Robot](/projects/3_project/)** - Handling conversational questions in clinical settings
-
-## Publications
-
-- 📄 **"Understanding and Answering Incomplete Questions"** (CUI, 2023)
-- 📄 **"Understanding Partial Questions"** (Amazon ML Conference, 2022)
-- 📄 **Related work on conversational question analysis**
-
-## Skills & Technologies
-
-- Natural Language Processing
-- Text Classification
-- Machine Learning
-- Safety AI
-- Conversational Analysis
-- Voice Assistant Systems
-- Python, scikit-learn, PyTorch
-
-## Key Learnings
-
-**Context is critical**: Simple keyword-based approaches fail to capture the nuance of human communication. Understanding context and intent is essential for both safety and functionality.
-
-**Regional variation matters**: Language use varies significantly across regions and cultures. Systems must be flexible enough to handle these variations without over-filtering.
-
-**Voice is different from text**: People communicate differently when speaking versus typing. Voice assistants need to be designed specifically for conversational interaction, not just adapted from text-based systems.
-
-**Safety and usability must balance**: Overly aggressive safety filtering can make systems frustrating to use, while insufficient filtering creates risks. Finding the right balance requires nuanced understanding of context and intent.
+- **[Voice Assistants for Dementia](/projects/2_project/)**: PhD work on accessible dialogue, including incomplete and disrupted questions
+- **[Amazon Alexa+](/projects/1_project/)**: Production conversational AI at scale
