@@ -2,7 +2,7 @@
 layout: page
 title: Abuse Detection & Question Analysis on the Alexa Prize Corpus
 description: Two MSc projects analysing roughly 1.7 million real Alexa Prize utterances; one for abuse detection, one for conversational question analysis.
-img: assets/img/8.jpg
+img: assets/img/misc.jpg
 importance: 7
 category: research
 related_publications: true

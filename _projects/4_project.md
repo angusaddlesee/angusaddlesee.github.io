@@ -2,7 +2,7 @@
 layout: page
 title: Voice Assistants for Visually Impaired People in the Kitchen
 description: Accessible kitchen assistance systems addressing malnutrition challenges for visually impaired users.
-img: assets/img/5.jpg
+img: assets/img/visual.png
 importance: 3
 category: research
 related_publications: true

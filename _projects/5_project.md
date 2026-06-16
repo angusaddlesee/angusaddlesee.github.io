@@ -2,7 +2,7 @@
 layout: page
 title: NHS & Scottish Government ML Projects
 description: Machine learning systems for healthcare information extraction and patient care management.
-img: assets/img/7.jpg
+img: assets/img/nhs.png
 importance: 4
 category: work
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: Production LLM Systems at Amazon Alexa+
 description: LLM routing, reward modelling, and evaluation infrastructure in Alexa's Frontier AI Modelling Lab.
-img: assets/img/12.jpg
+img: assets/img/alexa.jpg
 importance: 1
 category: work
 related_publications: true

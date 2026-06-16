@@ -2,7 +2,7 @@
 layout: page
 title: SPRING Hospital Memory Clinic Robot
 description: Multi-party conversational social robot deployed in real hospital settings for patient interactions.
-img: assets/img/6.jpg
+img: assets/img/spring.png
 importance: 1
 category: work
 related_publications: true

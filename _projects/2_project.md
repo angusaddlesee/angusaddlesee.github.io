@@ -2,7 +2,7 @@
 layout: page
 title: Voice Assistants for People with Dementia
 description: PhD research on accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.
-img: assets/img/3.jpg
+img: assets/img/phd.jpg
 importance: 2
 category: research
 related_publications: true
