@@ -54,4 +54,4 @@ I have also attended several **science communication and storytelling workshops*
 
 Community work pays dividends I never anticipated when I started. It informs my research because I hear the actual problems people are trying to solve. It makes my engineering better because I see how other teams have hit the same walls. And every now and then, an introduction at a summit becomes a hire, a paper, a project, or a friendship that lasts.
 
-If you're working on conversational AI and want to chat, present at a summit, or collaborate, **[get in touch](mailto:angus&#64;addleseeHQ&#46;com)**.
+If you're working on conversational AI and want to chat, present at a summit, or collaborate, <strong><a href="mailto:angus&#64;addleseeHQ&#46;com">get in touch</a></strong>.

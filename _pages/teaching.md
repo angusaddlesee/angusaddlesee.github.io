@@ -44,4 +44,4 @@ I believe in hands-on mentorship that connects academic research with real-world
 - **Career development**: Connecting students with industry opportunities and research networks
 - **Ethical awareness**: Ensuring students consider the broader implications of their work
 
-If you're interested in collaboration or supervision opportunities, feel free to [get in touch](mailto:angus&#64;addleseeHQ&#46;com).
+If you're interested in collaboration or supervision opportunities, feel free to <a href="mailto:angus&#64;addleseeHQ&#46;com">get in touch</a>.
