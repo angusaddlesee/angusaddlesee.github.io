@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Founded the **Aye-Saac project** — a voice assistant designed to help blind and partially sighted people, particularly in the kitchen.
+Founded the **Aye-Saac project**, a voice assistant designed to help blind and partially sighted people, particularly in the kitchen.

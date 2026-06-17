@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented "Multi-party Goal Tracking with LLMs" at SIGdial in Prague — comparing pre-training, fine-tuning, and prompt engineering for understanding hospital conversations. GPT-3.5-turbo with reasoning-style prompts came out on top.
+Presented "Multi-party Goal Tracking with LLMs" at SIGdial in Prague, comparing pre-training, fine-tuning, and prompt engineering for understanding hospital conversations. GPT-3.5-turbo with reasoning-style prompts came out on top.

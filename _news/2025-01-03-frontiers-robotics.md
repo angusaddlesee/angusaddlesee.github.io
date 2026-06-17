@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "Building for Speech: Designing the Next Generation of Social Robots for Audio Interaction" was published in **Frontiers in Robotics and AI** — making the case for better speakers, microphones, and quieter motors in social robots.
+Our paper "Building for Speech: Designing the Next Generation of Social Robots for Audio Interaction" was published in **Frontiers in Robotics and AI**, making the case for better speakers, microphones, and quieter motors in social robots.

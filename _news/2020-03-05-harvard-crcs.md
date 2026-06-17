@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented at the **CRCS Workshop on AI for Social Impact** at **Harvard University** — a highlight of my early academic career.
+Presented at the **CRCS Workshop on AI for Social Impact** at **Harvard University**, a highlight of my early academic career.

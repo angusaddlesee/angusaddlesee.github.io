@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Worked with the Scottish Government in their HQ on child protection statistics and data management — unifying large messy datasets and analysing the results.
+Worked with the Scottish Government in their HQ on child protection statistics and data management, unifying large messy datasets and analysing the results.

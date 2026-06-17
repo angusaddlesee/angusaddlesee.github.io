@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Co-organised and spoke at **SLiDInG 7** with the Scottish Government — a workshop on Scotland's Linked Data projects.
+Co-organised and spoke at **SLiDInG 7** with the Scottish Government, a workshop on Scotland's Linked Data projects.

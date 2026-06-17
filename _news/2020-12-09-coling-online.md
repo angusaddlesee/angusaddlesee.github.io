@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented "A comprehensive evaluation of incremental speech recognition and diarization for conversational AI" at COLING (online) — benchmarking commercial ASR systems for real-time multi-party dialogue.
+Presented "A comprehensive evaluation of incremental speech recognition and diarization for conversational AI" at COLING (online), benchmarking commercial ASR systems for real-time multi-party dialogue.

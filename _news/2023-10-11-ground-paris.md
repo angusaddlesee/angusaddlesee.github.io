@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers presented at the GROUND workshop at ICMI in Paris — both exploring how to detect agreement in multi-party conversations with social robots.
+Two papers presented at the GROUND workshop at ICMI in Paris, both exploring how to detect agreement in multi-party conversations with social robots.

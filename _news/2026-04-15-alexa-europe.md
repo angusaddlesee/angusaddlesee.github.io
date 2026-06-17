@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Alexa+ is rolling out across Europe — Italy, Spain, and more. An exciting and challenging time as we scale models triggered for 100% of traffic to support an increasing variety of languages.
+Alexa+ is rolling out across Europe, Italy, Spain, and more. An exciting and challenging time as we scale models triggered for 100% of traffic to support an increasing variety of languages.

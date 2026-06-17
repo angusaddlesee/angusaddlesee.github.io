@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Spoke at the inaugural **European Chatbot and Conversational AI Summit** that I co-founded — 1,200 attendees and 46 speakers.
+Spoke at the inaugural **European Chatbot and Conversational AI Summit** that I co-founded, 1,200 attendees and 46 speakers.

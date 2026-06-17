@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented "Securely Capturing People's Interactions with Voice Assistants at Home" at NLP4PI in Abu Dhabi — introducing CVR-SI, our bespoke tool for ethical data collection with vulnerable populations.
+Presented "Securely Capturing People's Interactions with Voice Assistants at Home" at NLP4PI in Abu Dhabi, introducing CVR-SI, our bespoke tool for ethical data collection with vulnerable populations.

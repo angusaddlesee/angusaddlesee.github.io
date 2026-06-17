@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Supervised 20 MSc students working on the **Aye-Saac project** — extending the voice assistant for visually impaired users.
+Supervised 20 MSc students working on the **Aye-Saac project**, extending the voice assistant for visually impaired users.

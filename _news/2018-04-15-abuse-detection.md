@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Worked on a side-project during my Masters on abuse detection towards conversational agents — collaborating with a PhD student under Professor Verena Rieser.
+Worked on a side-project during my Masters on abuse detection towards conversational agents, collaborating with a PhD student under Professor Verena Rieser.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Ran the Spartan Ultramarathon in Wales — a 58k race with 71 obstacles and 2,800m elevation gain (Ben Nevis twice!).
+Ran the Spartan Ultramarathon in Wales, a 58k race with 71 obstacles and 2,800m elevation gain (Ben Nevis twice!).

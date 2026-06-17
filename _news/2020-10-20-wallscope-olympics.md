@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My article "The Olympics: How to Build a Linked Data Application" was published on the [Wallscope blog](https://medium.com/wallscope/the-olympics-how-to-build-a-linked-data-application-f6f844b3a19c) — demonstrating how to combine RDFox with Wallscope's platform.
+My article "The Olympics: How to Build a Linked Data Application" was published on the [Wallscope blog](https://medium.com/wallscope/the-olympics-how-to-build-a-linked-data-application-f6f844b3a19c), demonstrating how to combine RDFox with Wallscope's platform.

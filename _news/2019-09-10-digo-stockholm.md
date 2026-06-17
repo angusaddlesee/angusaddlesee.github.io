@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented "Current Challenges in Spoken Dialogue Systems and Why They Are Critical for Those Living with Dementia" at Dialogue for Good in Stockholm — outlining urgent research priorities for accessible voice technology.
+Presented "Current Challenges in Spoken Dialogue Systems and Why They Are Critical for Those Living with Dementia" at Dialogue for Good in Stockholm, outlining urgent research priorities for accessible voice technology.

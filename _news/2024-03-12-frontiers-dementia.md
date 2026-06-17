@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New paper in **Frontiers in Dementia**: "You Have Interrupted Me Again!" — showing how incremental clarification requests can make voice assistants more accessible for people with dementia.
+New paper in **Frontiers in Dementia**: "You Have Interrupted Me Again!", showing how incremental clarification requests can make voice assistants more accessible for people with dementia.

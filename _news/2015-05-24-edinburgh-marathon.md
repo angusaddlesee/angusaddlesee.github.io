@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Completed the Edinburgh Marathon — my first ever marathon!
+Completed the Edinburgh Marathon, my first ever marathon!

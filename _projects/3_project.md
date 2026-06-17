@@ -83,6 +83,6 @@ Working in a healthcare setting demanded careful attention to:
 
 ## Media Coverage
 
-> "Robots Are Being Tested in Hospitals. Here's What Patients Think of Them" — TIME Magazine
+> "Robots Are Being Tested in Hospitals. Here's What Patients Think of Them", TIME Magazine
 
 The article discusses how patients and healthcare professionals responded to the robot, the challenges of deployment, and the future of AI assistance in clinical settings.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started my postdoc as a Research Associate on the EU SPRING H2020 project — deploying an LLM-based conversational robot in a hospital memory clinic.
+Started my postdoc as a Research Associate on the EU SPRING H2020 project, deploying an LLM-based conversational robot in a hospital memory clinic.

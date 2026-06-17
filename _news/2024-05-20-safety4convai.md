@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented "Grounding LLMs to In-prompt Instructions" at the Safety4ConvAI workshop in Turin — demonstrating up to 28% accuracy improvement by grounding LLMs to in-prompt knowledge in safety-critical domains.
+Presented "Grounding LLMs to In-prompt Instructions" at the Safety4ConvAI workshop in Turin, demonstrating up to 28% accuracy improvement by grounding LLMs to in-prompt knowledge in safety-critical domains.

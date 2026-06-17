@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Spoke at the inaugural **African Chatbot and Conversational AI Summit** that I co-founded — 1,000 attendees and 44 speakers, the first event of its kind in Africa.
+Spoke at the inaugural **African Chatbot and Conversational AI Summit** that I co-founded, 1,000 attendees and 44 speakers, the first event of its kind in Africa.

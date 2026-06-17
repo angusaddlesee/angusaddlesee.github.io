@@ -2,7 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
-description: Long-form posts on conversational AI, LLM systems, and accessibility — alongside selected articles I've written for Towards Data Science, Heartbeat, Amazon Science, and others.
+description: Long-form posts on conversational AI, LLM systems, and accessibility, alongside selected articles I've written for Towards Data Science, Heartbeat, Amazon Science, and others.
 nav: true
 nav_order: 1
 pagination:

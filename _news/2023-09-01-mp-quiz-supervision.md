@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Supervised 20+ students on a multi-party quiz project — exploring agreement detection in group conversations with social robots.
+Supervised 20+ students on a multi-party quiz project, exploring agreement detection in group conversations with social robots.

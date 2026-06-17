@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Helped organise **SIGdial 2022** in Edinburgh — bringing the dialogue research community to my home city.
+Helped organise **SIGdial 2022** in Edinburgh, bringing the dialogue research community to my home city.

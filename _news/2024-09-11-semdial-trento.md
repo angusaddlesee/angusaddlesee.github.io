@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our multi-party dialogue dataset paper was presented at SemDial in Trento, Italy — releasing a hospital dialogue corpus designed for goal tracking with LLMs.
+Our multi-party dialogue dataset paper was presented at SemDial in Trento, Italy, releasing a hospital dialogue corpus designed for goal tracking with LLMs.
