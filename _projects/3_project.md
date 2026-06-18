@@ -5,7 +5,7 @@ description: Multi-party conversational social robot deployed in real hospital s
 img: assets/img/spring.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
 
 ## Overview
@@ -40,21 +40,17 @@ When I joined SPRING, the dialogue system was a classic intent/rule-based system
 
 ## Impact & Outcomes
 
-✓ **TIME Magazine feature**: [Robots Are Being Tested in Hospitals](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)
-✓ **EACL 2024 Best Demo Award**: Multi-party hospital conversations
-✓ **Real clinical deployment**: Actual patient interactions in a Parisian hospital memory clinic
-✓ **International collaboration**: 8 research institutes across Europe
-✓ **Published research**: Multiple papers on multi-party dialogue and clinical robotics
-✓ **PhD integration**: Successfully integrated doctoral research into real-world system
-✓ **Accessibility impact**: Demonstrated feasibility of accessible conversational robots in healthcare
+- 🏆 **EACL 2024 Best Demo Award** for the demo paper on the system itself
+- 📰 **[Featured in TIME Magazine](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)**, the only piece of work I've done that has reached that audience
+- 🏥 **Real clinical deployment** with actual patient interactions in a Parisian hospital memory clinic
+- 🌍 **International collaboration** across eight research institutes in Europe
+- 📚 **Multiple peer-reviewed papers** on multi-party dialogue, clinical robotics, and accessibility
 
 ## Links & Resources
 
 - 🎥 **[HRI 2024 Video](https://www.youtube.com/watch?v=xMCpcsLhN_I)**: "A Multi-party Conversational Social Robot Using LLMs"
-- 📰 **[TIME Magazine Article](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/)**: Feature on hospital robot testing
-- 📄 **[Related Publications](/publications/)**: EACL Best Demo, journal papers, and conference proceedings
-- 🏆 **EACL 2024 Best Demo Award**: Multi-party Multimodal Conversations in Hospital Memory Clinic
 - 🔬 **[SPRING Project Website](https://spring-h2020.eu/)**: EU H2020 funded research initiative
+- 📄 **[Related Publications](/publications/)**: All papers from this project
 
 ## Key Contributions
 

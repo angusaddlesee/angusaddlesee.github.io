@@ -5,7 +5,7 @@ description: LLM routing, reward modelling, and evaluation infrastructure in Ale
 img: assets/img/alexa.jpg
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
 
 I work in **Amazon Alexa's Frontier AI Modelling Lab** on **Alexa+**, contributing across several workstreams that span model training, evaluation, and production routing.

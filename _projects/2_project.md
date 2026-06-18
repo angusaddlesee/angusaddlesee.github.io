@@ -5,7 +5,7 @@ description: PhD research on accessible dialogue systems tailored to cognitive a
 img: assets/img/phd.jpg
 importance: 2
 category: research
-related_publications: true
+related_publications: false
 ---
 
 ## Overview

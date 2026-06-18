@@ -5,14 +5,14 @@ description: Accessible kitchen assistance systems addressing malnutrition chall
 img: assets/img/visual.png
 importance: 3
 category: research
-related_publications: true
+related_publications: false
 ---
 
 ## Overview
 
 I **founded the Aye-Saac project** and led its development across multiple cohorts of MSc students at Heriot-Watt. In total I supervised **30 MSc students** through this work, with two academic papers published as outcomes. My role was to propose the project, teach the students about conversational AI, and guide the technical direction across years; the students did the heavy lifting and built the system.
 
-Aye-Saac is a voice assistant designed to help blind and partially sighted people in the kitchen. Malnutrition and visual impairment are well-known comorbidities, because shopping, preparing food, and eating safely all become harder without sight. Aye-Saac addresses this directly by reading food labels, locating kitchen items, and answering follow-up questions with transparent, explainable AI.
+Aye-Saac is a voice assistant designed to help blind and partially sighted people in the kitchen. Malnutrition and visual impairment are well-known comorbidities, because shopping, preparing food, and eating safely all become harder with limited sight. Aye-Saac addresses this directly by reading food labels, locating kitchen items, and answering follow-up questions with transparent, explainable AI.
 
 ## Why "Aye-Saac"? A Lesson in Human-Centred Design
 
@@ -58,11 +58,11 @@ It is worth noting that this work pre-dates today's strong vision-language model
 
 ## Impact & Outcomes
 
-✓ **Two published papers** on accessible kitchen assistance
-✓ **30 MSc students supervised** to completion across multiple cohorts
-✓ **Novel anchor-point spatial reasoning** approach (a main contribution of _The Spoon Is in the Sink_)
-✓ **Trust-focused design** with confidence reporting and follow-up questions
-✓ **Real-world applicability**: addressing malnutrition risk, a known comorbidity of visual impairment
+- 📚 **Two published papers** on accessible kitchen assistance
+- 🎓 **30 MSc students supervised** to completion across multiple cohorts
+- 🧭 **Novel anchor-point spatial reasoning** approach (a main contribution of _The Spoon Is in the Sink_)
+- 🔍 **Trust-focused design** with confidence reporting and follow-up questions
+- 🥗 **Real-world applicability**, addressing malnutrition risk, a known comorbidity of visual impairment
 
 ## Links & Resources
 

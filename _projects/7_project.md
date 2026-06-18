@@ -5,12 +5,12 @@ description: Two MSc projects analysing roughly 1.7 million real Alexa Prize utt
 img: assets/img/misc.jpg
 importance: 7
 category: research
-related_publications: true
+related_publications: false
 ---
 
 ## Overview
 
-During my MSc at Heriot-Watt I worked on two distinct projects that shared one thing: a corpus of **roughly 1.7 million real utterances** from my lab's **Alexa Prize Chatbot**. With that data in hand, I led two different lines of work, one with **Professor Verena Rieser** on detecting abuse directed at conversational agents, and one with **Professor Arash Eshghi** analysing how people ask questions via voice.
+During my MSc at Heriot-Watt I worked on two distinct projects that shared one thing: a corpus of **roughly 1.7 million real utterances** from my lab's **Alexa Prize Chatbot**. With that data in hand, I contributed to two different lines of work, one with **Professor Verena Rieser** on detecting abuse directed at conversational agents, and one with **Professor Arash Eshghi** analysing how people ask questions via voice.
 
 ## Project 1: Abuse Detection (with Verena Rieser)
 
