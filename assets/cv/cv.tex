@@ -1,0 +1,138 @@
+% =============================================================================
+% Angus Addlesee - Curriculum Vitae
+% Source-of-truth: assets/json/resume.json (kept in sync with the website CV)
+% Compile with: xelatex (recommended) or pdflatex
+% =============================================================================
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}      % styles: casual, classic, banking, oldstyle, fancy
+\moderncvcolor{blue}         % colours: blue, orange, green, red, purple, grey, black
+
+\usepackage[scale=0.78,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% --- Personal data -----------------------------------------------------------
+\name{Angus}{Addlesee}
+\title{Applied Scientist · Frontier AI Modelling Lab @ Amazon Alexa+}
+\address{Cambridge, UK}{}{}
+\email{angus@addleseeHQ.com}
+\homepage{www.addlesee.co.uk}
+\social[linkedin]{angusaddlesee}
+\social[github]{angusaddlesee}
+% Google Scholar: https://scholar.google.com/citations?user=6n2P4OEAAAAJ
+
+\begin{document}
+\makecvtitle
+
+% --- Summary -----------------------------------------------------------------
+\section{Profile}
+Applied Scientist in Amazon Alexa's Frontier AI Modelling Lab, working on
+Alexa+ across several critical workstreams: LLM routing and optimisation,
+reward modelling for evaluation and training, and high-throughput evaluation
+infrastructure. PhD in Artificial Intelligence focused on accessible,
+human-centred dialogue systems for people with dementia. 50+ international
+talks, EACL Best Demo Award, and work featured in TIME Magazine.
+
+% --- Experience --------------------------------------------------------------
+\section{Experience}
+
+\cventry{2024--Present}
+{Applied Scientist}
+{Amazon Alexa+ \textbullet{} Frontier AI Modelling Lab}
+{Cambridge, UK}{}
+{\begin{itemize}
+\item LLM routing and optimisation for Alexa+ (production models triggered for 100\% of traffic).
+\item Lead the development of reward models for model evaluation and training, moving to run on 100\% of production traffic.
+\item Built a high-throughput system simulator enabling offline evaluation of counterfactual tool-calling, used for router training and model checkpoint evaluation against traffic signals.
+\item On-call rotas: diagnose and resolve Alexa+ production issues under pressure.
+\item Active interviewer: conducted 25+ technical interviews for the team.
+\end{itemize}}
+
+\cventry{2022--2024}
+{Research Associate}
+{Heriot-Watt University}
+{Edinburgh, UK}{}
+{\begin{itemize}
+\item EU SPRING H2020 project: conversational AI and robotics for dementia care.
+\item Led the conversational AI and dialogue system development for a multi-party social robot deployed in a Parisian memory clinic.
+\item EACL 2024 Best Demo Award; project featured in TIME Magazine.
+\end{itemize}}
+
+\cventry{Mar--Aug 2022}
+{Applied Scientist Intern}
+{Amazon Alexa}
+{Cambridge, UK}{}
+{Research internship during PhD on voice assistant accessibility and partial-question understanding. Submitted three papers (INTERSPEECH, CUI, AMLC).}
+
+\cventry{2019--2022}
+{Machine Learning Engineer \& Researcher}
+{Wallscope}
+{Edinburgh, UK}{}
+{NLP and ML projects for NHS Scotland and Scottish Government (real-time discharge-letter parsing into SNOMED-grounded knowledge graphs feeding a live GP UI; child-protection analytics). Concurrent with PhD.}
+
+\cventry{2018--2019}
+{Machine Learning Engineer}
+{Wallscope}
+{Edinburgh, UK}{}
+{Information extraction from unstructured data into knowledge graphs for healthcare and public sector clients.}
+
+\cventry{2017--2018}
+{Data Scientist}
+{Wallscope}
+{Edinburgh, UK}{}
+{Data-driven NLP solutions for healthcare and government services.}
+
+% --- Education ---------------------------------------------------------------
+\section{Education}
+
+\cventry{2019--2024}
+{PhD in Artificial Intelligence}
+{Heriot-Watt University}
+{Edinburgh, UK}{}
+{Thesis: \emph{Incremental multi-party conversational AI for people with dementia}. Funded by The Data Lab.}
+
+\cventry{2016--2018}
+{MSc in Artificial Intelligence with Speech and Multimodal Interaction}
+{Heriot-Watt University}
+{Edinburgh, UK}{\textit{Distinction}}
+{Thesis: \emph{An Exploration into Open-domain Question Answering for Conversational Agents}.}
+
+\cventry{2013--2016}
+{BSc (Hons) in Mathematics}
+{Heriot-Watt University}
+{Edinburgh, UK}{}
+{Dissertation: \emph{Markov Chains: Modelling Stochastic Processes and Exploring the Mathematics Behind these Models}.}
+
+% --- Awards ------------------------------------------------------------------
+\section{Awards}
+\cvitem{2024}{\textbf{EACL Best Demo Award}, European Chapter of the Association for Computational Linguistics. \emph{Multi-party Multimodal Conversations Between Patients, Their Companions, and a Social Robot in a Hospital Memory Clinic}.}
+\cvitem{2022}{\textbf{Societal Impact Award}, Heriot-Watt University.}
+\cvitem{2019}{\textbf{Industrial Doctorate Funding Award}, The Data Lab Scotland.}
+
+% --- Speaking & Leadership ---------------------------------------------------
+\section{Speaking \& Leadership}
+\cvitem{50+ Talks}{International talks at venues including \textbf{Harvard, USC, KTH, BBC, NatWest}, plus conferences across Europe, North America, and the Middle East (Boulder, Boston, Dublin, Eindhoven, Glasgow, Leipzig, Los Angeles, Ljubljana, Malta, Montreal, Paris, Prague, Riga, Stockholm, Turin, Abu Dhabi, and more).}
+\cvitem{Co-founder}{\textbf{European \& African Conversational AI Summits} (since 2020). The first European event hosted 1{,}200 attendees with 46 speakers; the first African event hosted 1{,}000 attendees with 44 speakers, the first event of its kind in Africa.}
+\cvitem{SIGdial Officer}{Special Interest Group on Discourse and Dialogue.}
+\cvitem{Conference Organising}{SIGdial 2022 (Edinburgh); YRRSDS 2021, 2022; SLiDInG 7 (with the Scottish Government); ICMI 2020 (supported).}
+\cvitem{Supervision}{60+ MSc students supervised across multiple cohorts on conversational AI, accessibility, and human-computer interaction projects.}
+
+% --- Selected Publications ---------------------------------------------------
+\section{Selected Publications}
+\cvitem{2025}{\emph{Socially Pertinent Robots in Gerontological Healthcare}. Alameda-Pineda et al. International Journal of Social Robotics.}
+\cvitem{2024}{\emph{Multi-party Multimodal Conversations Between Patients, Their Companions, and a Social Robot in a Hospital Memory Clinic}. Addlesee et al. EACL (\textbf{Best Demo Award}).}
+\cvitem{2024}{\emph{You Have Interrupted Me Again!: Making Voice Assistants More Dementia-Friendly With Incremental Clarification}. Addlesee \& Eshghi. Frontiers in Dementia.}
+\cvitem{2024}{\emph{Clarifying Completions: Evaluating How LLMs Respond to Incomplete Questions}. Addlesee, Lemon \& Eshghi. LREC-COLING.}
+\cvitem{2023}{\emph{Multi-party Goal Tracking with LLMs: Comparing Pre-training, Fine-tuning, and Prompt Engineering}. Addlesee et al. SIGdial.}
+\cvitem{2024}{\textbf{PhD Thesis}: \emph{Incremental Multi-party Conversational AI for People with Dementia}. Heriot-Watt University.}
+\cvitem{}{Full list at \href{https://scholar.google.com/citations?user=6n2P4OEAAAAJ}{Google Scholar}.}
+
+% --- Skills ------------------------------------------------------------------
+\section{Skills \& Interests}
+\cvitem{Technical}{LLM Routing \& Optimisation, Large Language Models, Reward Modelling, Conversational AI, Real-Time Systems, Speech \& Dialogue, Knowledge Graphs, Production ML.}
+\cvitem{Research}{Human–AI Interaction, Accessibility, Responsible AI, Multimodal Interaction, Healthcare AI, Multi-party Dialogue.}
+\cvitem{Languages}{English (native).}
+
+\end{document}
