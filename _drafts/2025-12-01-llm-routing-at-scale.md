@@ -30,8 +30,8 @@ The reason I'd flag this to a technical leader rather than leave it as an engine
 
 Strip away the marketing and a router is a function `r(x) → m`, mapping each incoming request `x` to one model `m` from a portfolio of options. The portfolio normally spans:
 
-- Sizes (a 1B distilled model, a 7B mid-tier, a 70B+ frontier model, etc...)
-- Specialisations (a code model, a math-tuned model, a domain-specific fine-tune)
+- Sizes (a 1B distilled model, a 7B mid-tier, a 70B+ frontier model, etc.)
+- Specialisations (a code model, a maths-tuned model, a domain-specific fine-tune)
 - Providers (open-weights you self-host alongside frontier APIs)
 - Modes (a low-temperature deterministic mode versus a high-temperature creative one)
 
@@ -51,7 +51,7 @@ In production you usually combine several of these rather than rely on one:
 
 **Query features.** Length, language, presence of code blocks, detected task type, named entities, syntactic complexity. Crude but cheap, and more effective than you'd expect as a first pass. A rule as simple as "if the input contains a code block, route to the code-tuned model" closes a surprising amount of the gap to a learned router, and it takes an afternoon to write.
 
-**Embedding similarity.** Map the query into a semantic space and compare it to centroids of routes you've defined by example. This is the basis of [semantic routing](/blog/), which I'll dedicate a separate post to. Latency is around 1 to 5ms on a small encoder. It's fast, easy to update without retraining, and extends naturally to routing across RAG pipelines or tool sets. The weakness: semantic similarity is not the same as task difficulty. "What is 2+2?" and "What is the integral of $e^{x^2}$?" are both maths queries, but only one of them needs your best model.
+**Embedding similarity.** Map the query into a semantic space and compare it to centroids of routes you've defined by example. This is the basis of semantic routing, which I'll dedicate a separate post to. Latency is around 1 to 5ms on a small encoder. It's fast, easy to update without retraining, and extends naturally to routing across RAG pipelines or tool sets. The weakness: semantic similarity is not the same as task difficulty. "What is 2+2?" and "What is the integral of $e^{x^2}$?" are both maths queries, but only one of them needs your best model.
 
 **Learned classifiers.** Train a small encoder, typically a distilled BERT, on `(query, best_model)` triples gathered offline. This is the primary router type in the literature. The router's job is easier than the LLMs it routes to: it doesn't have to answer the query, only predict which model will. A modest labelled set is usually enough to beat a strong heuristic baseline, provided the labels are honest.
 
@@ -79,7 +79,7 @@ What separates a routing system that quietly compounds value from one that quiet
 
 **Silent quality regressions.** When a router misclassifies a hard query as easy, the user sees a degraded answer and has no way to know why. Unlike cascading, a predictive router has no safety net, because it commits to a model before any response exists to check. The mitigation is twofold: a small "shadow" sample of the large model's response on a fraction of small-model traffic, plus continuous online evaluation that flags drifts in quality per route, not just on average.
 
-**Tail behaviour eaten by averages.** Optimising mean quality can mask catastrophic behaviour on a small slice of users. If your router fails reliably on a particular minority of phrasings, such as non-native English, dialect, or accessibility-driven speech patterns, average metrics won't catch it, and that's exactly the slice where you most need to be right. This connects directly to my research background, which I've written about in [designing AI for cognitive diversity](/blog/2024/accessible-ai-design/): variance across the user distribution is a system-design problem, not a corner case.
+**Tail behaviour eaten by averages.** Optimising mean quality can mask catastrophic behaviour on a small slice of users. If your router fails reliably on a particular minority of phrasings, such as non-native English, dialect, or accessibility-driven speech patterns, average metrics won't catch it, and that's exactly the slice where you most need to be right. This connects directly to my research background on conversational AI for people with dementia: variance across the user distribution is a system-design problem, not a corner case.
 
 **Calibration drift.** A confidence threshold that was well-calibrated at deployment will be miscalibrated three months later, because user behaviour, query mix, and model versions all shift. Without monitoring, the cascade slowly stops cascading, either over-escalating (cost climbs) or under-escalating (quality drops). The fix is boring: track the escalation rate, the per-route quality, and the marginal cost weekly, and recalibrate.
 
@@ -100,7 +100,7 @@ If you are kicking off a routing project this quarter, here is the order I'd run
 
 ## Where this fits in the bigger picture
 
-Routing is one face of a broader move in LLM infrastructure: away from monolithic, always-on-the-best-model deployments, and towards portfolio architectures where the right capability is composed for the right request. The same logic shows up in [speculative decoding](/blog/), in [mixture-of-experts](/blog/), in disaggregated prefill/decode serving, and in agent frameworks that route between specialist sub-agents. They're all the same insight applied at different layers: capability is heterogeneous, queries are heterogeneous, and any system that ignores both pays for it.
+Routing is one face of a broader move in LLM infrastructure: away from monolithic, always-on-the-best-model deployments, and towards portfolio architectures where the right capability is composed for the right request. The same logic shows up in speculative decoding, in mixture-of-experts architectures, in disaggregated prefill/decode serving, and in agent frameworks that route between specialist sub-agents. They're all the same insight applied at different layers: capability is heterogeneous, queries are heterogeneous, and any system that ignores both pays for it.
 
 So if you take one thing from this: routing isn't a cost-cutting hack to bolt on after launch. It's an architecture decision that shapes whether your LLM platform keeps working as it grows. Get it right early and cost and quality improve together. Get it wrong and you're repeatedly asking for more compute to paper over a structural problem.
 
