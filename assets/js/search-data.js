@@ -44,29 +44,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-llm-routing-at-scale-lessons-from-amazon-alexa",
-        
-          title: "LLM Routing at Scale: Lessons from Amazon Alexa",
-        
-        description: "How intelligent model selection makes voice assistants faster and more accessible",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/llm-routing-at-scale/";
-          
-        },
-      },{id: "post-designing-ai-for-cognitive-diversity-lessons-from-hospital-deployments",
-        
-          title: "Designing AI for Cognitive Diversity: Lessons from Hospital Deployments",
-        
-        description: "What I learned building conversational AI for people with dementia",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/accessible-ai-design/";
-          
-        },
-      },{id: "post-repairing-interrupted-questions-makes-voice-assistants-more-accessible",
+        },{id: "post-repairing-interrupted-questions-makes-voice-assistants-more-accessible",
         
           title: 'Repairing Interrupted Questions Makes Voice Assistants More Accessible <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
@@ -462,57 +440,7 @@ ninja.data = [{
             window.open("https://companyconnecting.com/2017/03/02/graduate-series-an-interview-with-heriot-watt-student-angus-addlesee/", "_blank");
           
         },
-      },{id: "books-artificial-intelligence-a-modern-approach",
-          title: 'Artificial Intelligence: A Modern Approach',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/artificial_intelligence_modern_approach/";
-            },},{id: "books-deep-learning",
-          title: 'Deep Learning',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/deep_learning/";
-            },},{id: "books-the-elements-of-statistical-learning",
-          title: 'The Elements of Statistical Learning',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/elements_statistical_learning/";
-            },},{id: "books-graph-representation-learning",
-          title: 'Graph Representation Learning',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/graph_representation_learning/";
-            },},{id: "books-knowledge-graphs",
-          title: 'Knowledge Graphs',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/knowledge_graphs/";
-            },},{id: "books-pattern-recognition-and-machine-learning",
-          title: 'Pattern Recognition and Machine Learning',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/pattern_recognition_ml/";
-            },},{id: "books-probabilistic-graphical-models-principles-and-techniques",
-          title: 'Probabilistic Graphical Models: Principles and Techniques',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/probabilistic_graphical_models/";
-            },},{id: "books-reinforcement-learning-an-introduction",
-          title: 'Reinforcement Learning: An Introduction',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/reinforcement_learning/";
-            },},{id: "books-a-semantic-web-primer",
-          title: 'A Semantic Web Primer',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/semantic_web_primer/";
-            },},{id: "books-speech-and-language-processing",
-          title: 'Speech and Language Processing',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/speech_language_processing/";
-            },},{id: "news-completed-the-edinburgh-marathon-my-first-ever-marathon",
+      },{id: "news-completed-the-edinburgh-marathon-my-first-ever-marathon",
           title: 'Completed the Edinburgh Marathon, my first ever marathon!',
           description: "",
           section: "News",},{id: "news-finished-my-bookmaking-internship-at-tipico-in-malta-where-i-created-optimisation-algorithms",
