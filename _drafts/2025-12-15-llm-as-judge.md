@@ -26,7 +26,7 @@ For technical leaders, the strategic point is this: LLM-as-judge is what makes [
 
 ## What a judge actually does
 
-Strip the design space down and a judge is a function that takes a query, one or more candidate outputs, and a rubric, and returns a score or a preference. Two patterns dominate, and the choice between them affects everything downstream.
+A judge is a function that takes a query, one or more candidate outputs, and a rubric, and returns a score or a preference. Two patterns dominate, and the choice between them affects everything downstream.
 
 **Pointwise scoring** asks the judge to rate a single output on a numeric scale, say 1 to 5 for helpfulness. It is simple, cheap (one judge call per output), and naturally extends to dashboards and per-axis tracking. Its weakness is calibration. Judges use scales unevenly, cluster scores into a narrow band, and drift across versions of the same model. A pointwise score is meaningful relative to a calibration anchor, not in absolute terms.
 
@@ -62,7 +62,7 @@ For high-stakes evaluations (model deployment decisions, public benchmarks, anyt
 
 ## Multi-judge ensembles and when they help
 
-Single-judge evaluation is a single point of failure for both bias and outage. The standard response is a multi-judge ensemble: aggregate judgements from several judges, by majority vote, by score averaging, or by a learned aggregator. This works to the extent that the constituent judges have *uncorrelated* biases. Two judges that both have strong verbosity bias do not help each other. A panel deliberately mixed across model families, prompt structures, and reasoning depths gives you genuine independence.
+Single-judge evaluation is a single point of failure for both bias and outage. The standard response is a multi-judge ensemble: aggregate judgements from several judges, by majority vote, by score averaging, or by a learned aggregator. This works to the extent that the constituent judges have _uncorrelated_ biases. Two judges that both have strong verbosity bias do not help each other. A panel deliberately mixed across model families, prompt structures, and reasoning depths gives you genuine independence.
 
 Ensembles also enable axis-specialised panels: one judge tuned for factual correctness, one for safety, one for tone, one for format compliance. Each judge does the job it is calibrated for, and a separate aggregation step produces the headline number. This is more robust than asking a single judge to balance every axis in one prompt, and it is the architecture I would default to whenever the evaluation matters.
 
@@ -72,13 +72,13 @@ The downside is cost. A panel of three or five judges is three to five times the
 
 Here is the transition I most want technical leaders to understand. An LLM-as-judge built for evaluation looks identical, from the outside, to an LLM-as-judge used as a reward signal during reinforcement learning. They are not the same problem.
 
-An evaluation judge is calibrated against humans on a *fixed* distribution of outputs: the model you are about to ship, scored on a held-out test set. You measure agreement, you publish the number, you move on.
+An evaluation judge is calibrated against humans on a _fixed_ distribution of outputs: the model you are about to ship, scored on a held-out test set. You measure agreement, you publish the number, you move on.
 
-A reward judge is calibrated against humans on a *moving* distribution. As the policy trains, every gradient step pulls the model further from the distribution the judge was originally calibrated on. The judge's reliability on yesterday's outputs tells you nothing about its reliability on today's. And the training process is actively searching for outputs that score high, which means it is actively searching for the judge's blind spots.
+A reward judge is calibrated against humans on a _moving_ distribution. As the policy trains, every gradient step pulls the model further from the distribution the judge was originally calibrated on. The judge's reliability on yesterday's outputs tells you nothing about its reliability on today's. And the training process is actively searching for outputs that score high, which means it is actively searching for the judge's blind spots.
 
 This is the structural reason most evaluation judges break when promoted to reward judges. Three properties separate the safe ones from the dangerous ones:
 
-1. **High and stable agreement with humans on the *current* policy distribution**, not just on the eval set. If the judge agrees with humans on the SFT checkpoint but disagrees on outputs from an ablation, it will not survive RL.
+1. **High and stable agreement with humans on the _current_ policy distribution**, not just on the eval set. If the judge agrees with humans on the SFT checkpoint but disagrees on outputs from an ablation, it will not survive RL.
 2. **Low sample-to-sample variance.** Noisy judges produce noisy gradients, and noise is the friend of reward hacking: random good scores let the policy stumble into exploits before you see them.
 3. **Plausible adversarial robustness.** The judge does not break on outputs that game its prompt structure. Training will drive the policy toward whatever the judge mis-scores; if those exploits exist, they will be found.
 
@@ -99,12 +99,6 @@ If you are kicking off LLM-as-judge work this quarter, here is the order I'd run
 7. **Treat ensemble vs single-judge as a stakes decision.** Low-stakes tracking: single judge. High-stakes deployment or training reward: panel.
 
 The first five items are non-negotiable. The last two are economics.
-
-## Where this fits
-
-LLM-as-judge is the load-bearing infrastructure underneath almost everything modern in LLM development. It is what makes [LLM routing](/blog/2025/llm-routing-at-scale/) honest: you cannot route to the cheaper model unless you can measure that the cheaper model is good enough. It is what makes RLAIF possible: without a calibrated judge there is no scalable preference signal. It is what makes evaluation cadence fast enough to support real iteration. And it is what closes the loop between research and production: a judge that lives in the eval pipeline today is a candidate reward signal tomorrow, with the calibration discipline I described above.
-
-If routing is the architecture decision that determines whether your platform survives growth, evaluation is the discipline that determines whether you can tell the difference between a good model and a bad one. Without the second, the first is gambling.
 
 Future posts will go deeper into pairwise debiasing, multi-judge ensembles, and the migration from evaluation judge to learned reward model. The short version, for now: get a judge, characterise it like an instrument, and never trust a verdict whose error bar you cannot quote.
 

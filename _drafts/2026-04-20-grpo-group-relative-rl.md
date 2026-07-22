@@ -110,7 +110,7 @@ GRPO is not magic. Its failure modes are different enough from PPO's that migrat
 
 ## How to use it
 
-If you are kicking off a GRPO project this quarter, here is the order I'd run it in.
+These are the defaults I hand to teams starting out, roughly in the order the decisions come up.
 
 1. **Start with a verifiable reward.** GRPO's strongest setting is sparse, rule-based rewards on maths or code. Get the verifier working, then check that $G = 16$ to $32$ produces a mix of correct and incorrect solutions. If it doesn't, your prompts are mis-targeted for the policy's current capability.
 2. **Warm-start from a strong SFT checkpoint.** The initial generation distribution sets the ceiling on what the group-relative baseline can do. A weak SFT model produces low-variance groups and GRPO has nothing to learn from.
@@ -121,9 +121,9 @@ If you are kicking off a GRPO project this quarter, here is the order I'd run it
 7. **Plan the reward-hacking monitoring loop on day one.** Fresh on-policy human spot-checks, KL budget tracking, length-normalisation. The defences are the same in GRPO as in PPO; GRPO is cheap enough that you have less excuse not to monitor.
 8. **If long completions or MoE training destabilise GRPO, try GSPO.** Sequence-level clipping is simpler to implement than per-token ratio bookkeeping and performs comparably on reasoning tasks; it is a drop-in swap, not a re-architecture.
 
-The first four are non-negotiable. The rest is tuning.
+Get the first four right and the rest is tuning.
 
-## Where this fits
+## The bigger shift
 
 GRPO and the group-relative family are the algorithmic substrate of the new RL-on-reasoning era. They are why the reasoning-model wave was an open-source story rather than a closed-frontier one: DeepSeek-R1 was reproducible at moderate budgets _because_ GRPO is cheap enough to fit in moderate budgets. They are the optimiser side of the same problem the [reward modelling pillar](/blog/2026/reward-modelling-at-scale/) addresses from the reward side: making preference learning at scale operationally tractable.
 

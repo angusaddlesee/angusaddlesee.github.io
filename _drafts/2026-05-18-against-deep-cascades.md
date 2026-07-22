@@ -13,7 +13,7 @@ I've watched a lot of teams reach for a deep cascade because it looks elegant on
 
 It is almost always the wrong answer.
 
-I wrote a deliberately even-handed post about cascading [a few months ago](/blog/2026/cascading-llms/) and I still believe every word of it. Two-stage cascades, built carefully around a calibrated gate, are an excellent tool. But the leap from two stages to three is the leap that quietly destroys teams. The short version: every additional cascade stage is a quality gate you have to calibrate, monitor, debug, and own forever. The marginal cost saving from a third stage is almost always smaller than the operational cost of maintaining it. Pick two stages and an upfront router. That is the answer for ninety percent of teams.
+I wrote a deliberately even-handed post about cascading [a few months ago](/blog/2026/cascading-llms/) and I still believe every word of it. Two-stage cascades, built carefully around a calibrated gate, are an excellent tool. But the leap from two stages to three is the leap that destroys teams. The short version: every additional cascade stage is a quality gate you have to calibrate, monitor, debug, and own forever. The marginal cost saving from a third stage is almost always smaller than the operational cost of maintaining it. Pick two stages and an upfront router. That is the answer for ninety percent of teams.
 
 ## What a deep cascade actually is
 
@@ -95,15 +95,15 @@ If you're in one of these, build the deep cascade and build it carefully. If you
 
 ## For technical leaders
 
-The question I'd ask before approving a third stage is: _who is going to own gate two in eighteen months?_ Not at launch, when the team is excited and the eval set is fresh. Eighteen months in, when the original engineer has moved teams, the medium model has been quietly upgraded twice, the threshold was last touched at deployment, and a quality alarm has just fired at 2am.
+The question I'd ask before approving a third stage is: _who is going to own gate two in eighteen months?_ Not at launch, when the team is excited and the eval set is fresh. Eighteen months in, when the original engineer has moved teams, the medium model has been upgraded twice without anyone re-checking the gate, the threshold was last touched at deployment, and a quality alarm has just fired at 2am.
 
 The cascade equation is an architecture artefact. The gates are an _organisational_ commitment. The cost of carrying a gate is roughly constant per gate per quarter; the marginal saving of each additional stage shrinks. The two curves cross faster than the cost equation suggests, in a place that depends on your team's bandwidth, not your traffic distribution.
 
 A two-stage cascade plus an upfront router is something one engineer can own. A three-stage cascade requires a small team _whose primary job is the cascade_. If you don't have that team, you're shipping a two-stage cascade plus a slowly decaying piece of production debt that looks like a third stage on the diagram.
 
-## Where this fits
+## What I'm not saying
 
-To be clear about what I'm not saying. I am not saying cascading is bad; [I've written a long post arguing the opposite](/blog/2026/cascading-llms/). I am not saying multi-tier portfolios are misguided; the [pillar post on routing at scale](/blog/2025/llm-routing-at-scale/) makes that case and I stand by it.
+To be clear about the scope of the argument. I am not saying cascading is bad; [I've written a long post arguing the opposite](/blog/2026/cascading-llms/). I am not saying multi-tier portfolios are misguided; the [pillar post on routing at scale](/blog/2025/llm-routing-at-scale/) makes that case and I stand by it.
 
 I am saying that a deep sequential cascade (three or more models chained behind sequential gates) is a local optimum almost no team can occupy stably. The architecture is fine. The maintenance regime it implies is what most teams cannot afford.
 

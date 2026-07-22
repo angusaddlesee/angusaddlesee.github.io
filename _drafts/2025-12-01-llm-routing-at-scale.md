@@ -28,7 +28,7 @@ The reason I'd flag this to a technical leader rather than leave it as an engine
 
 ## What "routing" actually means
 
-Strip away the marketing and a router is a function `r(x) → m`, mapping each incoming request `x` to one model `m` from a portfolio of options. The portfolio normally spans:
+At its core, a router is a function `r(x) → m`, mapping each incoming request `x` to one model `m` from a portfolio of options. The portfolio normally spans:
 
 - Sizes (a 1B distilled model, a 7B mid-tier, a 70B+ frontier model, etc.)
 - Specialisations (a code model, a maths-tuned model, a domain-specific fine-tune)
@@ -98,12 +98,6 @@ If you are kicking off a routing project this quarter, here is the order I'd run
 5. **Instrument before you scale.** Cost per query, per-route quality, escalation rate, p50/p95/p99 latency, router error rate. Alert on drift.
 6. **A/B test against the all-frontier baseline.** Offline numbers always look better than reality. The only honest measurement is users.
 
-## Where this fits in the bigger picture
-
-Routing is one face of a broader move in LLM infrastructure: away from monolithic, always-on-the-best-model deployments, and towards portfolio architectures where the right capability is composed for the right request. The same logic shows up in speculative decoding, in mixture-of-experts architectures, in disaggregated prefill/decode serving, and in agent frameworks that route between specialist sub-agents. They're all the same insight applied at different layers: capability is heterogeneous, queries are heterogeneous, and any system that ignores both pays for it.
-
-So if you take one thing from this: routing isn't a cost-cutting hack to bolt on after launch. It's an architecture decision that shapes whether your LLM platform keeps working as it grows. Get it right early and cost and quality improve together. Get it wrong and you're repeatedly asking for more compute to paper over a structural problem.
-
-I'll go deeper on cascading, semantic routing, learned routers, and the LLM-as-judge infrastructure that makes any of it measurable in later posts. There's a lot of detail buried under that simple `r(x) → m`.
+Routing isn't a cost-cutting hack to bolt on after launch; it's an architecture decision that shapes whether your LLM platform keeps working as it grows. Get it right early and cost and quality improve together, and if you get it wrong you'll find yourself repeatedly asking for more compute to paper over a structural problem. I'll go deeper on cascading, semantic routing, learned routers, and the LLM-as-judge infrastructure that makes any of it measurable in later posts, because there is a lot of detail buried under that simple `r(x) → m`.
 
 _This post reflects my personal views and experience. It does not represent official Amazon positions._

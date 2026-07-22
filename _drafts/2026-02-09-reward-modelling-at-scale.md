@@ -24,7 +24,7 @@ The practical consequence is that the quality ceiling of any RLHF system is set 
 
 ## What a reward model actually is
 
-Strip the marketing and a reward model is a function $r_\phi(x, y) \to \mathbb{R}$ that takes a prompt $x$ and a candidate response $y$ and returns a scalar score. Higher score, more preferred. That is the entire interface. Architecturally it is almost always the SFT model with the language modelling head sliced off and replaced by a single linear projection from the final-token hidden state to one number:
+A reward model is a function $r_\phi(x, y) \to \mathbb{R}$ that takes a prompt $x$ and a candidate response $y$ and returns a scalar score. Higher score, more preferred. That is the entire interface. Architecturally it is almost always the SFT model with the language modelling head sliced off and replaced by a single linear projection from the final-token hidden state to one number:
 
 $$r_\phi(x, y) = w^\top h_{\text{last}} + b$$
 
@@ -99,12 +99,6 @@ If you are kicking off reward modelling work this quarter, here is the order I'd
 
 The first six items are non-negotiable. The last two are the difference between a reward model you ship and one that ships you.
 
-## Where this fits
-
-Reward modelling is the load-bearing infrastructure underneath every aligned LLM in production. It is what makes [LLM-as-judge](/blog/2025/llm-as-judge/) operationally relevant: judges become reward models when you trust them enough to put a gradient through them. It is what makes [GRPO and group-relative RL](/blog/2026/grpo-group-relative-rl/) tractable: group-relative methods reduce variance but still need a reward signal worth being relative to. It is what makes [Constitutional AI and RLAIF](/blog/2026/constitutional-ai-rlaif/) more than a thought experiment: a constitution is a structured way to elicit preference labels from an LLM, and those labels still flow through a Bradley-Terry-shaped objective at the end. Pull on any modern alignment thread and you find a reward model at the other end.
-
-If routing is the architecture decision that determines whether your platform survives growth, and evaluation is the discipline that determines whether you can tell a good model from a bad one, reward modelling is the place where those two disciplines are forced to commit to a number. It is unglamorous, it is fragile, and it is the part of the stack where small mistakes compound into large alignment failures. The teams that take it seriously ship aligned models. The teams that don't ship the model their reward function deserved.
-
-Future posts will go deeper into reward hacking, GRPO and group-relative methods, and the Constitutional / RLAIF flavours of preference data. The short version, for now: the reward _is_ the model. Treat it as such.
+Future posts will go deeper into reward hacking, [GRPO and group-relative methods](/blog/2026/grpo-group-relative-rl/), and the [Constitutional / RLAIF](/blog/2026/constitutional-ai-rlaif/) flavours of preference data. The short version, for now: the reward _is_ the model. Treat it as such.
 
 _This post reflects my personal views and experience. It does not represent official Amazon positions._

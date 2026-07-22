@@ -16,7 +16,7 @@ This is not a rare failure mode. It is the modal failure mode of pairwise LLM-as
 
 ## What pairwise comparison actually is
 
-Strip the design space down. A pairwise judge takes a query $q$, two candidate responses $a$ and $b$, and a rubric, and returns a preference:
+A pairwise judge takes a query $q$, two candidate responses $a$ and $b$, and a rubric, and returns a preference:
 
 $$
 P(a \succ b \mid q, \text{rubric}) \in \{A, B, \text{tie}\}
@@ -72,7 +72,7 @@ Position bias is the most widely understood pairwise pathology, but it is far fr
 
 **Style and authority bias.** Judges over-credit confident, well-formatted, hedge-free prose. A wrong-but-confident answer can outrank a right-but-uncertain one, which is a particularly dangerous failure mode for safety-relevant axes. The mitigation is rubric-level: explicit instructions to weight correctness above tone, plus reference-guided evaluation wherever a gold answer exists.
 
-**Intransitivity.** Pairwise preferences can fail to be transitive: $A \succ B$, $B \succ C$, $C \succ A$. This is not a bug in the judge; it is a real consequence of different queries favouring different systems and the aggregate preference being a non-linear function of the per-query preferences. It is most pronounced when the systems being compared have genuinely different strengths. Bradley–Terry and Elo handle this gracefully (they fit a single latent skill that minimises disagreement), but they hide it. If you care about understanding *why* one system wins, hold onto the per-query verdicts and slice them, do not just publish the Elo.
+**Intransitivity.** Pairwise preferences can fail to be transitive: $A \succ B$, $B \succ C$, $C \succ A$. This is not a bug in the judge; it is a real consequence of different queries favouring different systems and the aggregate preference being a non-linear function of the per-query preferences. It is most pronounced when the systems being compared have genuinely different strengths. Bradley–Terry and Elo handle this gracefully (they fit a single latent skill that minimises disagreement), but they hide it. If you care about understanding _why_ one system wins, hold onto the per-query verdicts and slice them, do not just publish the Elo.
 
 These biases interact. A verbose response from the judge's own family in the first position is essentially playing the eval on easy mode. Debiasing position alone, while ignoring the others, gives you a calibrated number for an evaluation that is still systematically wrong.
 
@@ -89,9 +89,7 @@ If you are setting up pairwise evaluation this quarter, here is the order I woul
 
 The first three are non-negotiable. The rest are economics.
 
-## Where this fits
-
-Pairwise comparison with proper position debiasing is the load-bearing primitive underneath honest model-vs-model evaluation. It is what makes [LLM routing](/blog/2025/llm-routing-at-scale/) defensible: you cannot route a fraction of traffic to a cheaper model and claim quality parity unless your evaluation methodology is robust to the biases I have described above. It is the basis of Arena-style rankings that the broader community trusts. And it is the entry point to most of what comes next in this series: [multi-judge ensembles](/blog/2026/multi-judge-ensembles/) that mitigate the residual biases a single debiased judge still has, and calibration practice that keeps the whole stack honest as the underlying models drift underneath it.
+Pairwise comparison with proper position debiasing is also the load-bearing primitive underneath a lot of what this series covers: it is what makes [LLM routing](/blog/2025/llm-routing-at-scale/) defensible (you cannot route a fraction of traffic to a cheaper model and claim quality parity unless your evaluation methodology is robust to these biases), and it is the entry point to [multi-judge ensembles](/blog/2026/multi-judge-ensembles/), which mitigate the residual biases a single debiased judge still has.
 
 The thing I most want both engineers and technical leaders to internalise from this piece is the framing from the [parent post on LLM-as-judge](/blog/2025/llm-as-judge/): a judge is an instrument. Pairwise comparison is the most reliable evaluation methodology we have for LLMs, but only when you have characterised the instrument. A pairwise win rate from an unaudited judge is exactly as trustworthy as a thermometer you have never compared to a known temperature. It will produce a confident-looking number. That number will be wrong in a consistent direction. And the team that ships on the basis of it will not realise the mistake until the regression shows up somewhere it cannot be hidden.
 

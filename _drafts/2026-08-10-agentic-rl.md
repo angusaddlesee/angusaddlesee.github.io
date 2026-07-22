@@ -9,7 +9,7 @@ toc:
   beginning: true
 ---
 
-The first time I watched an agent fail a rollout in a way that single-pass RL could never have surfaced, I knew the field had moved. The model picked the wrong tool on pass one, realised on pass two from a confused observation, recovered on pass three, and finished correctly on pass four. A traditional RLHF reward (one judge on one completion) would have looked at pass one in isolation and called it a regression. The trajectory-level reward looked at the whole rollout and said: this is exactly what I want to reinforce. Recovery is not a failure. Recovery is the policy being good at its job.
+Here is a rollout that convinced me the field had moved. The model picked the wrong tool on pass one, realised on pass two from a confused observation, recovered on pass three, and finished correctly on pass four. A traditional RLHF reward (one judge on one completion) would have looked at pass one in isolation and called it a regression. The trajectory-level reward looked at the whole rollout and said: this is exactly what I want to reinforce. Recovery is the policy being good at its job, and single-pass RL could never have surfaced it.
 
 Agentic RL is the regime where that distinction becomes the entire point. The policy is no longer producing text; it is producing _episodes_. The unit of optimisation is a rollout: every model pass, every tool call, every observation, every recovery, every termination. The reward arrives once, at the end, and back-propagates to every token the model generated along the way.
 
@@ -21,7 +21,7 @@ The pre-2024 RL stack was built around a specific shape: one prompt in, one comp
 
 Agentic tasks break every assumption. The "completion" is not a string but a sequence of (action, observation) pairs that can run for thirty inference passes. The correct output is not unique; half a dozen valid first actions lead to the same outcome through different paths. Verifiable reward exists in some domains (does the unit test pass?) and is absent in most realistic ones. And the model has to learn _termination_ as a behaviour: when to stop calling tools, when to commit, when to ask for clarification rather than guess.
 
-Try to fit this into completion-level RL and you either reward each pass against a gold reference (which fails the moment the model picks a different-but-valid first tool) or score the final response and hope the gradient finds its way to the right tokens (which it doesn't, because the response tokens are 5% of the trajectory and the tool-call tokens are 95%). Trajectory-level RL takes the structure seriously: roll out until termination, score the whole rollout, let gradient flow back to every model-generated token. This is also where [tool use](/blog/2026/tool-use-function-calling/) stops being a static API contract and becomes a _learnable substrate_. Without tools, there is no agentic RL.
+Try to fit this into completion-level RL and you either reward each pass against a gold reference (which fails the moment the model picks a different-but-valid first tool) or score the final response and hope the gradient finds its way to the right tokens (which it doesn't, because the response tokens are a sliver of the trajectory and the tool-call tokens are the bulk of it). Trajectory-level RL takes the structure seriously: roll out until termination, score the whole rollout, let gradient flow back to every model-generated token. This is also where [tool use](/blog/2026/tool-use-function-calling/) stops being a static API contract and becomes a _learnable substrate_. Without tools, there is no agentic RL.
 
 ## What changes when the unit is a rollout
 
@@ -71,7 +71,7 @@ For text-only RLHF, ground truth is a string or a preference label. For agentic 
 
 A customer asking "what's X's birthday?" can be served correctly by `Calendar.Search()`, `PersonalMemory.Lookup()`, or `Info.Search()`, depending on who X is. A coding agent can read a file before listing the directory, or list first then read; both valid. A dialogue agent can ask a clarifying question or proceed on a reasonable interpretation, and both are correct strategies in different situations. Treating ground truth as a single canonical trajectory is the central failure of pre-trajectory-level agentic RL.
 
-Formally, let $\mathcal{T}^*(s_0)$ be the set of acceptable trajectories from seed $s_0$. The single-correct-path assumption is $|\mathcal{T}^*(s_0)| = 1$. The multi-correct-path reality is that $|\mathcal{T}^*(s_0)|$ is unbounded for any non-trivial agentic task. A reward that penalises every trajectory not in some specific gold path punishes 30%–70% of correct behaviour for surface mismatch.
+Formally, let $\mathcal{T}^*(s_0)$ be the set of acceptable trajectories from seed $s_0$. The single-correct-path assumption is $|\mathcal{T}^*(s_0)| = 1$. The multi-correct-path reality is that $|\mathcal{T}^*(s_0)|$ is unbounded for any non-trivial agentic task. A reward that penalises every trajectory not in some specific gold path punishes a large fraction of correct behaviour, often the majority of it, for surface mismatch.
 
 The clean approach is to score _membership_ in $\mathcal{T}^*(s_0)$ rather than match to a reference. Outcome-only rewards (binary success, the SWE-bench style) are path-agnostic by construction but only work for verifiable goals. Path-quality judges read the full trajectory and grade whether each tool call was reasonable in context, ignoring the response wording (the TRAIL pattern). Response-quality judges score the final response while ignoring how it was reached. Path and response are independent quality axes; conflating them produces conflated gradients.
 
@@ -123,7 +123,7 @@ Work on trace-based evaluation of agentic behaviour (including TRAIL and similar
 
 ## For technical leaders
 
-Strip the maths and the question becomes: when does agentic RL pay back the investment, and what does the investment look like?
+The question that matters at the planning level is simpler than the maths: when does agentic RL pay back the investment, and what does the investment look like?
 
 Agentic RL is the right tool when (a) your product is an agent (multi-pass tool use, dialogue, code edits, web actions) rather than a one-shot generator, (b) you can build a faithful environment, and (c) you have a credible reward signal beyond imitation. If any of those is missing, you're better off with strong SFT on production trajectories until the gap closes. SFT teaches format and basic competence; trajectory-level RL teaches end-to-end agentic behaviour. The order matters: a trajectory-level run on a model that hasn't been SFT'd to terminate cleanly produces degenerate rollouts that hit the pass cap on every sample.
 
@@ -133,14 +133,8 @@ The strategic lever is the loop between [reward-modelling](/blog/2026/reward-mod
 
 The closing thought I'd offer leaders specifically: agentic RL is not a "should we train an agent?" question. The agent already exists; it's the SFT model running in production. The question is whether the policy is being shaped by your reward signal or by whatever distribution your SFT data happened to capture. If you're not running trajectory-level RL on your production agent, someone else's SFT data is deciding how your agent behaves.
 
-## Where this fits
-
-Agentic RL is the natural endpoint of converging trends. Group-relative methods made the algorithmic substrate cheap enough for multi-pass rollouts. The reward modelling stack developed judge-distilled rewards, multi-axis decompositions, and calibrated panels capable of handling the multi-correct-path reality. Tool use matured into a reliable inference substrate. And empirical results from Search-R1, ReSearch, RAGEN, Tool-Star, τ-bench, and the SWE-Gym lineage made it clear the trajectory-level approach works at scale.
-
 What comes next, in roughly the order I expect to write about it: multi-agent systems, where the policy is a coordinated team rather than one model; richer agent evaluation frameworks that close the gap between offline judges and deployed traffic; and self-play and self-anchoring at scale, where the user-simulator's quality becomes the binding constraint on the whole pipeline.
 
-The deepest shift agentic RL represents is philosophical. Conventional RLHF treated the language model as a function that produces text, and the reward as a way to grade text. Agentic RL treats it as a policy that takes actions in a world, and the reward as a way to grade outcomes. Once you make that shift, almost everything else reorganises around it: rewards become trajectory-level, environments become first-class, judges decompose into path and response, efficiency becomes a tiebreaker rather than an afterthought, and the failure modes get bigger and weirder in proportion to how much room you've given the policy to act.
-
-The rollout is the episode. The episode is the unit. Everything else follows.
+The deepest shift agentic RL represents is philosophical. Conventional RLHF treated the language model as a function that produces text, and the reward as a way to grade text. Agentic RL treats it as a policy that takes actions in a world, and the reward as a way to grade outcomes. Once the rollout becomes the unit of optimisation, almost everything else reorganises around it: rewards become trajectory-level, environments become first-class, judges decompose into path and response, efficiency becomes a tiebreaker rather than an afterthought, and the failure modes get bigger and weirder in proportion to how much room you've given the policy to act.
 
 _This post reflects my personal views and experience. It does not represent official Amazon positions._

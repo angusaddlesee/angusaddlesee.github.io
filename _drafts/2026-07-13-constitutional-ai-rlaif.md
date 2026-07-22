@@ -17,7 +17,7 @@ This is a child of the [reward modelling pillar](/blog/2026/reward-modelling-at-
 
 Modern post-training rests on pairwise preference labels. Pretraining tells the model what people have written; SFT tells it what to do when asked nicely; preference data tells it which of two responses a person would actually prefer. That third signal is the only one encoding anything resembling values, and it is the one we cannot scale.
 
-Trained annotators produce tens of comparisons per hour. Frontier labs need millions, across dozens of languages and shifting policy distributions. Inter-annotator agreement caps at 70–80% on careful pipelines. As I argued in the [reward modelling pillar](/blog/2026/reward-modelling-at-scale/), every imperfection in the reward model becomes an attack surface for the optimiser, and annotators are where most of those imperfections enter.
+Trained annotators produce tens of comparisons per hour. Frontier labs need millions, across dozens of languages and shifting policy distributions. Even careful pipelines top out well short of full inter-annotator agreement. As I argued in the [reward modelling pillar](/blog/2026/reward-modelling-at-scale/), every imperfection in the reward model becomes an attack surface for the optimiser, and annotators are where most of those imperfections enter.
 
 AI feedback is the field's response. Replace human annotators with an LLM that reads the same rubric and produces labels at inference speed. The labels are self-consistent in a way no annotator pool will be. And the rubric is _written down_. With humans, the values are implicit. With AI feedback, the values are a document. That property is what gives Constitutional AI its name.
 
@@ -47,12 +47,12 @@ At one end, every label from a human. At the other, every label from an AI judge
 
 That result aged well, with a qualifier on the tasks. RLAIF works where the judge is competitive with humans on the rubric. It works less well where the judge has blind spots: subtle factuality, long-horizon code, anything where the judge itself is miscalibrated. The fashionable framing is "AI feedback scales human values"; the engineering framing is "AI feedback scales whatever the judge happens to have learned, accurate or not."
 
-| Component | RLHF | CAI | General RLAIF | Verifier-heavy (R1) |
-|---|---|---|---|---|
-| Preference source | Human | AI judge + constitution | AI judge (any rubric) | Verifier on ground truth |
-| Calibration anchor | Annotator agreement | Human spot-check on judge | Human-labelled seed | Deterministic correctness |
-| Label cost | High | Near-zero | Near-zero | Near-zero |
-| Hackability | Annotator biases | Judge biases compounding | Judge biases compounding | Spec gaps |
+| Component          | RLHF                | CAI                       | General RLAIF            | Verifier-heavy (R1)       |
+| ------------------ | ------------------- | ------------------------- | ------------------------ | ------------------------- |
+| Preference source  | Human               | AI judge + constitution   | AI judge (any rubric)    | Verifier on ground truth  |
+| Calibration anchor | Annotator agreement | Human spot-check on judge | Human-labelled seed      | Deterministic correctness |
+| Label cost         | High                | Near-zero                 | Near-zero                | Near-zero                 |
+| Hackability        | Annotator biases    | Judge biases compounding  | Judge biases compounding | Spec gaps                 |
 
 The two ends are rarely deployed in pure form. The middle is where every production system lives.
 
@@ -90,22 +90,18 @@ Where verifiers apply, they win. DeepSeek-R1 is the clearest recent demonstratio
 
 But verifiers do not exist for most things people want from an assistant. Dialogue naturalness, factual grounding in open domains, emotional appropriateness: none have verifiable ground truth. For those, judge rewards are the only practical signal, with all the failure modes above. The strongest production stacks are explicit hybrids: verifier hard floors for what admits them, judge shaping for everything else. Pure verifier-only stacks are restricted to maths and code; pure judge-only stacks are fragile.
 
-Do not reach for a judge when a verifier would do. Many teams default to LLM-as-judge because it is flexible. Often a simple rule covers 80% of what they wanted to enforce, with none of the cost, stochasticity, or hackability.
+Do not reach for a judge when a verifier would do. Many teams default to LLM-as-judge because it is flexible. Often a simple rule covers most of what they wanted to enforce, with none of the cost, stochasticity, or hackability.
 
 ## For technical leaders
 
-AI feedback does not dodge the cost of evaluation. It redirects it. Instead of paying humans to label preference pairs, you pay them to validate that your judge agrees with them on the policy's current distribution. The annotation budget moves from labels to calibration. Total cost is lower; the discipline required is _higher_, because a calibration failure is silent rather than a missing line item.
+AI feedback redirects the cost of evaluation rather than dodging it. Instead of paying humans to label preference pairs, you pay them to validate that your judge agrees with them on the policy's current distribution. The annotation budget moves from labels to calibration. Total cost is lower; the discipline required is _higher_, because a calibration failure is silent rather than a missing line item.
 
 Every team I have seen ship a regression from RLAIF made the same mistake: they invested in the judge and underinvested in the calibration loop. The judge looked reasonable on the eval set, proxy reward went up, the launch happened, and the regression showed up in user metrics two weeks later. The calibration set was stale, the policy had moved, the judge was no longer measuring what they thought.
 
-The framing I find myself returning to: **a constitution does not align a model. A constitution aligns the conversation between the team and the judge.** The model gets aligned by the labels the judge produces, weighted by how often each principle is sampled, regularised by how much human spot-checking the team can afford. The constitution is not the values. The labels are the values. The constitution is the document the team uses to argue about which labels they wanted.
+The framing I find myself returning to: **a constitution does not align a model. A constitution aligns the conversation between the team and the judge.** The model gets aligned by the labels the judge produces, weighted by how often each principle is sampled, regularised by how much human spot-checking the team can afford. The values live in the labels; the constitution is the document the team uses to argue about which labels they wanted.
 
-That is a healthier mental model than "we wrote a constitution and the model followed it." It is also more demanding, because the work is not in writing the document; it is in keeping the judge honest on a distribution that will never sit still.
+That is a healthier mental model than "we wrote a constitution and the model followed it." It is also more demanding, because the hard part was never writing the document. The hard part is keeping the judge honest on a distribution that will never sit still.
 
-## Where this fits
-
-AI feedback bridges the [LLM-as-judge pillar](/blog/2025/llm-as-judge/) and the [reward modelling pillar](/blog/2026/reward-modelling-at-scale/). Judges become reward models when you trust them enough to put a gradient through them; the constitution is one structured way to elicit the labels those reward models are built from. The discipline protecting evaluation is the discipline protecting training.
-
-The work I do at the Alexa+ Frontier AI Modelling Lab on judge calibration and reward modelling treats AI feedback as load-bearing with a calibration cost attached. AI feedback is real, it is shipping, and the part that's working has little to do with the elegance of the constitution. It has everything to do with the unglamorous loop where humans keep checking that the judge still means what the team thinks it means.
+This is why AI feedback ends up bridging the [LLM-as-judge pillar](/blog/2025/llm-as-judge/) and the [reward modelling pillar](/blog/2026/reward-modelling-at-scale/): judges become reward models when you trust them enough to put a gradient through them, and the discipline protecting evaluation is the discipline protecting training. AI feedback is real, it is shipping, and the part that's working has little to do with the elegance of the constitution. It has everything to do with the unglamorous loop where humans keep checking that the judge still means what the team thinks it means.
 
 _This post reflects my personal views and experience. It does not represent official Amazon positions._

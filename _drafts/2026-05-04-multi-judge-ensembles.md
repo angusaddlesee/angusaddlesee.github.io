@@ -30,7 +30,7 @@ The theoretical case is the Condorcet jury theorem. If each of $k$ judges is cor
 
 $$P(\text{majority correct}) = \sum_{i=\lceil k/2 \rceil}^{k} \binom{k}{i} p^i (1-p)^{k-i}$$
 
-The catch is the word _independently_, which we will spend most of this post on. In practice, three carefully chosen judges from different model families improve agreement with human annotators by 5–12 percentage points over the best individual judge. That is the difference between a judge layer you can trust to drive a deployment and one you cannot.
+The catch is the word _independently_, which we will spend most of this post on. In my experience, three carefully chosen judges from different model families improve agreement with human annotators by several percentage points, sometimes closer to ten, over the best individual judge. That is the difference between a judge layer you can trust to drive a deployment and one you cannot.
 
 The empirical case is the literature. PoLL (Verga et al., 2024) showed that a panel of small open-weight judges could match or exceed a single frontier judge while reducing self-enhancement bias. JudgeLM and Auto-J explored learned judge architectures that benefit from panel-style training data. The throughline: when you stop relying on a single judge, you recover signal it was systematically erasing.
 
@@ -92,7 +92,7 @@ This is the requirement most teams skip because it costs design effort instead o
 6. **Use axis-specialised panels for multi-axis evaluation.** One judge per axis, with the headline number computed from the per-axis verdicts.
 7. **Recalibrate on a schedule.** Both individual judges and aggregation rule.
 
-The first three are non-negotiable. The rest are economics.
+Skip any of the first three and the panel is decorative. The rest are economics.
 
 ## For technical leaders
 
@@ -101,12 +101,6 @@ A panel is an organisational commitment, not a one-off engineering choice. You a
 The flip side: the investment pays compound interest. The calibrated judges in your evaluation panel are the candidate inputs for a [judge-distilled reward model](/blog/2026/reward-modelling-at-scale/) tomorrow: the promotion path the literature converges on for cost reasons, and the one that sits underneath most modern aligned LLMs. Routing, evaluation, ensembling, reward: four positions along the same arc.
 
 The unit-economics framing: a panel is the cheapest insurance policy in the eval stack. Marginal cost is two extra judge calls and an aggregation step. Marginal benefit is a measurable error bar, robustness to provider drift, and meaningful reduction of the worst single-judge biases. Anyone proposing single-judge evaluation for a deployment-driving decision is proposing to ship without insurance.
-
-## Where this fits
-
-Multi-judge ensembles are the natural successor to the position-debiasing work in the [pairwise post](/blog/2026/pairwise-position-bias/). They turn a calibrated single judge into an evaluation pipeline you can trust to drive deployments, and they are the prerequisite for a [judge-distilled reward model](/blog/2026/reward-modelling-at-scale/) that does not silently inherit one judge's blind spots. They feed directly into the calibration and drift monitoring discipline that keeps the stack honest as the underlying models update underneath you.
-
-The framing from the [parent pillar](/blog/2025/llm-as-judge/): a judge is an instrument, and an uncharacterised instrument lies to you in a consistent direction. A panel is what you build when one instrument is not enough, either because its biases need averaging out, or because the cost of being wrong is high enough that you want a second opinion. That is most evaluations that drive a real decision.
 
 If there is one thing I want technical leaders to take from this piece, it is that the cheapest way to ruin an ensemble is to build it from the same provider's models and call the result a panel. The cheapest way to make one work is to insist on family diversity, measure error correlation before you trust any aggregation, and treat inter-judge agreement as a metric you actually look at. The instruments are not interchangeable. An honest panel is not three of them; it is three different ones, characterised, watched, and recalibrated.
 

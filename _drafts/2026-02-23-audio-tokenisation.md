@@ -18,7 +18,7 @@ This post is the deep dive on that choice: what audio tokenisation actually is, 
 
 ## What audio tokenisation actually is
 
-Text is already discrete. "Hello" is five characters or one BPE token; the model never has to ask what "hello" *is* at the level of bits. Speech is continuous. A 16kHz waveform produces 16,000 floating-point samples per second. To feed that into an LLM whose entire architecture assumes a sequence of discrete tokens, you have to compress audio down to roughly 25–100 tokens per second (comparable to text token rates) while still preserving enough of the signal to be useful for whatever the LLM is going to do with it.
+Text is already discrete. "Hello" is five characters or one BPE token; the model never has to ask what "hello" _is_ at the level of bits. Speech is continuous. A 16kHz waveform produces 16,000 floating-point samples per second. To feed that into an LLM whose entire architecture assumes a sequence of discrete tokens, you have to compress audio down to roughly 25–100 tokens per second (comparable to text token rates) while still preserving enough of the signal to be useful for whatever the LLM is going to do with it.
 
 Formally, the problem is to find an encoder $E: \mathbb{R}^{T} \to \{1, \dots, V\}^{T'}$ that maps a $T$-sample waveform to a sequence of $T'$ tokens from a vocabulary of size $V$, with $T' \ll T$, and a decoder $D$ such that $D(E(x))$ is "close enough" to $x$ on the dimensions that matter. The catch is that the dimensions that matter are not the same across applications.
 
@@ -34,13 +34,13 @@ Three families of audio tokenisers dominate today, and they answer the semantics
 
 **Hybrid tokens** try to have it both ways. SpeechTokenizer (Zhang et al., 2023) is the cleanest example: an RVQ codec where codebook 1 is explicitly distilled to match HuBERT semantic tokens, and subsequent codebooks pick up the residual acoustic detail. SemantiCodec and Mimi (the codec inside Moshi) occupy this design space. Hybrids are where the field is converging for joint understanding-and-generation models.
 
-| Strategy | Tokens/sec | Semantics | Acoustics | Best for |
-|----------|-----------|-----------|-----------|----------|
-| HuBERT k-means | ~50 | Strong | None | Pure understanding |
-| EnCodec, codebook 1 only | 75 | Moderate | Coarse | Light understanding + basic generation |
-| EnCodec, all codebooks | 75 × 8 = 600 | Moderate | Strong | High-quality generation |
-| SpeechTokenizer / Mimi | ~50 semantic + ~50 × 7 acoustic | Strong | Strong | Joint understanding + generation |
-| Continuous features (no discretisation) | 50–75 | Strong | Moderate | Understanding-only on an existing LLM |
+| Strategy                                | Tokens/sec                      | Semantics | Acoustics | Best for                               |
+| --------------------------------------- | ------------------------------- | --------- | --------- | -------------------------------------- |
+| HuBERT k-means                          | ~50                             | Strong    | None      | Pure understanding                     |
+| EnCodec, codebook 1 only                | 75                              | Moderate  | Coarse    | Light understanding + basic generation |
+| EnCodec, all codebooks                  | 75 × 8 = 600                    | Moderate  | Strong    | High-quality generation                |
+| SpeechTokenizer / Mimi                  | ~50 semantic + ~50 × 7 acoustic | Strong    | Strong    | Joint understanding + generation       |
+| Continuous features (no discretisation) | 50–75                           | Strong    | Moderate  | Understanding-only on an existing LLM  |
 
 The honest summary is that there is no globally best row in that table, only a row that is best for the system you are actually trying to ship.
 
@@ -48,15 +48,15 @@ The honest summary is that there is no globally best row in that table, only a r
 
 Almost every modern audio codec uses residual vector quantisation, and RVQ's structure is doing more work than its surface description suggests.
 
-In RVQ, each frame is quantised through $Q$ codebooks sequentially. Codebook 1 picks the nearest entry to the latent. Codebook 2 quantises the *residual error* left from codebook 1. Codebook 3 quantises the residual from 1 and 2, and so on. With $z$ the latent, $c_q(\cdot)$ the $q$-th codebook's nearest-neighbour function, and $\hat{z}_q$ the cumulative reconstruction:
+In RVQ, each frame is quantised through $Q$ codebooks sequentially. Codebook 1 picks the nearest entry to the latent. Codebook 2 quantises the _residual error_ left from codebook 1. Codebook 3 quantises the residual from 1 and 2, and so on. With $z$ the latent, $c_q(\cdot)$ the $q$-th codebook's nearest-neighbour function, and $\hat{z}_q$ the cumulative reconstruction:
 
 $$\hat{z}_q = \sum_{i=1}^{q} c_i\big(z - \hat{z}_{i-1}\big), \quad \hat{z}_0 = 0.$$
 
 What this produces in practice is a hierarchy. The first codebook captures the coarsest, most semantically loaded content: what was said. Each subsequent codebook captures finer-grained residual detail: speaker, prosody, room acoustics, breath. By codebook 8 you are encoding things a human would barely notice but a discriminator would.
 
-The implication I keep coming back to: an RVQ codec gives you, for free, an internal axis from semantic to acoustic. You do not pick semantic *or* acoustic; you pick how many codebooks to use and at what stage. Codebook 1 only for understanding, full stack for generation. Hybrid tokenisers like SpeechTokenizer and Mimi formalise this, sharpening the natural hierarchy into an explicit semantic-acoustic split the model can reason about.
+The implication I keep coming back to: an RVQ codec gives you, for free, an internal axis from semantic to acoustic. You do not pick semantic _or_ acoustic; you pick how many codebooks to use and at what stage. Codebook 1 only for understanding, full stack for generation. Hybrid tokenisers like SpeechTokenizer and Mimi formalise this, sharpening the natural hierarchy into an explicit semantic-acoustic split the model can reason about.
 
-It also explains why the *multi-codebook problem* matters. Eight codebooks at 75Hz is 600 tokens per second. A 10-second utterance becomes 6,000 tokens of audio alone. For an LLM with a fixed context window and per-token compute cost, that is brutal. Four common ways to handle it:
+It also explains why the _multi-codebook problem_ matters. Eight codebooks at 75Hz is 600 tokens per second. A 10-second utterance becomes 6,000 tokens of audio alone. For an LLM with a fixed context window and per-token compute cost, that is brutal. Four common ways to handle it:
 
 - **Flattened sequence:** interleave codebooks in token order, $[c^1_1, c^2_1, \dots, c^8_1, c^1_2, \dots]$. Simplest, sequence-length-wise the worst.
 - **Delayed pattern:** offset codebooks in time so codebook $q$ at frame $t$ is predicted alongside codebook $q-1$ at $t+1$ (MusicGen). Reduces effective sequence length without sacrificing autoregressive structure.
@@ -97,12 +97,6 @@ If I had to give a default for someone starting a serious voice-LLM project toda
 
 The point I would press hardest if I were briefing a director or VP on this work: audio tokenisation is not a low-level implementation detail you can delegate to one researcher and revisit at review time. It is an architectural commitment that propagates into every other decision in the voice-LLM stack: context length, latency, training data, evaluation, voice quality ceiling, and the migration phasing I laid out in [the pillar post](/blog/2025/speech-llm-integration/). Treat it as a top-level decision, owned by someone who understands both speech and LLMs, with explicit success criteria and an explicit reversibility plan. Teams that get this right make it look easy. Teams that don't are the ones whose voice quality, evaluation pipelines, or inference costs quietly fail to converge eighteen months in, and by then the cost of switching tokenisers is enormous.
 
-If you cannot articulate, for your product, *which* of the three tokenisation families you are committing to and *why*, your voice-LLM roadmap has a gap at the foundation.
-
-## Where this fits
-
-Audio tokenisation is the input layer to everything else in the voice-LLM stack. The next layer up is speech-text interleaving: how speech tokens, text tokens, and the inner monologue coexist in a single sequence. Above that is streaming speech input, which determines whether tokenisation is even compatible with real-time interaction, and full-duplex training, which redefines what the model is trying to predict. Underneath all of it is the voice latency budget: the fixed time between the user finishing their sentence and the system needing to respond, into which every tokenisation, encoding, and decoding cost has to fit.
-
-This is the cleanest example of why I argued in the [pillar post](/blog/2025/speech-llm-integration/) that the speech-LLM migration is the hardest one in AI right now. The migration mechanics (phasing, rollback, canary, evaluation) are tractable. The chain of foundational representation choices on which all of those mechanics rest is not, except by patient and deliberate work. Audio tokenisation is the first of those choices, and it sets the ceiling for everything that comes after. The cascade is on borrowed time, and the architecture that replaces it will be defined, more than anything else, by the design choice underneath every voice-LLM: how to turn sound into tokens.
+If you cannot articulate, for your product, _which_ of the three tokenisation families you are committing to and _why_, your voice-LLM roadmap has a gap at the foundation.
 
 _This post reflects my personal views and experience. It does not represent official Amazon positions._

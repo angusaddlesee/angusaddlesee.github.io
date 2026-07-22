@@ -9,15 +9,15 @@ toc:
   beginning: true
 ---
 
-The first time you watch a frontier LLM call a tool correctly, it feels like magic. The user asks a question, the model emits a neat JSON object, your runtime hands the result back, and the answer is grounded in real data instead of a confident hallucination. The second time, on a different schema, the model invents an enum value that does not exist, passes a string where you wanted an integer, and hangs your service on a retry storm. Both come out of the same model. Which you get is mostly down to choices you made before the model ever saw a request.
+Two tool calls, same model. In the first, the user asks a question, the model emits a neat JSON object, your runtime hands the result back, and the answer is grounded in real data instead of a confident hallucination. In the second, on a different schema, the model invents an enum value that does not exist, passes a string where you wanted an integer, and hangs your service on a retry storm. Which one you get is mostly down to choices you made before the model ever saw a request.
 
 Tool use is one of the most production-critical things modern LLMs do, and one of the most poorly written about. Most public material is marketing or framework docs demonstrating the happy path on a calculator. This post is the field guide I wish I had when I started: schema design, constrained decoding, error recovery, MCP, and the evaluation discipline that keeps tool-using models honest.
 
 ## What function calling actually is
 
-Strip the marketing and a function call is a structured output with extra ceremony. The model is given tool definitions in the system prompt (names, descriptions, JSON Schema) and instead of prose, emits a JSON object naming a tool and its arguments. The runtime parses, executes, feeds the result back. The model then decides whether to call another tool, ask a clarifying question, or produce a final answer.
+A function call is a structured output with extra ceremony. The model is given tool definitions in the system prompt (names, descriptions, JSON Schema) and instead of prose, emits a JSON object naming a tool and its arguments. The runtime parses, executes, feeds the result back. The model then decides whether to call another tool, ask a clarifying question, or produce a final answer.
 
-This applies equally to OpenAI function calling, Anthropic tool use, Gemini's API, and the special-token chat templates of Llama, Mistral and the open ecosystem. What matters more is the distinction between a model _trained_ to emit tool calls (with tool-use tokens in pretraining or instruction tuning) and one prompted to imitate it. Frontier models in 2026 pick the right tool over 95% of the time when descriptions are clear; smaller open models with prompted tool use sit at 70-85%, with failures clustered on argument formatting. That gap is why this is systems design, not prompt engineering.
+This applies equally to OpenAI function calling, Anthropic tool use, Gemini's API, and the special-token chat templates of Llama, Mistral and the open ecosystem. What matters more is the distinction between a model _trained_ to emit tool calls (with tool-use tokens in pretraining or instruction tuning) and one prompted to imitate it. Frontier models in 2026 pick the right tool the vast majority of the time when descriptions are clear; smaller open models with prompted tool use miss noticeably more often, with failures clustered on argument formatting. That gap is why this is systems design, not prompt engineering.
 
 Function calling is not the model "deciding to act." It is the model emitting a particular shape of token sequence, which your runtime interprets as an action. Everything that goes wrong goes wrong in one of two places: the schema, or the loop.
 
@@ -32,7 +32,7 @@ Principles that hold across every system I have worked on:
 - **Constrain enums ruthlessly.** Free-string parameters are where hallucinated arguments live.
 - **Parameter descriptions earn their keep.** "ISO 8601 timestamp, UTC" is the difference between `2026-07-27T10:00:00Z` and `Monday morning`.
 
-Context-window cost is the trap nobody warns you about. Fifty tools is 15-25K tokens of system prompt before the user has said a word. The empirical ceiling for reliable selection across frontier models sits around 20-30 tools per context; beyond that the model calls near-misses. The fix is rarely "more tools"; it is two-stage selection, where a router LLM picks a category and only those tools get materialised. The overlap with [LLM routing](/blog/2025/llm-routing-at-scale/) is not coincidental.
+Context-window cost is the trap nobody warns you about. Fifty tools can be tens of thousands of tokens of system prompt before the user has said a word. In my experience the ceiling for reliable selection sits somewhere in the low tens of tools per context; beyond that the model calls near-misses. The fix is usually two-stage selection, where a router LLM picks a category and only those tools get materialised. The overlap with [LLM routing](/blog/2025/llm-routing-at-scale/) is not coincidental.
 
 Avoid `oneOf`, `anyOf`, and discriminated unions. They are the part of JSON Schema that constrained decoders handle worst and that models reason about least reliably. Prefer two separate tools with disjoint names.
 
@@ -42,7 +42,7 @@ There are two ways to make a model emit valid JSON. Ask politely and validate, o
 
 Constrained decoding compiles a grammar (JSON Schema, regex, or context-free grammar) into a finite-state machine over the token vocabulary. At each step, the FSM tells the sampler which tokens keep the partial output on a valid path; the rest have their logits masked. Formally, $P'(x_t \mid x_{<t}) = \text{normalise}(P(x_t \mid x_{<t}) \odot M_t)$. The output is valid by construction. No retry loop, no defensive parsing, no regex extraction.
 
-OpenAI's structured outputs, Anthropic's tool use, and equivalent server-side modes all implement this. For local models, Outlines is the mature default; Guidance, LMQL, and llama.cpp's GBNF grammars cover adjacent niches. Per-token overhead is typically 5-20%, mostly recouped because the model never wastes tokens on formatting mistakes.
+OpenAI's structured outputs, Anthropic's tool use, and equivalent server-side modes all implement this. For local models, Outlines is the mature default; Guidance, LMQL, and llama.cpp's GBNF grammars cover adjacent niches. Per-token overhead is modest, on the order of a few percent to a fifth depending on the stack, and mostly recouped because the model never wastes tokens on formatting mistakes.
 
 The objection you hear is quality degradation. On very restrictive grammars with small models, masking preferred tokens has visible cumulative effect. But for typical tool-call schemas the quality cost is below the noise of any reasonable evaluation, and the reliability gain is enormous. **If your stack supports constrained decoding for tool calls and you are not using it, you are paying for retry loops with money you could be paying for inference.**
 
@@ -95,12 +95,8 @@ Two implications. Your tool catalogue is a product: owner, versioning policy, de
 
 Tool-using agents have different cost profiles from pure-text LLMs: multiple round trips per request, larger system prompts, longer context. A latency regression in the tool layer multiplies across every interaction. Plan against tool-call budgets, not just token budgets.
 
-## Where this fits
+Function calling is the capability holding up almost every LLM application that does more than autocomplete. Without it, [agentic RL](/blog/2026/agentic-rl/) has nothing to give a signal to, multi-agent systems become a game of telephone, and agent evaluation collapses into a vibes check. Pull on any modern agent thread and you find a tool-call schema at the other end.
 
-Function calling is the load-bearing capability under almost every LLM application that does more than autocomplete. Without it, [agentic RL](/blog/2026/agentic-rl/) has nothing to give a signal to, multi-agent systems become a game of telephone, and agent evaluation collapses into a vibes check. Pull on any modern agent thread and you find a tool-call schema at the other end.
-
-If routing decides whether your platform survives growth, and evaluation decides whether you can tell good from bad, function calling is the surface where it all has to work, turn by turn, on schemas you wrote and have to live with. The work is unglamorous, mostly description-writing and reading error logs, and it decides whether your agent stack ships.
-
-Future posts will go deeper into agentic RL with verifiable tool feedback, multi-agent coordination, and the evaluation harnesses that hold this together. For now: the error path is the product. Everything else is demo.
+Future posts will go deeper into agentic RL with verifiable tool feedback, multi-agent coordination, and the evaluation harnesses that hold this together. Until then, the work is unglamorous, mostly description-writing and reading error logs, and the part of it that repays attention most is the part the demos never show: what your agent does when a tool call fails.
 
 _This post reflects my personal views and experience. It does not represent official Amazon positions._

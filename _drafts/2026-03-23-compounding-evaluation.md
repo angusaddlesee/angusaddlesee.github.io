@@ -12,7 +12,7 @@ toc:
 
 A pattern I have watched repeat across teams, companies, and launches: evaluation gets built like a project, then thrown away. A launch is coming, so somebody stitches together a held-out set, a notebook, a Slack thread of edge cases, and a half-calibrated judge. The launch happens. The notebook rots. Six months later somebody asks "what did we use last time?", and the work begins again from roughly zero.
 
-This is the most expensive habit in modern ML and almost nobody names it. The cost is not the rebuild. The cost is that evaluation is the one piece of infrastructure where every new failure mode, every new model, every regression caught in production should make the system *more valuable*, not the same valuable. Evaluation, done correctly, is a compounding asset. Done as a project, it is a depreciating one.
+This is the most expensive habit in modern ML and almost nobody names it. The cost is not the rebuild. The cost is that evaluation is the one piece of infrastructure where every new failure mode, every new model, every regression caught in production should make the system _more valuable_, not the same valuable. Evaluation, done correctly, is a compounding asset. Done as a project, it is a depreciating one.
 
 This post is the leadership-flavoured piece in the series: less maths than the [LLM-as-judge](/blog/2025/llm-as-judge/) and [reward modelling](/blog/2026/reward-modelling-at-scale/) pillars, more about reasoning about evaluation as a long-lived asset. The audience is technical leaders deciding whether next quarter's headcount goes into model work or the unglamorous infrastructure underneath. The honest answer, more often than people want to hear, is the second one.
 
@@ -30,7 +30,7 @@ The mental shift is to stop treating evaluation as a measurement event and start
 
 **It accumulates rather than replaces.** Every failure mode found in production becomes a permanent test case. Every new model is scored on the full historical suite. The suite grows monotonically, so yesterday's bugs do not ship again tomorrow. This is what distinguishes teams that ship LLM features quarterly from teams that ship them annually.
 
-**It calibrates rather than asserts.** A pointwise score from an uncharacterised judge is marketing. A pointwise score next to a documented position-consistency rate, human-agreement rate, and score distribution is evaluation. The compounding asset is not the judge prompts; it is the *calibration data*: the human-labelled set, the adversarial pairs, the agreement metrics. Those let you swap the underlying judge model when a new frontier release lands without losing your error bar.
+**It calibrates rather than asserts.** A pointwise score from an uncharacterised judge is marketing. A pointwise score next to a documented position-consistency rate, human-agreement rate, and score distribution is evaluation. The compounding asset is not the judge prompts; it is the _calibration data_: the human-labelled set, the adversarial pairs, the agreement metrics. Those let you swap the underlying judge model when a new frontier release lands without losing your error bar.
 
 **It produces signal that flows downstream.** A mature evaluation pipeline is not just a launch-decision tool. It is the substrate for [reward modelling](/blog/2026/reward-modelling-at-scale/), the calibration layer for [LLM routing](/blog/2025/llm-routing-at-scale/), the regression suite for prompt updates, and the dataset bank from which next year's preference labels are drawn. Every downstream use pays back into the same calibration discipline.
 
@@ -42,13 +42,13 @@ Every mature team I have seen converges on the same four components. The order m
 
 The load-bearing piece. The temptation is to treat a judge as code (a prompt and a model) and version it like a script. The compounding version treats it as a measuring instrument with documented error characteristics. Every production judge should have, on a wiki page somebody can find: position-consistency rate, human-agreement rate, score distribution, and the version of the underlying judge it was last calibrated against. A judge whose biases you have not characterised does not produce results, it produces decoration.
 
-The discipline that compounds here is *recalibration cadence*. Frontier judges update, generation distributions drift, rubrics evolve. Bake recalibration in from day one: quarterly at minimum, every model swap whether planned or not. [Pairwise comparison](/blog/2026/pairwise-position-bias/) is the most reliable primitive to build on: it sidesteps the calibration headache that plagues pointwise scoring, and its main weakness, position bias, is well-understood and cheap to mitigate.
+The discipline that compounds here is _recalibration cadence_. Frontier judges update, generation distributions drift, rubrics evolve. Bake recalibration in from day one: quarterly at minimum, every model swap whether planned or not. [Pairwise comparison](/blog/2026/pairwise-position-bias/) is the most reliable primitive to build on: it sidesteps the calibration headache that plagues pointwise scoring, and its main weakness, position bias, is well-understood and cheap to mitigate.
 
 ### 2. Regression suites
 
 Every failure mode discovered in production becomes a permanent test case. Said out loud it sounds obvious; in practice almost nobody does it. Production failures arrive in inconvenient formats (a Slack thread, a support ticket, a screenshot), and distilling them into reproducible cases is unrewarding. Nobody is promoted for adding the 4,127th regression case. Everybody is blamed when the bug ships again.
 
-The leadership move is to make the regression suite a first-class on-call deliverable. A bug fix is not closed until it has a test: not a unit test on the code change, but an evaluation case on the *behaviour*. The technical piece is straightforward; the organisational piece is the bit that has to be enforced for the first six months before it self-sustains.
+The leadership move is to make the regression suite a first-class on-call deliverable. A bug fix is not closed until it has a test: not a unit test on the code change, but an evaluation case on the _behaviour_. The technical piece is straightforward; the organisational piece is the bit that has to be enforced for the first six months before it self-sustains.
 
 ### 3. Drift monitoring
 
@@ -68,7 +68,7 @@ The infrastructure can be perfect on paper and still rot if the surrounding orga
 
 **Eval owned by whoever shipped last.** Rotating ownership across teams is the surest way to make sure nobody owns it. Judge prompts get a different opinion every quarter, the rubric evolves toward whatever the current shipper found inconvenient, calibration discipline lapses. Compounding evaluation needs a stable owner with a multi-year mandate.
 
-**Evaluation as a launch-blocker only.** If the only time it gets attention is when preventing a launch, it will be optimised against launches. Judges drift permissive, regression suites accumulate exemptions. Evaluation has to be a launch-*enabler*: the thing that lets you ship faster because you can prove the change is safe.
+**Evaluation as a launch-blocker only.** If the only time it gets attention is when preventing a launch, it will be optimised against launches. Judges drift permissive, regression suites accumulate exemptions. Evaluation has to be a launch-_enabler_: the thing that lets you ship faster because you can prove the change is safe.
 
 **Pointwise leniency and the slow drift to "all green."** Pointwise judges have a leniency bias and their effective scale compresses over time. Teams reporting only mean scores see them creep up while real quality is flat or falling. The fix is rubric anchoring, score-distribution monitoring, and a pairwise primitive underneath. If your dashboard has not had a "score went down" moment in a year, your evaluation is broken.
 
@@ -80,7 +80,7 @@ The right question is not "how good is our evaluation?" It is "is our evaluation
 
 Evaluation infrastructure is one of the highest-leverage hires you can make. Not because the engineers are cheap (they aren't, and rightly so), but because the work compounds across every model the org will ever ship. A model researcher's contribution decays the moment the next model is released. An evaluation engineer's accumulates. Two years in, the team with strong evaluation infrastructure is shipping faster, with smaller error bars, on the same headcount as the team that put everything into model work.
 
-The other point is that evaluation is the *connective tissue* between the disciplines this series has been about. [LLM-as-judge](/blog/2025/llm-as-judge/) is evaluation. Reward modelling is evaluation with a gradient through it. LLM routing is evaluation that decides which model handles each query. Drift monitoring is evaluation in the time dimension. Pull on any thread and you find the same calibration data, the same human-labelled anchors, the same regression suite at the other end.
+The other point is that evaluation is the _connective tissue_ between the disciplines this series has been about. [LLM-as-judge](/blog/2025/llm-as-judge/) is evaluation. Reward modelling is evaluation with a gradient through it. LLM routing is evaluation that decides which model handles each query. Drift monitoring is evaluation in the time dimension. Pull on any thread and you find the same calibration data, the same human-labelled anchors, the same regression suite at the other end.
 
 ## How to start
 

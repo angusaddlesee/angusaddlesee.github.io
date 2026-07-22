@@ -86,14 +86,14 @@ The clearest signal is a divergence between proxy reward and human evaluation. T
 
 Signals worth wiring up before any serious RL run:
 
-| Signal | Healthy run | Hacking |
-|---|---|---|
-| Proxy reward | Gradual increase | Rapid, unbounded |
-| Response length | Stable or modest growth | Monotonic increase |
-| KL from reference | Stable, near target | Rapidly increasing |
-| Response diversity | Maintained | Mode collapse |
-| Filler / preamble rate | Stable | Climbing |
-| Human spot-check vs proxy | Tracking | Diverging |
+| Signal                    | Healthy run             | Hacking            |
+| ------------------------- | ----------------------- | ------------------ |
+| Proxy reward              | Gradual increase        | Rapid, unbounded   |
+| Response length           | Stable or modest growth | Monotonic increase |
+| KL from reference         | Stable, near target     | Rapidly increasing |
+| Response diversity        | Maintained              | Mode collapse      |
+| Filler / preamble rate    | Stable                  | Climbing           |
+| Human spot-check vs proxy | Tracking                | Diverging          |
 
 The last row is decisive. Everything above it is a leading indicator. The decisive measurement is fresh human judgement on samples from the _current_ policy. Anything else is your reward model talking to itself.
 
@@ -105,14 +105,6 @@ Reward hacking is not a research problem. It is an _operational_ problem disguis
 
 Every team I've seen ship a reward-hacked model made the same mistake: they invested in the policy and underinvested in the measurement. The best PPO implementation on the market, and a reward model nobody had stress-tested on the current policy's distribution. The model trained, the proxy went up, the launch happened, and the regression showed up in user metrics two weeks later, looking nothing like the dashboards.
 
-The framing I'd offer your VP: reward hacking is the audit problem of RL. You cannot trust a number you have not audited against ground truth. The audit costs a fraction of shipping the model the proxy thought you had. Underfunding audit is the highest-leverage way to lose value in an RLHF programme, and it is invisible until the run is already broken. This connects directly to the [reward modelling pillar](/blog/2026/reward-modelling-at-scale/), [LLM-as-judge](/blog/2025/llm-as-judge/), and [LLM routing](/blog/2025/llm-routing-at-scale/). Three angles on the same problem of measuring quality at scale; reward hacking is what happens when one silently goes out of calibration.
-
-## Where this fits
-
-Reward hacking is the reason most of the modern alignment discipline exists in the form it does. KL penalties, ensembles, iterative retraining, judge calibration, GRPO, Constitutional AI, process reward models, best-of-N, the monitoring apparatus: all of it is, at root, a response to the same fact: a learned reward is a proxy, and a sufficiently powerful optimiser will exploit any proxy you give it.
-
-The teams that internalise this build for it. They invest in measurement, run the monitoring loop continuously, treat the reward model and its calibration as the load-bearing artefact. They ship aligned models. The teams that don't ship the model their reward function deserved.
-
-The reward model is a useful signal that will mislead you the moment you stop checking it against reality. Keep checking.
+The framing I'd offer your VP: reward hacking is the audit problem of RL. You cannot trust a number you have not audited against ground truth. The audit costs a fraction of shipping the model the proxy thought you had. Underfunding audit is the highest-leverage way to lose value in an RLHF programme, and it is invisible until the run is already broken. This connects directly to the [reward modelling pillar](/blog/2026/reward-modelling-at-scale/), [LLM-as-judge](/blog/2025/llm-as-judge/), and [LLM routing](/blog/2025/llm-routing-at-scale/). Three angles on the same problem of measuring quality at scale; reward hacking is what happens when one silently goes out of calibration. The reward model is a useful signal that will mislead you the moment you stop checking it against reality. Keep checking.
 
 _This post reflects my personal views and experience. It does not represent official Amazon positions._
