@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.addlesee.co.uk'>Applied Scientist · Frontier AI Modelling Lab @ Amazon Alexa+</a>
+subtitle: Applied Scientist · Frontier AI Modelling Lab @ Amazon Alexa+
 description: Angus Addlesee is an Applied Scientist in Amazon Alexa's Frontier AI Modelling Lab specialising in LLM routing, reward modelling, evaluation infrastructure, and accessibility-driven deployments.
 
 profile:
@@ -47,7 +47,7 @@ I'm an Applied Scientist in **Amazon Alexa's Frontier AI Modelling Lab**, workin
 
 Before Amazon, I completed a **PhD in Artificial Intelligence** on conversational AI for people with dementia, and contributed to the **EU-funded SPRING project**, deploying a multi-party social robot in a hospital memory clinic. Earlier, I worked as a machine learning engineer on NLP projects with the NHS and Scottish Government, using information extraction to improve patient outcomes.
 
-I co-founded the **European and African Conversational AI Summits**, a SIGdial officer, and have given 50+ talks at venues including Harvard, USC, KTH, BBC, and NatWest.
+I co-founded the **European and African Conversational AI Summits**, am a SIGdial officer, and have given 50+ talks at venues including Harvard, USC, KTH, BBC, and NatWest.
 
 ---
 
@@ -109,7 +109,7 @@ My PhD research on accessible dialogue systems for people living with dementia. 
 
 Supervised 30 MSc students building voice assistants that help visually impaired users read food labels, locate items using stationary objects as spatial anchor points, and make informed decisions about food safety and nutrition. Designed with explainable AI so users can ask follow-ups like "how sure are you about that?" This was published across two papers.
 
-**Links:** 🔗 [Project details](/projects/)
+**Links:** 🔗 [Project details](/projects/4_project/)
 
 </div>
 
