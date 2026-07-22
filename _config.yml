@@ -147,8 +147,6 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  books:
-    output: false
   news:
     defaults:
       layout: post
@@ -256,8 +254,6 @@ jekyll-archives:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["conversational-ai", "accessibility", "linked-data", "computer-vision", "voice-assistants", "dementia", "knowledge-graphs"]
 display_categories: ["technical", "research", "external-articles", "interviews"]
