@@ -238,8 +238,9 @@ jekyll-archives:
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
 
-display_tags: ["conversational-ai", "accessibility", "linked-data", "computer-vision", "voice-assistants", "dementia", "knowledge-graphs"]
-display_categories: ["technical", "research", "external-articles", "interviews"]
+display_tags:
+  ["conversational-ai", "accessibility", "visual-impairment", "linked-data", "computer-vision", "voice-assistants", "dementia", "knowledge-graphs"]
+display_categories: ["external-articles", "interviews"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
