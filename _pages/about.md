@@ -67,7 +67,7 @@ A multi-party conversational robot using LLMs, deployed in a real hospital memor
 
 **Highlights:** EACL 2024 Best Demo Award · Featured in [TIME Magazine](https://time.com/6590440/robots-hospital-patient-testing-phase-ai-assistance/) · Demonstrated at HRI 2024
 
-**Links:** 🎥 [Demo video](https://www.youtube.com/watch?v=xMCpcsLhN_I) · 🔗 [Project details](/projects/3_project/)
+**Links:** 🎥 [Demo video](https://www.youtube.com/watch?v=xMCpcsLhN_I) · 🔗 [Project details](/projects/spring-hospital-robot/)
 
 </div>
 
@@ -81,7 +81,7 @@ A multi-party conversational robot using LLMs, deployed in a real hospital memor
 
 Intelligent LLM routing that assesses intent, context, and risk to select the best-fit model for each interaction, with continuous benchmarking and observability. In production, serving millions of users daily with a meaningful reduction in response latency while maintaining conversation quality.
 
-**Links:** 🔗 [Project details](/projects/1_project/)
+**Links:** 🔗 [Project details](/projects/alexa-llm-systems/)
 
 </div>
 
@@ -95,7 +95,7 @@ Intelligent LLM routing that assesses intent, context, and risk to select the be
 
 My PhD research on accessible dialogue systems for people living with dementia. Today's voice assistants are trained on data representing the "average" user and misunderstand speech patterns that differ from the norm. Mid-sentence pauses and anaphora usage, for example, become more common and pronounced with dementia. I collected real interactions with Alexa devices to identify exactly which changes cause failures, and designed tweaks to current systems that make them more accessible and more naturally interactive for everyone.
 
-**Links:** 📰 [Amazon Science article](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-assistants-more-accessible) · 🔗 [Project details](/projects/2_project/)
+**Links:** 📰 [Amazon Science article](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible) · 🔗 [Project details](/projects/voice-assistants-dementia/)
 
 </div>
 
@@ -109,7 +109,7 @@ My PhD research on accessible dialogue systems for people living with dementia. 
 
 Supervised 30 MSc students building voice assistants that help visually impaired users read food labels, locate items using stationary objects as spatial anchor points, and make informed decisions about food safety and nutrition. Designed with explainable AI so users can ask follow-ups like "how sure are you about that?" This was published across two papers.
 
-**Links:** 🔗 [Project details](/projects/4_project/)
+**Links:** 🔗 [Project details](/projects/kitchen-visual-impairment/)
 
 </div>
 

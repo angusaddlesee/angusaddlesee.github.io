@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My article "Image Storage, Color Spaces, and Manipulation" was published on [Heartbeat](https://heartbeat.comet.ml/the-ancient-secrets-of-computer-vision-3-by-joseph-redmon-condensed-934e16eacb44).
+My article "Image Storage, Color Spaces, and Manipulation" was published on [Heartbeat](https://heartbeat.comet.ml/the-ancient-secrets-of-computer-vision-3-by-joseph-redmon-condensed-681517a89060).
