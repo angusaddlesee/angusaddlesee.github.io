@@ -833,41 +833,44 @@ ninja.data = [{
           section: "News",},{id: "news-alexa-is-rolling-out-across-europe-italy-spain-and-more-an-exciting-and-challenging-time-as-we-scale-models-triggered-for-100-of-traffic-to-support-an-increasing-variety-of-languages",
           title: 'Alexa+ is rolling out across Europe, Italy, Spain, and more. An exciting and...',
           description: "",
+          section: "News",},{id: "news-alexa-launched-in-brazil-our-first-portuguese-language-market-continuing-to-scale-the-models-i-work-on-to-support-more-languages-and-more-customers-around-the-world",
+          title: 'Alexa+ launched in Brazil, our first Portuguese-language market. Continuing to scale the models...',
+          description: "",
           section: "News",},{id: "projects-production-llm-systems-at-amazon-alexa",
           title: 'Production LLM Systems at Amazon Alexa+',
           description: "LLM routing, reward modelling, and evaluation infrastructure in Alexa&#39;s Frontier AI Modelling Lab.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/alexa-llm-systems/";
             },},{id: "projects-voice-assistants-for-people-with-dementia",
           title: 'Voice Assistants for People with Dementia',
           description: "PhD research on accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
+              window.location.href = "/projects/voice-assistants-dementia/";
             },},{id: "projects-spring-hospital-memory-clinic-robot",
           title: 'SPRING Hospital Memory Clinic Robot',
           description: "Multi-party conversational social robot deployed in real hospital settings for patient interactions.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
+              window.location.href = "/projects/spring-hospital-robot/";
             },},{id: "projects-voice-assistants-for-visually-impaired-people-in-the-kitchen",
           title: 'Voice Assistants for Visually Impaired People in the Kitchen',
           description: "Accessible kitchen assistance systems addressing malnutrition challenges for visually impaired users.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
+              window.location.href = "/projects/kitchen-visual-impairment/";
             },},{id: "projects-nhs-amp-scottish-government-ml-projects",
           title: 'NHS &amp;amp; Scottish Government ML Projects',
           description: "Machine learning systems for healthcare information extraction and patient care management.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
+              window.location.href = "/projects/nhs-scotgov-ml/";
             },},{id: "projects-abuse-detection-amp-question-analysis-on-the-alexa-prize-corpus",
           title: 'Abuse Detection &amp;amp; Question Analysis on the Alexa Prize Corpus',
           description: "Two MSc projects analysing roughly 1.7 million real Alexa Prize utterances; one for abuse detection, one for conversational question analysis.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
+              window.location.href = "/projects/alexa-prize-analysis/";
             },},{id: "projects-community-leadership-in-conversational-ai",
           title: 'Community Leadership in Conversational AI',
           description: "Co-founded the European and African Conversational AI Summits, SIGdial officer, conference organiser, and 50+ international talks.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/community-leadership/";
             },},{
         id: 'social-email',
         title: 'email',
