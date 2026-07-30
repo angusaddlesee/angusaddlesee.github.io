@@ -62,6 +62,18 @@ def get_scholar_citations() -> None:
 
     citation_data = {"metadata": {"last_updated": today}, "papers": {}}
 
+    # Capture the summary metrics displayed on the publications page. These live
+    # on the filled author object; without them the page's metrics box would be
+    # dropped on every automated update.
+    for src_key, dest_key in (
+        ("citedby", "total_citations"),
+        ("hindex", "h_index"),
+        ("i10index", "i10_index"),
+    ):
+        value = author_data.get(src_key)
+        if value is not None:
+            citation_data[dest_key] = value
+
     scholarly.set_timeout(15)
     scholarly.set_retries(3)
     try:
