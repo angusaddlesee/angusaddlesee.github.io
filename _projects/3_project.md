@@ -1,9 +1,10 @@
 ---
 layout: page
 title: SPRING Hospital Memory Clinic Robot
+permalink: /projects/spring-hospital-robot/
 description: Multi-party conversational social robot deployed in real hospital settings for patient interactions.
 img: assets/img/spring.png
-importance: 1
+importance: 3
 category: work
 related_publications: false
 ---

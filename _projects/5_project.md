@@ -1,6 +1,7 @@
 ---
 layout: page
 title: NHS & Scottish Government ML Projects
+permalink: /projects/nhs-scotgov-ml/
 description: Machine learning systems for healthcare information extraction and patient care management.
 img: assets/img/nhs.png
 importance: 4
@@ -44,6 +45,6 @@ The full set of linked data articles, plus tutorials and conference write-ups, i
 
 ## Related Work
 
-- **[Voice Assistants for Dementia](/projects/2_project/)**: PhD work on accessibility-focused dialogue
-- **[SPRING Hospital Robot](/projects/3_project/)**: Conversational AI in clinical settings
-- **[Amazon Alexa+](/projects/1_project/)**: Production conversational AI at scale
+- **[Voice Assistants for Dementia](/projects/voice-assistants-dementia/)**: PhD work on accessibility-focused dialogue
+- **[SPRING Hospital Robot](/projects/spring-hospital-robot/)**: Conversational AI in clinical settings
+- **[Amazon Alexa+](/projects/alexa-llm-systems/)**: Production conversational AI at scale

@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Community Leadership in Conversational AI
+permalink: /projects/community-leadership/
 description: Co-founded the European and African Conversational AI Summits, SIGdial officer, conference organiser, and 50+ international talks.
 img: assets/img/speak.jpg
 importance: 9
-category: fun
+category: community
 ---
 
 ## Overview

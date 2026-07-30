@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Production LLM Systems at Amazon Alexa+
+permalink: /projects/alexa-llm-systems/
 description: LLM routing, reward modelling, and evaluation infrastructure in Alexa's Frontier AI Modelling Lab.
 img: assets/img/alexa.jpg
 importance: 1
@@ -44,9 +45,9 @@ I'm passionate about accessibility, and I draw on my PhD research to advocate fo
 
 This work builds on and extends my research background:
 
-- **[Voice Assistants for Dementia](/projects/2_project/)**: PhD research on accessibility
-- **[SPRING Hospital Robot](/projects/3_project/)**: Multi-party conversational AI in healthcare
-- **[NHS ML Projects](/projects/5_project/)**: Healthcare information extraction and decision support
+- **[Voice Assistants for Dementia](/projects/voice-assistants-dementia/)**: PhD research on accessibility
+- **[SPRING Hospital Robot](/projects/spring-hospital-robot/)**: Multi-party conversational AI in healthcare
+- **[NHS ML Projects](/projects/nhs-scotgov-ml/)**: Healthcare information extraction and decision support
 
 ## Publications & Articles
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Voice Assistants for People with Dementia
+permalink: /projects/voice-assistants-dementia/
 description: PhD research on accessible dialogue systems tailored to cognitive abilities and communication patterns of dementia patients.
 img: assets/img/phd.jpg
 importance: 2
@@ -30,11 +31,11 @@ Improving conversational fluidity for people with dementia improves the experien
 
 ## Real-World Deployment
 
-The findings from this PhD didn't stay in the lab. They were integrated into a multi-party social robot deployed in a real hospital memory clinic via the EU-funded **[SPRING project](/projects/3_project/)**, where it interacted with patients, their companions, and clinicians. The research moved from understanding the problem, to designing solutions, to seeing them tested with the very people they were built for.
+The findings from this PhD didn't stay in the lab. They were integrated into a multi-party social robot deployed in a real hospital memory clinic via the EU-funded **[SPRING project](/projects/spring-hospital-robot/)**, where it interacted with patients, their companions, and clinicians. The research moved from understanding the problem, to designing solutions, to seeing them tested with the very people they were built for.
 
 ## From Memory Clinic to Alexa+
 
-I now work in **Amazon Alexa's Frontier AI Modelling Lab** on the models behind **[Alexa+](/projects/1_project/)**. The lessons from PhD research inform how I think about routing, evaluation, and reward signals at scale: accessibility is not a separate workstream, it shapes good conversational AI for everyone. I bring up these points internally to advocate for accessibility-aware design wherever I can.
+I now work in **Amazon Alexa's Frontier AI Modelling Lab** on the models behind **[Alexa+](/projects/alexa-llm-systems/)**. The lessons from PhD research inform how I think about routing, evaluation, and reward signals at scale: accessibility is not a separate workstream, it shapes good conversational AI for everyone. I bring up these points internally to advocate for accessibility-aware design wherever I can.
 
 ## Research Highlights
 
@@ -52,7 +53,7 @@ I now work in **Amazon Alexa's Frontier AI Modelling Lab** on the models behind 
 - 📄 **PhD Thesis**: ["Incremental multi-party conversational AI for people with dementia"](https://www.ros.hw.ac.uk/items/70decb81-127b-4a03-b141-84fb19c637f2) (2024)
 - 📰 **[Amazon Science Article](https://www.amazon.science/blog/repairing-interrupted-questions-makes-voice-agents-more-accessible)**: "Repairing Interrupted Questions Makes Voice Assistants More Accessible"
 - 🎥 **[HRI 2024 Video](https://www.youtube.com/watch?v=xMCpcsLhN_I)**: Demonstration of accessible multi-party dialogue
-- 🏥 **[SPRING Project](/projects/3_project/)**: Hospital memory clinic deployment
+- 🏥 **[SPRING Project](/projects/spring-hospital-robot/)**: Hospital memory clinic deployment
 
 ### Key Publications
 

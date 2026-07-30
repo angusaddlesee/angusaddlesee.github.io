@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Abuse Detection & Question Analysis on the Alexa Prize Corpus
+permalink: /projects/alexa-prize-analysis/
 description: Two MSc projects analysing roughly 1.7 million real Alexa Prize utterances; one for abuse detection, one for conversational question analysis.
 img: assets/img/misc.jpg
 importance: 7
@@ -49,5 +50,5 @@ Both projects shared the same insight: **real spoken interactions are messier an
 
 ## Related Work
 
-- **[Voice Assistants for Dementia](/projects/2_project/)**: PhD work on accessible dialogue, including incomplete and disrupted questions
-- **[Amazon Alexa+](/projects/1_project/)**: Production conversational AI at scale
+- **[Voice Assistants for Dementia](/projects/voice-assistants-dementia/)**: PhD work on accessible dialogue, including incomplete and disrupted questions
+- **[Amazon Alexa+](/projects/alexa-llm-systems/)**: Production conversational AI at scale
