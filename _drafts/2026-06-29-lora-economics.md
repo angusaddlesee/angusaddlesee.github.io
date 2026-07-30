@@ -2,7 +2,7 @@
 layout: post
 title: "LoRA, QLoRA, and the Economics of Fine-Tuning"
 date: 2026-06-29 10:00:00
-description: A technical deep-dive into LoRA, QLoRA and the wider PEFT family: the rank-decomposition that turned customisation into a laptop-scale problem, the operational story of serving many adapters, and where the economics still haven't finished adjusting.
+description: "A technical deep-dive into LoRA, QLoRA and the wider PEFT family: the rank-decomposition that turned customisation into a laptop-scale problem, the operational story of serving many adapters, and where the economics still haven't finished adjusting."
 tags: fine-tuning lora qlora peft machine-learning
 categories: technical
 toc:
@@ -47,11 +47,11 @@ The original paper landed in 2021 and variants arrived immediately. Most are noi
 
 **LoRA+ (Hayou et al., 2024)** is the closest thing PEFT has to a free lunch. The two matrices play different roles and have different shapes, and Hayou et al. show that this gives them asymmetric learning dynamics at scale; giving them the same learning rate is provably suboptimal. LoRA+ trains $B$ faster than $A$: $\eta_B = \lambda \cdot \eta_A$ with $\lambda \gg 1$, and the paper recommends $\lambda \approx 16$ in practice. One optimiser parameter group, 1–2% accuracy, 10–20% faster convergence. There is no reason not to use it; the only reason most people don't is that they haven't heard of it.
 
-**DoRA (Liu et al., 2024)** is the more interesting structural variant. The observation: full fine-tuning makes _large directional changes with relatively small magnitude changes_, and standard LoRA's coupled update can't represent that pattern cleanly. DoRA decomposes each weight matrix column-wise into magnitude and direction, then applies the low-rank update only to the directional component:
+**DoRA (Liu et al., 2024)** is the more interesting structural variant. The observation: across training, full fine-tuning shows a _negative_ correlation between its magnitude updates and its directional updates (Liu et al. measure −0.62), whereas LoRA's coupled update forces a strongly _positive_ correlation (+0.83) — LoRA cannot cleanly make a large directional change paired with a small magnitude change, or vice versa. DoRA decomposes each weight matrix column-wise into magnitude and direction, with $V$ the directional component initialised from $W_0$, then applies the low-rank update only to the direction:
 
 $$W' = m' \cdot \frac{V + BA}{\|V + BA\|_c},$$
 
-with $m'$ a separately-learnable per-column scalar. Empirically DoRA closes most of the remaining gap to full fine-tuning at the same rank, costing a column-wise norm per forward pass (~10–20% layer-level overhead). DoRA is a slightly more honest parameterisation of what fine-tuning actually does, and the consistent 1–3% gain at no parameter cost suggests the honesty is worth something.
+with $m'$ a separately-learnable per-column scalar and $\|\cdot\|_c$ the column-wise norm. Empirically DoRA closes most of the remaining gap to full fine-tuning at the same rank, costing a column-wise norm per forward pass (~10–20% layer-level overhead) and one magnitude scalar per column. DoRA is a slightly more honest parameterisation of what fine-tuning actually does, and the consistent 1–3% gain at negligible parameter cost suggests the honesty is worth something.
 
 **Rank selection** is where most of LoRA's hyperparameter risk lives. Hu et al. originally found NLU tasks on GPT-3 saturated at $r = 4$. Subsequent work on instruction tuning, code, and reasoning found that 64 or 128 give meaningful gains. The rough heuristic:
 
@@ -78,7 +78,7 @@ The principle behind all of these: LoRA's low-rank structure is a prior on the g
 
 ## The operational story
 
-The single most underrated property of LoRA is that the trained artefact is small. A rank-16 adapter for a 7B model is about 50MB; you can store thousands in the footprint of one full-fine-tuned model, ship them as if they were config files, and serve a lot of them from a single base.
+The single most underrated property of LoRA is that the trained artefact is small. A rank-16 adapter over all linear layers of a 7B model is roughly 40M parameters, about 80MB in bf16; you can store many in the footprint of one full-fine-tuned model, ship them as if they were config files, and serve a lot of them from a single base.
 
 This is the architecture behind every commercial fine-tuning API I am aware of. Systems like S-LoRA, LoRAX, and Punica keep one copy of the base in GPU memory, pull per-request LoRA weights from a CPU- or NVMe-resident cache, and do the low-rank multiplication as an extra term in the forward pass. The base FLOPs are amortised across thousands of users, and each user gets a personalised model at the marginal cost of one matrix multiply per layer. Multi-tenant LoRA serving is the unit-economics unlock for the entire fine-tuning-as-a-service category.
 

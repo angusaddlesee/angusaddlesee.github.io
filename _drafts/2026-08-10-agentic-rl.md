@@ -2,7 +2,7 @@
 layout: post
 title: "Agentic RL: Trajectory-Level Optimisation for Tool-Using Agents"
 date: 2026-08-10 10:00:00
-description: A deep-dive into agentic RL: what changes when the unit of optimisation is a multi-step rollout, the trajectory-level GRPO maths, the part of the stack that's actually hard (the environment), and the failure modes that bite when the policy gets to call tools.
+description: "A deep-dive into agentic RL: what changes when the unit of optimisation is a multi-step rollout, the trajectory-level GRPO maths, the part of the stack that's actually hard (the environment), and the failure modes that bite when the policy gets to call tools."
 tags: agentic-rl trajectory-rl grpo reinforcement-learning alexa
 categories: technical
 toc:
@@ -59,7 +59,7 @@ What this objective is _not_ doing: it is not assigning per-step value, not lear
 
 Most engineers reading agentic RL papers think the algorithm is the hard bit. It isn't. The algorithm is a hundred lines of code on top of an existing GRPO trainer. The hard bit is the environment: whatever stands in for "the world" during a rollout. Its fidelity, latency, and stochasticity determine what the policy can learn and whether that learning transfers.
 
-There is a fundamental tension between fidelity and cost. **Real-API environments** give maximum fidelity but are too slow and expensive for RL at scale; SWE-Gym, AppWorld, and WebArena live here. **Recorded-replay environments** look up the closest match in a library of logged (request, response) pairs: fast and faithful, useless when the policy issues a request that wasn't logged. **Mock environments** synthesise responses on the fly: cheap, full coverage, but subtle mock bugs teach the policy wrong things. **Hybrid environments** (replay when the request matches, mock otherwise) are the practical sweet spot, and the architecture production agentic systems converge to.
+There is a fundamental tension between fidelity and cost. **High-fidelity execution environments** give the most faithful signal but are too slow and expensive for RL at scale; SWE-Gym, AppWorld, and WebArena live here, achieving fidelity through faithful self-hosted simulation rather than live production APIs. **Recorded-replay environments** look up the closest match in a library of logged (request, response) pairs: fast and faithful, useless when the policy issues a request that wasn't logged. **Mock environments** synthesise responses on the fly: cheap, full coverage, but subtle mock bugs teach the policy wrong things. **Hybrid environments** (replay when the request matches, mock otherwise) are the practical sweet spot, and the architecture production agentic systems converge to.
 
 All of them have to maintain state across passes (a `Calendar.Add()` followed by a `Calendar.Search()` should reflect the add, or the policy learns that adds don't stick), inject partial failures (mocks that always succeed teach the model error recovery never matters), and enforce termination caps cleanly.
 
@@ -73,7 +73,7 @@ A customer asking "what's X's birthday?" can be served correctly by `Calendar.Se
 
 Formally, let $\mathcal{T}^*(s_0)$ be the set of acceptable trajectories from seed $s_0$. The single-correct-path assumption is $|\mathcal{T}^*(s_0)| = 1$. The multi-correct-path reality is that $|\mathcal{T}^*(s_0)|$ is unbounded for any non-trivial agentic task. A reward that penalises every trajectory not in some specific gold path punishes a large fraction of correct behaviour, often the majority of it, for surface mismatch.
 
-The clean approach is to score _membership_ in $\mathcal{T}^*(s_0)$ rather than match to a reference. Outcome-only rewards (binary success, the SWE-bench style) are path-agnostic by construction but only work for verifiable goals. Path-quality judges read the full trajectory and grade whether each tool call was reasonable in context, ignoring the response wording (the TRAIL pattern). Response-quality judges score the final response while ignoring how it was reached. Path and response are independent quality axes; conflating them produces conflated gradients.
+The clean approach is to score _membership_ in $\mathcal{T}^*(s_0)$ rather than match to a reference. Outcome-only rewards (binary success, the SWE-bench style) are path-agnostic by construction but only work for verifiable goals. Path-quality judges read the full trajectory and grade whether each tool call was reasonable in context, ignoring the response wording. Response-quality judges score the final response while ignoring how it was reached. Path and response are independent quality axes; conflating them produces conflated gradients.
 
 A trajectory-level reward in production typically composes them as
 
@@ -119,7 +119,7 @@ Path-quality judges are the single biggest reward-signal innovation that disting
 
 The mechanical reason this matters: conflated rewards produce conflated gradients. If a single judge scores both axes, the gradient on path tokens carries a signal that depends partly on response quality, and vice versa. The policy can improve tool selection while degrading response wording, and the conflated score barely moves, or worse, moves in a misleading direction. Separating axes lets each gradient pull on its own tokens cleanly. The diagnostic reason matters too: when a checkpoint regresses, "path or response?" is the first useful question, and a conflated judge cannot answer it.
 
-Work on trace-based evaluation of agentic behaviour (including TRAIL and similar efforts) explores this decomposition explicitly: grading tool selection, parameter extraction, recovery from failures, and clarification handling, with no access to the final response. This is representative of what teams training agentic policies tend to converge toward. The classical RL formulation assumed one reward function captured everything you cared about. For agentic tasks, no single reward function does. Decomposing path versus response is not a workaround; it's the field acknowledging that agentic quality is genuinely multidimensional.
+Work on trace-based evaluation of agentic behaviour is a growing area (Patronus AI's TRAIL benchmark, for instance, provides a taxonomy of trace-level error types and human-annotated traces for localising them). Grading tool selection, parameter extraction, recovery from failures, and clarification handling separately from the final response is exactly the decomposition this points to. This is representative of what teams training agentic policies tend to converge toward. The classical RL formulation assumed one reward function captured everything you cared about. For agentic tasks, no single reward function does. Decomposing path versus response is not a workaround; it's the field acknowledging that agentic quality is genuinely multidimensional.
 
 ## For technical leaders
 

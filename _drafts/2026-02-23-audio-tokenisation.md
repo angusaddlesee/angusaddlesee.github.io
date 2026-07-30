@@ -2,7 +2,7 @@
 layout: post
 title: "Audio Tokenisation: The Design Choice That Shapes Every Voice-LLM"
 date: 2026-02-23 10:00:00
-description: A deep dive into the foundational representation decision under every speech-native LLM: semantic tokens, acoustic codecs, hybrid approaches, codebook hierarchies, and how the choice quietly determines everything downstream.
+description: "A deep dive into the foundational representation decision under every speech-native LLM: semantic tokens, acoustic codecs, hybrid approaches, codebook hierarchies, and how the choice quietly determines everything downstream."
 tags: speech audio-tokenisation voice-assistants llm machine-learning
 categories: technical
 thumbnail: assets/img/misc.jpg
@@ -32,15 +32,16 @@ Three families of audio tokenisers dominate today, and they answer the semantics
 
 **Acoustic tokens** come from neural audio codecs: EnCodec (Meta, 2022), SoundStream (Google, 2021), DAC (Descript, 2023). They compress audio to discrete codes through an encoder, a residual vector quantisation (RVQ) bottleneck, and a decoder, jointly trained for reconstruction. EnCodec runs at 75Hz with $Q = 8$ codebooks of 1024 entries, giving 6kbps and near-transparent reconstruction. Acoustic tokens preserve everything (speaker, prosody, recording quality) at the cost of many more tokens per second, with a substantial fraction encoding information an LLM reasoning about meaning fundamentally does not need.
 
-**Hybrid tokens** try to have it both ways. SpeechTokenizer (Zhang et al., 2023) is the cleanest example: an RVQ codec where codebook 1 is explicitly distilled to match HuBERT semantic tokens, and subsequent codebooks pick up the residual acoustic detail. SemantiCodec and Mimi (the codec inside Moshi) occupy this design space. Hybrids are where the field is converging for joint understanding-and-generation models.
+**Hybrid tokens** try to have it both ways. SpeechTokenizer (Zhang et al., 2023) is the cleanest example: an RVQ codec where codebook 1 is explicitly distilled to match HuBERT semantic tokens, and subsequent codebooks pick up the residual acoustic detail. SemantiCodec and Mimi (the codec inside Moshi) occupy this design space; Mimi's headline trick is doing it at just 12.5 Hz, so 8 codebooks give only 100 tokens/sec against SpeechTokenizer's ~400, which is what makes real-time full-duplex generation tractable. Hybrids are where the field is converging for joint understanding-and-generation models.
 
-| Strategy                                | Tokens/sec                      | Semantics | Acoustics | Best for                               |
-| --------------------------------------- | ------------------------------- | --------- | --------- | -------------------------------------- |
-| HuBERT k-means                          | ~50                             | Strong    | None      | Pure understanding                     |
-| EnCodec, codebook 1 only                | 75                              | Moderate  | Coarse    | Light understanding + basic generation |
-| EnCodec, all codebooks                  | 75 × 8 = 600                    | Moderate  | Strong    | High-quality generation                |
-| SpeechTokenizer / Mimi                  | ~50 semantic + ~50 × 7 acoustic | Strong    | Strong    | Joint understanding + generation       |
-| Continuous features (no discretisation) | 50–75                           | Strong    | Moderate  | Understanding-only on an existing LLM  |
+| Strategy                                | Tokens/sec                        | Semantics | Acoustics | Best for                               |
+| --------------------------------------- | --------------------------------- | --------- | --------- | -------------------------------------- |
+| HuBERT k-means                          | ~50                               | Strong    | None      | Pure understanding                     |
+| EnCodec, codebook 1 only                | 75                                | Moderate  | Coarse    | Light understanding + basic generation |
+| EnCodec, all codebooks                  | 75 × 8 = 600                      | Moderate  | Strong    | High-quality generation                |
+| SpeechTokenizer                         | ~50 × 8 (1 semantic + 7 acoustic) | Strong    | Strong    | Joint understanding + generation       |
+| Mimi (Moshi)                            | 12.5 × 8 = 100 tokens/sec         | Strong    | Strong    | Joint understanding + generation       |
+| Continuous features (no discretisation) | 50–75                             | Strong    | Moderate  | Understanding-only on an existing LLM  |
 
 The honest summary is that there is no globally best row in that table, only a row that is best for the system you are actually trying to ship.
 

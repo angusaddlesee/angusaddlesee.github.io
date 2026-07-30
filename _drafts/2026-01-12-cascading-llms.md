@@ -2,7 +2,7 @@
 layout: post
 title: "Cascading LLMs: Try the Cheap Model First, and the Failure Modes Nobody Warns You About"
 date: 2026-01-12 10:00:00
-description: A deep dive into cascading as an LLM routing strategy: how it works, why the quality gate is everything, and where it quietly costs you more than the all-frontier baseline.
+description: "A deep dive into cascading as an LLM routing strategy: how it works, why the quality gate is everything, and where it quietly costs you more than the all-frontier baseline."
 tags: llm-routing inference cascading machine-learning alexa
 categories: technical
 thumbnail: assets/img/alexa.jpg
@@ -34,7 +34,7 @@ The latency profile is the part most people underweight. Accepted queries cost s
 
 Multi-stage cascades (say a 1B → 8B → 70B chain) extend the same logic. Each stage catches a slice of queries, and only the hard tail reaches the largest model. They're tempting on paper and brutal in practice: every additional stage adds a quality gate that has to be calibrated, monitored, and maintained. Start with two stages, get the gate right, and only add a third when the data shows a meaningful middle band of queries that an 8B handles but a 1B can't.
 
-**Speculative cascading** is the variant worth knowing if your latency budget is tight. Fire both models in parallel. If the gate accepts the small response, cancel the large model. If it rejects, you've already started the large model and paid almost no extra wall-clock time. The trade-off is wasted compute on cancelled requests; whether it's worth it depends on your scheduler and how much your product values bounded p99 over mean cost.
+Two related latency tricks are worth knowing when your budget is tight. The simplest is **hedged execution**: fire both models in parallel and cancel the large one if the gate accepts the small response. If it rejects, the large model is already running and you've paid almost no extra wall-clock time. The trade-off is wasted compute on cancelled requests. **Speculative cascading** (Narasimhan et al., 2024) is the more sophisticated version: the small model drafts tokens, the large model verifies them in a single parallel pass, and a deferral rule decides token-by-token whether to keep the draft or fall back to the large model, so you never pay for two full independent generations. Whether either is worth it depends on your scheduler and how much your product values bounded p99 over mean cost.
 
 ## The quality gate is the entire system
 
@@ -52,11 +52,11 @@ The gate that ends up in production is almost always a hybrid: log-probabilities
 
 ## The maths people don't sit with long enough
 
-Let $p$ be the fraction of queries the gate accepts, and $c_s, c_l$ the per-query costs of the small and large models. Average cost per query is
+Let $p$ be the fraction of queries the gate accepts, and $c_s, c_l, c_g$ the per-query costs of the small model, the large model, and the gate. Average cost per query is
 
-$$\bar{c} = c_s + (1-p) \cdot c_l$$
+$$\bar{c} = c_s + c_g + (1-p) \cdot c_l$$
 
-Notice the $c_s$ term is _not_ multiplied by $p$; you always pay the small model. The cascade only beats all-frontier when $p > c_s/c_l$. If the small model is an order of magnitude cheaper, your acceptance rate only needs to clear a small fraction. That's what makes cascading look so compelling on a slide. The part that gets glossed over: _quality_ is also a weighted average, over the small model's quality on accepted queries and the large model's on escalated ones, weighted by the gate. A gate that accepts queries the small model fails on degrades quality silently while the cost numbers look lovely. The cost side is trivial to measure and the quality side is not, and the quality side is the side that hurts you.
+Notice the $c_s$ term is _not_ multiplied by $p$; you always pay the small model, and you always pay the gate. If the gate is a mean-log-prob read it's essentially free ($c_g \approx 0$) and you can drop it, but a verifier-model gate is a real per-query cost and belongs in the equation. The cascade only beats all-frontier when $p > (c_s + c_g)/c_l$. If the small model is an order of magnitude cheaper and the gate is cheap, your acceptance rate only needs to clear a small fraction. That's what makes cascading look so compelling on a slide. The part that gets glossed over: _quality_ is also a weighted average, over the small model's quality on accepted queries and the large model's on escalated ones, weighted by the gate. A gate that accepts queries the small model fails on degrades quality silently while the cost numbers look lovely. The cost side is trivial to measure and the quality side is not, and the quality side is the side that hurts you.
 
 ## The failure modes nobody warns you about
 

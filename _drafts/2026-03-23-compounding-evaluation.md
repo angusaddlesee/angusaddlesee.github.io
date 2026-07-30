@@ -2,7 +2,7 @@
 layout: post
 title: "Evaluation Infrastructure That Actually Compounds"
 date: 2026-03-23 10:00:00
-description: Most evaluation infrastructure is built as a series of one-off projects that depreciate. The good kind compounds: every new model, feature, and failure mode adds to a growing asset rather than starting from scratch.
+description: "Most evaluation infrastructure is built as a series of one-off projects that depreciate. The good kind compounds: every new model, feature, and failure mode adds to a growing asset rather than starting from scratch."
 tags: evaluation mlops infrastructure leadership alexa
 categories: technical
 thumbnail: assets/img/alexa.jpg

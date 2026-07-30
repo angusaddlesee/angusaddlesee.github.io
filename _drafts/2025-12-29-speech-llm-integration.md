@@ -2,7 +2,7 @@
 layout: post
 title: "Collapsing the Voice Pipeline: Why Speech-LLM Integration Is the Hardest Migration in AI Right Now"
 date: 2025-12-29 10:00:00
-description: A technical and strategic guide to merging ASR, NLU, LLM, and TTS into unified speech-native models: what you gain, what you lose, and how to migrate a production system without breaking it.
+description: "A technical and strategic guide to merging ASR, NLU, LLM, and TTS into unified speech-native models: what you gain, what you lose, and how to migrate a production system without breaking it."
 tags: speech voice-assistants llm conversational-ai alexa
 categories: technical
 thumbnail: assets/img/misc.jpg

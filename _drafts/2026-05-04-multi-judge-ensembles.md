@@ -2,7 +2,7 @@
 layout: post
 title: "The Panel Trick: Multi-Judge Ensembles That Don't Just Compound Bias"
 date: 2026-05-04 10:00:00
-description: A deep dive into multi-judge LLM ensembles: what they actually buy you, the aggregation strategies that work in practice, and the uncorrelated-bias requirement that most teams quietly skip.
+description: "A deep dive into multi-judge LLM ensembles: what they actually buy you, the aggregation strategies that work in practice, and the uncorrelated-bias requirement that most teams quietly skip."
 tags: evaluation llm-as-judge multi-judge ensembles alexa machine-learning
 categories: technical
 thumbnail: assets/img/phd.jpg
@@ -32,7 +32,7 @@ $$P(\text{majority correct}) = \sum_{i=\lceil k/2 \rceil}^{k} \binom{k}{i} p^i (
 
 The catch is the word _independently_, which we will spend most of this post on. In my experience, three carefully chosen judges from different model families improve agreement with human annotators by several percentage points, sometimes closer to ten, over the best individual judge. That is the difference between a judge layer you can trust to drive a deployment and one you cannot.
 
-The empirical case is the literature. PoLL (Verga et al., 2024) showed that a panel of small open-weight judges could match or exceed a single frontier judge while reducing self-enhancement bias. JudgeLM and Auto-J explored learned judge architectures that benefit from panel-style training data. The throughline: when you stop relying on a single judge, you recover signal it was systematically erasing.
+The empirical case is the literature. PoLL (Verga et al., 2024) showed that a panel of three smaller judges drawn from disjoint model families (Command R, Claude-3 Haiku, and GPT-3.5) could match or exceed a single frontier judge at over seven times lower cost, while reducing intra-model bias. JudgeLM and Auto-J showed that judge capability can be distilled into small open models, which is part of what makes an affordable panel possible. The throughline: when you stop relying on a single judge, you recover signal it was systematically erasing.
 
 The less obvious benefit is the disagreement signal. A single judge gives a verdict with no error bar. A panel gives you a verdict _and_ a measure of how trustworthy it is. When the panel splits, the example is genuinely ambiguous: the task is subjective, the rubric underspecified, or the judges poorly calibrated, and any of those is more useful than a confident wrong answer. A sudden spike in disagreement means something has shifted, and you find out before it shows up in production.
 

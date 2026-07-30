@@ -2,7 +2,7 @@
 layout: post
 title: "The Long-Context Lie: What 'Million-Token Window' Actually Buys You"
 date: 2026-04-06 10:00:00
-description: A practitioner's tour of long-context LLMs: what RoPE extensions actually do, why advertised context lengths are mostly marketing, and what to do about it in production.
+description: "A practitioner's tour of long-context LLMs: what RoPE extensions actually do, why advertised context lengths are mostly marketing, and what to do about it in production."
 tags: long-context llm transformers attention machine-learning
 categories: technical
 thumbnail: assets/img/misc.jpg
@@ -25,7 +25,7 @@ Two things follow from that and they are routinely conflated in marketing materi
 
 These are not the same number, not even the same order of magnitude, and most of the headline figures you read are the first one. Llama 3.1 ships with 128K. GPT-4 Turbo, 128K. Claude, 200K. Gemini 1.5, 1M+. Those numbers are real in the sense that the model will produce tokens when fed that much input. They are largely fiction in the sense that the model will _use_ those tokens evenly.
 
-The literature is now embarrassingly clear. Liu et al.'s "Lost in the Middle" (2023) showed that retrieval accuracy in long contexts forms a U-curve: high at the start, high at the end, sagging through the middle. Needle-in-a-haystack (insert a fact at depth $d$, ask the model to recover it) is the canonical demonstration. Models advertised at 128K routinely fail to retrieve facts placed at 60K while passing at 5K and 120K on the same input. RULER (Hsieh et al., 2024) generalised this to multi-hop tracing, aggregation, and variable tracking and found something brutal: by its own definition of "effective length", the longest context at which performance stays above a fixed quality threshold (benchmarked against Llama-2-7B at 4K), most models hit the cliff at one quarter to one half of their advertised length.
+The literature is now embarrassingly clear. Liu et al.'s "Lost in the Middle" (2023) showed that retrieval accuracy in long contexts forms a U-curve: high at the start, high at the end, sagging through the middle. Needle-in-a-haystack (insert a fact at depth $d$, ask the model to recover it) is the canonical demonstration. Models advertised at 128K routinely fail to retrieve facts placed at 60K while passing at 5K and 120K on the same input. RULER (Hsieh et al., 2024) generalised this to multi-hop tracing, aggregation, and variable tracking and found something brutal: by its own definition of "effective length", the longest context at which performance stays above a fixed quality threshold (Llama-2-7B's 85.6% at 4K), the better-behaved models hold to roughly a half or a quarter of their advertised length, and the most aggressively-marketed ones fare far worse (GradientAI's 1M-token Llama 3 is effective only to ~16K).
 
 So when a vendor says 128K, the working assumption for production design should be "32–64K of usable context, distributed unevenly, with a sag in the middle." That is the number that goes in your design doc. The 128K is the number that goes on the marketing page.
 

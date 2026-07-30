@@ -2,7 +2,7 @@
 layout: post
 title: "GRPO and Group-Relative RL: Why Everyone Is Moving Past PPO"
 date: 2026-04-20 10:00:00
-description: A technical deep-dive into GRPO, RLOO, GSPO and the group-relative family: why critic-free RL has eaten frontier LLM training, what the maths actually buys you, and the failure modes that bite in production.
+description: "A technical deep-dive into GRPO, RLOO, GSPO and the group-relative family: why critic-free RL has eaten frontier LLM training, what the maths actually buys you, and the failure modes that bite in production."
 tags: rlhf grpo reinforcement-learning reward-modelling alexa
 categories: technical
 thumbnail: assets/img/misc.jpg
@@ -10,7 +10,7 @@ toc:
   beginning: true
 ---
 
-For most of the post-InstructGPT era, the canonical answer to "how do we run RL on a language model?" was PPO with a learned critic. Schulman et al. brought it over from continuous control, Ouyang et al. industrialised it into RLHF, and every frontier lab maintained it as their gold-standard alignment loop. Then in early 2024 DeepSeek published GRPO in the DeepSeekMath paper, used it a year later to train DeepSeek-R1, and within months the open-source RL stack had reorganised itself around critic-free, group-relative methods. By the time Qwen2.5-Math and a long tail of community reasoning models had landed, PPO was quietly demoted from "the algorithm" to "one algorithm in the family."
+For most of the post-InstructGPT era, the canonical answer to "how do we run RL on a language model?" was PPO with a learned critic. Schulman et al. brought it over from continuous control, Ouyang et al. industrialised it into RLHF, and every frontier lab maintained it as their gold-standard alignment loop. Then in early 2024 DeepSeek published GRPO in the DeepSeekMath paper. Qwen2.5-Math had already adopted it by September 2024, and DeepSeek used it to train DeepSeek-R1 in early 2025, at which point the open-source RL stack reorganised itself around critic-free, group-relative methods and a long tail of community reasoning models followed. PPO was quietly demoted from "the algorithm" to "one algorithm in the family."
 
 This is the algorithmic side of the [Reward Modelling at Scale](/blog/2026/reward-modelling-at-scale/) pillar: the optimiser that sits on top of the reward model and either stays out of its way or makes its job impossible. GRPO is one of my day-job specialisations at the Alexa+ Frontier AI Modelling Lab; this is the deep-dive I'd point ML engineers at when they ask why everyone left PPO behind.
 
@@ -56,19 +56,19 @@ That's the entire baseline. No value function, no GAE, no critic learning rate. 
 
 The policy update keeps the PPO clipped surrogate, since clipping's variance-control story is independent of where the advantage came from:
 
-$$\mathcal{L}_{\text{GRPO}} = -\frac{1}{G}\sum_{i=1}^{G} \min\!\left(\rho_i \hat{A}_i,\; \text{clip}(\rho_i, 1-\epsilon, 1+\epsilon)\hat{A}_i\right) + \beta \cdot D_{\text{KL}}(\pi_\theta \,\|\, \pi_{\text{ref}})$$
+$$\mathcal{L}_{\text{GRPO}} = -\frac{1}{G}\sum_{i=1}^{G} \frac{1}{|o_i|} \sum_{t=1}^{|o_i|} \left[ \min\!\left(\rho_{i,t} \hat{A}_i,\; \text{clip}(\rho_{i,t}, 1-\epsilon, 1+\epsilon)\hat{A}_i\right) - \beta \cdot D_{\text{KL}}(\pi_\theta \,\|\, \pi_{\text{ref}}) \right]$$
 
-where $\rho_i = \pi_\theta(y_i \mid x) / \pi_{\text{old}}(y_i \mid x)$ and the KL term stops the policy drifting into the reward model's blind spots.
+where the ratio is per-token, $\rho_{i,t} = \pi_\theta(o_{i,t} \mid x, o_{i,<t}) / \pi_{\text{old}}(o_{i,t} \mid x, o_{i,<t})$, every token in output $o_i$ shares the same sequence-level advantage $\hat{A}_i$, and the KL term (subtracted per-token, inside the double sum) stops the policy drifting into the reward model's blind spots.
 
 What this expression _doesn't_ contain is per-token advantage. Every token in $y_i$ gets the same scalar $\hat{A}_i$, a coarser credit-assignment scheme than PPO's GAE. For verifiable reasoning with sparse outcome rewards, this is a feature: the reward only arrives at the end of the sequence anyway. PPO's per-token advantages were mostly an artefact of the value-function machinery, not information you actually had. Sequence-level credit assignment is being honest about what the reward function is telling you.
 
-The mechanical details that matter: $G = 16$ is the standard default, with $G = 32$ or $G = 64$ for binary-reward tasks where you need a mix of correct and incorrect solutions before std-normalisation gives useful signal. Smaller groups make the std estimate noisy. $\beta$ starts at 0.01–0.04: raise it if KL climbs past 10–15 nats, drop it if the policy is barely moving. Clip $\epsilon = 0.2$. One or two epochs per generation batch. The hyperparameter that cuts hardest in production is $G$: generation is the bottleneck and $G$ multiplies it. The compute you would have spent training a value network is the compute you now spend generating more samples per prompt.
+The mechanical details that matter: DeepSeekMath itself sampled $G = 64$ outputs per question with $\beta = 0.04$, and in my experience $G = 16$ is a reasonable starting point when generation cost binds, moving up to $G = 32$ or $G = 64$ for binary-reward tasks where you need a mix of correct and incorrect solutions before std-normalisation gives useful signal. Smaller groups make the std estimate noisy. For $\beta$, the paper's 0.04 is a sensible anchor; I keep it in the 0.01–0.04 range, raising it if KL climbs past 10–15 nats and dropping it if the policy is barely moving. Clip $\epsilon = 0.2$. One or two epochs per generation batch. The hyperparameter that cuts hardest in production is $G$: generation is the bottleneck and $G$ multiplies it. The compute you would have spent training a value network is the compute you now spend generating more samples per prompt.
 
 ## GSPO, RLOO, and the family
 
 GRPO is one point in a family, and the differences are illuminating once you see the shared skeleton.
 
-**RLOO** (REINFORCE Leave-One-Out, Ahmadian et al., 2024) is the closest cousin and the most theoretically clean. Instead of the group mean, it uses a leave-one-out baseline:
+**RLOO** (REINFORCE Leave-One-Out; the estimator is due to Kool et al., 2019, brought to RLHF by Ahmadian et al., 2024) is the closest cousin and the most theoretically clean. Instead of the group mean, it uses a leave-one-out baseline:
 
 $$b_i = \frac{1}{G-1}\sum_{j \neq i} r_j, \qquad A_i = r_i - b_i.$$
 
@@ -78,7 +78,7 @@ This is provably unbiased: $b_i$ is independent of $y_i$, so the gradient direct
 
 $$s_i(\theta) = \left(\frac{\pi_\theta(y_i \mid x)}{\pi_{\theta_{\text{old}}}(y_i \mid x)}\right)^{1/|y_i|},$$
 
-and clips that instead. The argument is that per-token ratios multiplied by a sequence-level advantage inject noise that accumulates over long completions, and clipping token-by-token means different fractions of each sequence get silently dropped from the gradient. Matching the unit of clipping to the unit of reward removes both problems. Qwen reports it is noticeably more stable for long-completion and MoE training, with comparable or better results on reasoning benchmarks. The implementation is also simpler, because the per-token ratio bookkeeping disappears.
+and clips that instead. The argument is that per-token ratios multiplied by a sequence-level advantage inject noise that accumulates over long completions, and clipping token-by-token means different fractions of each sequence get silently dropped from the gradient. Matching the unit of clipping to the unit of reward removes both problems. Qwen reports better training efficiency and benchmark performance than GRPO at matched compute, and notably more stable long-completion and MoE training (GSPO removes GRPO's dependence on the Routing Replay trick for MoE). The implementation is also simpler, because the per-token ratio bookkeeping disappears.
 
 The pattern is the same across the family: sample a group, score the group, use the group statistics as the baseline. The variants differ in how much PPO machinery they keep around that core: RLOO strips it out, GRPO keeps token-level clipping, GSPO lifts the clipping to sequence level. The group-relative trick is doing the heavy lifting either way.
 
@@ -114,7 +114,7 @@ These are the defaults I hand to teams starting out, roughly in the order the de
 
 1. **Start with a verifiable reward.** GRPO's strongest setting is sparse, rule-based rewards on maths or code. Get the verifier working, then check that $G = 16$ to $32$ produces a mix of correct and incorrect solutions. If it doesn't, your prompts are mis-targeted for the policy's current capability.
 2. **Warm-start from a strong SFT checkpoint.** The initial generation distribution sets the ceiling on what the group-relative baseline can do. A weak SFT model produces low-variance groups and GRPO has nothing to learn from.
-3. **Group size $G = 16$ as default.** Drop to 8 if generation cost dominates; raise to 32 or 64 for binary-reward tasks. Baseline quality is monotonic in $G$; when in doubt, go larger.
+3. **Group size: DeepSeekMath used $G = 64$; $G = 16$ is a reasonable starting point when generation cost binds.** Drop to 8 if generation cost dominates; raise to 32 or 64 for binary-reward tasks. Baseline quality improves with $G$; when in doubt, go larger.
 4. **Build the prompt curriculum from the start.** The single biggest gap between teams that get GRPO working and teams that don't.
 5. **Use the k3 KL estimator.** $\beta = 0.01$–$0.04$, adapt based on the KL trajectory.
 6. **Standard PPO clip $\epsilon = 0.2$, one or two epochs per batch.**

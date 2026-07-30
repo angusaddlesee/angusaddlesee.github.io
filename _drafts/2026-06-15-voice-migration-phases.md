@@ -2,7 +2,7 @@
 layout: post
 title: "Phase by Phase: Migrating a Production Voice Assistant Off Its Cascade"
 date: 2026-06-15 10:00:00
-description: A field guide to the four-phase cascaded-to-end-to-end voice migration: what each phase preserves, what it breaks without warning, and how the rollback architecture has to be designed before any of it ships.
+description: "A field guide to the four-phase cascaded-to-end-to-end voice migration: what each phase preserves, what it breaks without warning, and how the rollback architecture has to be designed before any of it ships."
 tags: speech voice-assistants llm migration alexa
 categories: technical
 toc:

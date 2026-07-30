@@ -2,7 +2,7 @@
 layout: post
 title: "Tool Use and Function Calling Done Well"
 date: 2026-07-27 10:00:00
-description: A practical guide to production-grade function calling: schema design, constrained decoding, error recovery, MCP, and the failure modes that bite once you leave the demo.
+description: "A practical guide to production-grade function calling: schema design, constrained decoding, error recovery, MCP, and the failure modes that bite once you leave the demo."
 tags: tool-use function-calling agents llm machine-learning
 categories: technical
 toc:
@@ -15,7 +15,7 @@ Tool use is one of the most production-critical things modern LLMs do, and one o
 
 ## What function calling actually is
 
-A function call is a structured output with extra ceremony. The model is given tool definitions in the system prompt (names, descriptions, JSON Schema) and instead of prose, emits a JSON object naming a tool and its arguments. The runtime parses, executes, feeds the result back. The model then decides whether to call another tool, ask a clarifying question, or produce a final answer.
+A function call is a structured output with extra ceremony. The model is given tool definitions through a dedicated `tools` API parameter (names, descriptions, JSON Schema), which the provider renders into the model's context, and instead of prose it emits a structured object naming a tool and its arguments. The runtime parses, executes, feeds the result back. The model then decides whether to call another tool, ask a clarifying question, or produce a final answer.
 
 This applies equally to OpenAI function calling, Anthropic tool use, Gemini's API, and the special-token chat templates of Llama, Mistral and the open ecosystem. What matters more is the distinction between a model _trained_ to emit tool calls (with tool-use tokens in pretraining or instruction tuning) and one prompted to imitate it. Frontier models in 2026 pick the right tool the vast majority of the time when descriptions are clear; smaller open models with prompted tool use miss noticeably more often, with failures clustered on argument formatting. That gap is why this is systems design, not prompt engineering.
 
@@ -68,7 +68,7 @@ Until 2024, every tool-using agent was a bespoke integration. The Model Context 
 
 Two things make MCP more than a packaging convention. Dynamic discovery, where the client connects and gets a structured tool catalogue at runtime, is a real shift away from hardcoded registries. And resources as first-class citizens alongside tools, collapsing retrieval and tool use into one protocol surface.
 
-Two years in, MCP has won the protocol layer for the same reason TCP/IP did: it is the lowest-overhead standard everyone could agree on. OpenAI's function-call format is still the de facto schema convention and most stacks translate between formats internally, but the trajectory is clear. If you are designing tooling infrastructure today, expose it as MCP.
+Not quite two years on from its late-2024 launch, MCP has won the protocol layer for the same reason TCP/IP did: it is the lowest-overhead standard everyone could agree on. OpenAI's function-call format is still the de facto schema convention and most stacks translate between formats internally, but the trajectory is clear. If you are designing tooling infrastructure today, expose it as MCP.
 
 What MCP does not solve, and no protocol can, is description quality. A standardised wire format does not save you from a vague description; it just lets the vague description fail in more clients.
 

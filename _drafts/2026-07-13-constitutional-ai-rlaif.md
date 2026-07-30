@@ -2,7 +2,7 @@
 layout: post
 title: "Constitutional AI and RLAIF: What's Actually Working"
 date: 2026-07-13 10:00:00
-description: An honest look at AI feedback for alignment: Anthropic's Constitutional AI recipe, the broader RLAIF spectrum, what's deployed in production, and the failure modes that don't show up in the marketing.
+description: "An honest look at AI feedback for alignment: Anthropic's Constitutional AI recipe, the broader RLAIF spectrum, what's deployed in production, and the failure modes that don't show up in the marketing."
 tags: rlaif constitutional-ai alignment reward-modelling alexa
 categories: technical
 toc:
@@ -25,9 +25,9 @@ AI feedback is the field's response. Replace human annotators with an LLM that r
 
 Constitutional AI, as introduced by Bai et al. (2022), is a specific two-phase recipe. Most people use the term loosely to mean "any kind of AI feedback", a conflation that is unhelpful for engineering decisions.
 
-**Phase 1: Supervised Learning from AI Feedback (SL-CAI).** The model is prompted with red-teaming queries. A critic (often the same model) evaluates the response against a principle ("Choose the response that is less harmful or toxic") and produces a written critique. The model then revises in light of the critique. The (prompt, original, revised) triple becomes a supervised example, and the model is fine-tuned to produce the revised output directly. Multiple rounds, each sampling a different principle, layer in the full constitution.
+**Phase 1: Supervised Learning from AI Feedback (SL-CAI).** The model is prompted with red-teaming queries. A critic (often the same model) evaluates the response against a principle ("Choose the response that is less harmful or toxic") and produces a written critique. The model then revises in light of the critique. The (prompt, original, revised) triple becomes a supervised example, and the model is fine-tuned on the revised outputs mixed with helpfulness data sampled from the original helpful RLHF model (so the model does not become evasively unhelpful). Multiple rounds, each sampling a different principle, layer in the full constitution.
 
-**Phase 2: Reinforcement Learning from AI Feedback (RL-CAI).** The SL-CAI model generates response pairs. An AI judge, given both, the prompt, and a sampled principle, selects the better one. These labels train a Bradley-Terry reward model exactly as in standard RLHF. Then PPO with a KL penalty against the SL-CAI reference. The only thing that has changed is who labelled the preferences.
+**Phase 2: Reinforcement Learning from AI Feedback (RL-CAI).** The SL-CAI model generates response pairs. An AI judge, given both, the prompt, and a sampled principle, selects the better one. These AI-generated harmlessness labels are mixed with the existing human-feedback helpfulness comparisons (Bai et al. used 182,831 AI harmlessness comparisons alongside 135,296 human helpfulness ones) to train a Bradley-Terry reward model exactly as in standard RLHF. Then PPO with a KL penalty against the SL-CAI reference. So CAI is a hybrid: the harmlessness preferences are now AI-labelled, but helpfulness stays human-labelled.
 
 Writing the revision step as conditional sampling: given prompt $x$, response $y_0$, and principle $p \sim \mathcal{C}$, the critic produces $c \sim \pi_{\text{critic}}(\cdot \mid x, y_0, p)$ and the revisor produces
 

@@ -2,7 +2,7 @@
 layout: post
 title: "LLM-as-Judge: How to Evaluate Models When the Old Metrics Have Stopped Working"
 date: 2025-12-15 10:00:00
-description: A pragmatic guide to using language models as evaluators: what they're good at, where they quietly mislead you, and what changes when an evaluation judge becomes a reward signal.
+description: "A pragmatic guide to using language models as evaluators: what they're good at, where they quietly mislead you, and what changes when an evaluation judge becomes a reward signal."
 tags: evaluation llm-as-judge reward-modelling alexa machine-learning
 categories: technical
 thumbnail: assets/img/alexa.jpg
@@ -30,7 +30,7 @@ A judge is a function that takes a query, one or more candidate outputs, and a r
 
 **Pointwise scoring** asks the judge to rate a single output on a numeric scale, say 1 to 5 for helpfulness. It is simple, cheap (one judge call per output), and naturally extends to dashboards and per-axis tracking. Its weakness is calibration. Judges use scales unevenly, cluster scores into a narrow band, and drift across versions of the same model. A pointwise score is meaningful relative to a calibration anchor, not in absolute terms.
 
-**Pairwise comparison** shows the judge two candidate outputs and asks which is better, with a tie option. This sidesteps calibration almost entirely (the judgement is self-contained and relative) and tends to produce higher agreement with humans on subjective dimensions. It is the basis of Arena-style Elo rankings. The cost is quadratic in the number of systems being compared, and it leaves you with a ranking rather than an absolute quality metric.
+**Pairwise comparison** shows the judge two candidate outputs and asks which is better, with a tie option. This sidesteps calibration almost entirely (the judgement is self-contained and relative) and tends to produce higher agreement with humans on subjective dimensions. It is the basis of Arena-style rankings (originally Elo, since late 2023 a Bradley–Terry model). The cost is quadratic in the number of systems if you run a full round-robin, though sampling-based approaches like Chatbot Arena avoid this, and it leaves you with a ranking rather than an absolute quality metric.
 
 A useful default, if you are starting from scratch: use **pairwise** for model-vs-model comparisons (regression catches, A/B variants, leaderboard-style decisions), and **pointwise** for axis-specific quality tracking (helpfulness, safety, format compliance) where you need a number you can plot over time. They are complementary, not competing.
 
