@@ -2,17 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: Applied Scientist · Frontier AI Modelling Lab @ Amazon Alexa+
-description: Angus Addlesee is an Applied Scientist in Amazon Alexa's Frontier AI Modelling Lab specialising in LLM routing, reward modelling, evaluation infrastructure, and accessibility-driven deployments.
+subtitle: Senior Research Scientist · Research @ PolyAI
+description: Angus Addlesee is a Senior Research Scientist at PolyAI, training the in-house models behind PolyAI's voice agents, with a background in LLM routing, reward modelling, evaluation infrastructure, and accessibility-driven deployments.
 
 profile:
   align: right
   image: profile.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Applied Scientist</p>
-    <p>Frontier AI Modelling Lab</p>
-    <p>Amazon Alexa+</p>
+    <p>Senior Research Scientist</p>
+    <p>Research Team</p>
+    <p>PolyAI</p>
     <p>Cambridge, UK</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -29,7 +29,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I build conversational AI that is fast, reliable, and inclusive, from real-world hospital deployments to large-scale systems at Amazon Alexa+.
+I build conversational AI that is fast, reliable, and inclusive, from real-world hospital deployments to voice assistants used by millions.
 
 <div class="hero-cta-buttons">
   <a href="/publications/" class="btn btn-primary">View Publications</a>
@@ -43,11 +43,13 @@ I build conversational AI that is fast, reliable, and inclusive, from real-world
 
 ## About
 
-I'm an Applied Scientist in **Amazon Alexa's Frontier AI Modelling Lab**, working on **Alexa+** across several critical workstreams: LLM routing and optimisation, reward modelling for evaluation and training, and high-throughput evaluation infrastructure. I moved from academia to industry to help build a product that reaches people at that scale, with a particular focus on making voice interactions more natural and accessible.
+I'm a **Senior Research Scientist at PolyAI**, in the Research team, training the in-house models behind PolyAI's voice agents. These are models built for the hard constraints of live phone calls, where latency, accuracy, and reliability all matter at once.
+
+Before PolyAI, I was an Applied Scientist in **Amazon Alexa's Frontier AI Modelling Lab**, working on **Alexa+** across several critical workstreams: LLM routing and optimisation, reward modelling for evaluation and training, and high-throughput evaluation infrastructure. I moved from academia to industry to help build a product that reaches people at that scale, with a particular focus on making voice interactions more natural and accessible.
 
 Before Amazon, I completed a **PhD in Artificial Intelligence** on conversational AI for people with dementia, and contributed to the **EU-funded SPRING project**, deploying a multi-party social robot in a hospital memory clinic. Earlier, I worked as a machine learning engineer on NLP projects with the NHS and Scottish Government, using information extraction to improve patient outcomes.
 
-I co-founded the **European and African Conversational AI Summits**, am a SIGdial officer, and have given 50+ talks at venues including Harvard, USC, KTH, BBC, and NatWest.
+I co-founded the **European and African Conversational AI Summits**, am a SIGdial officer, and have given 50+ talks at venues including Harvard, USC, Carnegie Mellon, KTH, BBC, and NatWest.
 
 ---
 
@@ -79,7 +81,7 @@ A multi-party conversational robot using LLMs, deployed in a real hospital memor
   <img src="/assets/img/alexa.jpg" alt="Amazon Alexa LLM Systems" />
 </div>
 
-Intelligent LLM routing that assesses intent, context, and risk to select the best-fit model for each interaction, with continuous benchmarking and observability. In production, serving millions of users daily with a meaningful reduction in response latency while maintaining conversation quality.
+Intelligent LLM routing that assessed intent, context, and risk to select the best-fit model for each interaction, with continuous benchmarking and observability. Shipped to production, serving millions of users daily with a meaningful reduction in response latency while maintaining conversation quality.
 
 **Links:** 🔗 [Project details](/projects/alexa-llm-systems/)
 

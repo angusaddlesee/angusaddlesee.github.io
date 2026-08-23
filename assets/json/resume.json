@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Angus Addlesee",
-    "label": "Applied Scientist",
+    "label": "Senior Research Scientist",
     "image": "",
     "email": "angus[at]addleseeHQ[dot]com",
     "url": "https://angusaddlesee.github.io",
-    "summary": "Applied Scientist at Amazon Alexa specialising in LLM routing, conversational AI, and accessibility. Award-winning researcher with 50+ international talks, EACL best demo award, and work featured in TIME Magazine. PhD in AI focused on human-centred dialogue systems.",
+    "summary": "Senior Research Scientist at PolyAI specialising in conversational AI, LLM systems, and accessibility. Award-winning researcher with 50+ international talks, EACL best demo award, and work featured in TIME Magazine. PhD in AI focused on human-centred dialogue systems.",
     "location": {
       "city": "Cambridge",
       "countryCode": "UK",
@@ -31,11 +31,20 @@
   },
   "work": [
     {
+      "name": "PolyAI · Research",
+      "position": "Senior Research Scientist",
+      "url": "https://poly.ai/",
+      "startDate": "2026",
+      "endDate": "",
+      "summary": "Training PolyAI's in-house models for voice agents — models built for the hard constraints of live phone calls, where latency, accuracy, and reliability all matter at once. Work spans the Raven family of voice-native LLMs and audio-native dialog models.",
+      "highlights": ["Model Training", "Voice-native LLMs", "Audio-native Dialogue Models", "Evaluation", "Real-Time Systems"]
+    },
+    {
       "name": "Amazon Alexa+ · Frontier AI Modelling Lab",
       "position": "Applied Scientist",
       "url": "https://www.amazon.science/",
       "startDate": "2024",
-      "endDate": "",
+      "endDate": "2026",
       "summary": "Working on Alexa+ across several critical workstreams: LLM routing and optimisation (production models triggered for 100% of traffic), reward modelling for model evaluation and training (moving to 100% of production traffic), and a high-throughput system simulator enabling offline evaluation of counterfactual tool-calling for router training and model checkpoint evaluation. On-call for production. Active interviewer with 25+ technical interviews.",
       "highlights": [
         "LLM Routing & Optimisation",

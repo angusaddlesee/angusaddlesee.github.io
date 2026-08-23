@@ -9,7 +9,7 @@ category: work
 related_publications: false
 ---
 
-I work in **Amazon Alexa's Frontier AI Modelling Lab** on **Alexa+**, contributing across several workstreams that span model training, evaluation, and production routing.
+From 2024 to 2026 I worked in **Amazon Alexa's Frontier AI Modelling Lab** on **Alexa+**, contributing across several workstreams that spanned model training, evaluation, and production routing.
 
 ## Why Amazon Alexa+
 
@@ -19,27 +19,27 @@ Alexa+ has been reimagined from the ground up. It is smarter, more capable, more
 
 ## LLM Routing & Optimisation
 
-Alexa+ needs to handle millions of diverse interactions daily with the right balance of accuracy, latency, and cost. I work on **routing algorithms** that assess context to select the best-fit LLM for each interaction, alongside evaluation frameworks for both the routers themselves and the downstream model tasks they trigger. The work involves continuous iteration and shipping to production, balancing innovation with the reliability users expect.
+Alexa+ needs to handle millions of diverse interactions daily with the right balance of accuracy, latency, and cost. I worked on **routing algorithms** that assessed context to select the best-fit LLM for each interaction, alongside evaluation frameworks for both the routers themselves and the downstream model tasks they triggered. The work involved continuous iteration and shipping to production, balancing innovation with the reliability users expect.
 
 ## Reward Modelling
 
-Evaluating and training large LLMs at this scale requires reliable, automated reward signals. I contribute to the development of **reward models used in evaluation and training**, helping the team move beyond surface-level metrics towards signals that better capture nuanced, multi-step interactions (Alexa+ has to call tools to play music, set timers, control smart home devices, and much more).
+Evaluating and training large LLMs at this scale requires reliable, automated reward signals. I contributed to the development of **reward models used in evaluation and training**, helping the team move beyond surface-level metrics towards signals that better capture nuanced, multi-step interactions (Alexa+ has to call tools to play music, set timers, control smart home devices, and much more).
 
 ## Evaluation Infrastructure
 
-Working on a routing system whose decisions involve downstream tool use is fundamentally hard to evaluate offline. I build **internal evaluation infrastructure** that supports high-throughput experimentation, which can be used for both model training and assessing new model candidates against representative signals before any production rollout.
+Working on a routing system whose decisions involve downstream tool use is fundamentally hard to evaluate offline. I built **internal evaluation infrastructure** that supported high-throughput experimentation, used for both model training and for assessing new model candidates against representative signals before any production rollout.
 
 ## Production Engineering & Team
 
-Beyond research, this role demands deep production engineering and team contribution:
+Beyond research, the role demanded deep production engineering and team contribution:
 
-- **On-call rotas**: I'm on multiple on-call rotas. When Alexa+ has issues in production, I get paged and work to identify the root cause and resolve them quickly.
+- **On-call rotas**: I was on multiple on-call rotas. When Alexa+ had issues in production, I was paged and worked to identify the root cause and resolve them quickly.
 - **Active interviewing**: I have conducted **over 25 technical interviews** for the team.
 - **Cross-functional collaboration**: across applied scientists, engineers, product, and operations.
 
 ## Accessibility
 
-I'm passionate about accessibility, and I draw on my PhD research to advocate for users with different abilities and communication patterns wherever I can across our routing decisions, evaluation criteria, and reward signals.
+I'm passionate about accessibility, and I drew on my PhD research to advocate for users with different abilities and communication patterns wherever I could across routing decisions, evaluation criteria, and reward signals.
 
 ## Related Work
 
