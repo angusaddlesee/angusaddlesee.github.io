@@ -11,7 +11,7 @@ related_publications: false
 
 ## Overview
 
-My **PhD research** focused on designing conversational AI for people with dementia. Speech production changes as dementia progresses, but today's voice assistants are trained on huge datasets that work well for the "average" user but not for groups whose speech differs from the norm. This work was deployed in a hospital memory clinic via the SPRING project, and informs how I think about accessibility now that I work on the models behind Alexa+.
+My **PhD research** focused on designing conversational AI for people with dementia. Speech production changes as dementia progresses, but today's voice assistants are trained on huge datasets that work well for the "average" user but not for groups whose speech differs from the norm. This work was deployed in a hospital memory clinic via the SPRING project, and informs how I think about accessibility in every production system I have worked on since.
 
 ## Problem
 
@@ -33,9 +33,9 @@ Improving conversational fluidity for people with dementia improves the experien
 
 The findings from this PhD didn't stay in the lab. They were integrated into a multi-party social robot deployed in a real hospital memory clinic via the EU-funded **[SPRING project](/projects/spring-hospital-robot/)**, where it interacted with patients, their companions, and clinicians. The research moved from understanding the problem, to designing solutions, to seeing them tested with the very people they were built for.
 
-## From Memory Clinic to Alexa+
+## From Memory Clinic to Production Voice AI
 
-I now work in **Amazon Alexa's Frontier AI Modelling Lab** on the models behind **[Alexa+](/projects/alexa-llm-systems/)**. The lessons from PhD research inform how I think about routing, evaluation, and reward signals at scale: accessibility is not a separate workstream, it shapes good conversational AI for everyone. I bring up these points internally to advocate for accessibility-aware design wherever I can.
+I went on to work in **Amazon Alexa's Frontier AI Modelling Lab** on the models behind **[Alexa+](/projects/alexa-llm-systems/)**, and I am now a Senior Research Scientist at **PolyAI**, training the models behind its voice agents. The lessons from PhD research inform how I think about routing, evaluation, and reward signals at scale: accessibility is not a separate workstream, it shapes good conversational AI for everyone. I raise these points wherever I can to advocate for accessibility-aware design.
 
 ## Research Highlights
 

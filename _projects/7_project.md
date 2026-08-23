@@ -42,7 +42,7 @@ People ask questions very differently when speaking to a voice assistant compare
 
 **Outcome:** A characterisation of the question landscape that voice assistants face in the wild, very different from the clean question forms in benchmark QA datasets.
 
-**A fun connection:** I then trained question classifiers on the annotated question corpus and built a **QA system in which the question type informed which underlying QA system was called**. This was back during my MSc, but with the benefit of hindsight, it is a clear early hint of the **LLM routing** work I now do on Alexa+, picking the right downstream system for each user request based on what the request actually looks like.
+**A fun connection:** I then trained question classifiers on the annotated question corpus and built a **QA system in which the question type informed which underlying QA system was called**. This was back during my MSc, but with the benefit of hindsight, it is a clear early hint of the **LLM routing** work I later did on Alexa+, picking the right downstream system for each user request based on what the request actually looks like.
 
 ## Why This Matters
 
